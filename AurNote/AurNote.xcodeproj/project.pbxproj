@@ -14,7 +14,7 @@
 		2AC429F823F9F6CA00F122C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AC429F623F9F6CA00F122C5 /* Main.storyboard */; };
 		2AC429FA23F9F6CA00F122C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AC429F923F9F6CA00F122C5 /* Assets.xcassets */; };
 		2AC429FD23F9F6CA00F122C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AC429FB23F9F6CA00F122C5 /* LaunchScreen.storyboard */; };
-		2AC42A0923F9FD5F00F122C5 /* IndividualNote.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AC42A0823F9FD5F00F122C5 /* IndividualNote.storyboard */; };
+		2AC42A0B23FA0B4100F122C5 /* NoteManagement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AC42A0A23FA0B4100F122C5 /* NoteManagement.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 		2AC429F923F9F6CA00F122C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2AC429FC23F9F6CA00F122C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2AC429FE23F9F6CA00F122C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2AC42A0823F9FD5F00F122C5 /* IndividualNote.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IndividualNote.storyboard; sourceTree = "<group>"; };
+		2AC42A0A23FA0B4100F122C5 /* NoteManagement.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NoteManagement.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +81,9 @@
 		2AC42A0523F9F72F00F122C5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2AC42A0A23FA0B4100F122C5 /* NoteManagement.storyboard */,
 				2AC429FB23F9F6CA00F122C5 /* LaunchScreen.storyboard */,
 				2AC429F623F9F6CA00F122C5 /* Main.storyboard */,
-				2AC42A0823F9FD5F00F122C5 /* IndividualNote.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -166,7 +166,7 @@
 				2AC429FD23F9F6CA00F122C5 /* LaunchScreen.storyboard in Resources */,
 				2AC429FA23F9F6CA00F122C5 /* Assets.xcassets in Resources */,
 				2AC429F823F9F6CA00F122C5 /* Main.storyboard in Resources */,
-				2AC42A0923F9FD5F00F122C5 /* IndividualNote.storyboard in Resources */,
+				2AC42A0B23FA0B4100F122C5 /* NoteManagement.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
