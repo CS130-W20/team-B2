@@ -15,9 +15,11 @@
 		2AC429FA23F9F6CA00F122C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AC429F923F9F6CA00F122C5 /* Assets.xcassets */; };
 		2AC429FD23F9F6CA00F122C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AC429FB23F9F6CA00F122C5 /* LaunchScreen.storyboard */; };
 		2AC42A0B23FA0B4100F122C5 /* NoteManagement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AC42A0A23FA0B4100F122C5 /* NoteManagement.storyboard */; };
+		79F1DA2704A3E3F8E736CB23 /* Pods_AurNote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BEBB0BE26BE8FFE01C9157E /* Pods_AurNote.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BEBB0BE26BE8FFE01C9157E /* Pods_AurNote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AurNote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AC429EB23F9F6CA00F122C5 /* AurNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AurNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AC429EE23F9F6CA00F122C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AC429F023F9F6CA00F122C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +30,8 @@
 		2AC429FC23F9F6CA00F122C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2AC429FE23F9F6CA00F122C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AC42A0A23FA0B4100F122C5 /* NoteManagement.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NoteManagement.storyboard; sourceTree = "<group>"; };
+		C16A32E5556F9D9D7F3D7838 /* Pods-AurNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurNote.release.xcconfig"; path = "Target Support Files/Pods-AurNote/Pods-AurNote.release.xcconfig"; sourceTree = "<group>"; };
+		CB7BC88BD745B72BC06869CC /* Pods-AurNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurNote.debug.xcconfig"; path = "Target Support Files/Pods-AurNote/Pods-AurNote.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79F1DA2704A3E3F8E736CB23 /* Pods_AurNote.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +51,8 @@
 			children = (
 				2AC429ED23F9F6CA00F122C5 /* AurNote */,
 				2AC429EC23F9F6CA00F122C5 /* Products */,
+				31C91E3A1B69BF136B63D0AF /* Pods */,
+				BD2DC4B725022A189EE76308 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +112,24 @@
 			path = Configurations;
 			sourceTree = "<group>";
 		};
+		31C91E3A1B69BF136B63D0AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CB7BC88BD745B72BC06869CC /* Pods-AurNote.debug.xcconfig */,
+				C16A32E5556F9D9D7F3D7838 /* Pods-AurNote.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BD2DC4B725022A189EE76308 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0BEBB0BE26BE8FFE01C9157E /* Pods_AurNote.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -112,9 +137,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2AC42A0123F9F6CA00F122C5 /* Build configuration list for PBXNativeTarget "AurNote" */;
 			buildPhases = (
+				152AD315C690546C96B44458 /* [CP] Check Pods Manifest.lock */,
 				2AC429E723F9F6CA00F122C5 /* Sources */,
 				2AC429E823F9F6CA00F122C5 /* Frameworks */,
 				2AC429E923F9F6CA00F122C5 /* Resources */,
+				7A6D30D7BA6CA3D5094AECA4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -171,6 +198,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		152AD315C690546C96B44458 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AurNote-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A6D30D7BA6CA3D5094AECA4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AurNote/Pods-AurNote-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AurNote/Pods-AurNote-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AurNote/Pods-AurNote-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2AC429E723F9F6CA00F122C5 /* Sources */ = {
@@ -322,6 +391,7 @@
 		};
 		2AC42A0223F9F6CA00F122C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB7BC88BD745B72BC06869CC /* Pods-AurNote.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -341,6 +411,7 @@
 		};
 		2AC42A0323F9F6CA00F122C5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C16A32E5556F9D9D7F3D7838 /* Pods-AurNote.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
