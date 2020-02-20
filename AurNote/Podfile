@@ -7,4 +7,5 @@ target 'AurNote' do
 
   # Pods for AurNote
   pod 'AWSS3'
+  pod 'AWSCognito'
 end
