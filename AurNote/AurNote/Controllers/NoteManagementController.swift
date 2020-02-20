@@ -21,16 +21,17 @@ class DirectoryCollectionCell: UICollectionViewCell {
 
 class NoteManagementController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     var data = [String]()
-    let userId = "testUser"
+    let userId = "testUser"         //change this to dynamically obtain signed in userId
     var awsBucketHandler: AWSBucketHandler? = nil
     
 
     @IBOutlet weak var directoryCollection: UICollectionView!
     
+    //overrides function so the bucket handler is initialized and the names of the directories are recieved
     override func viewDidLoad() {
         super.viewDidLoad()
         data = []
-        let awsBucketHandler = AWSBucketHandler(id: userId, view: directoryCollection)
+        let awsBucketHandler = AWSBucketHandler(id: userId)
         awsBucketHandler.getAllFiles(completion: {result in
             if(result != nil) {
                 self.data = awsBucketHandler.getDirectories()
@@ -43,16 +44,19 @@ class NoteManagementController: UIViewController, UICollectionViewDelegate, UICo
         
     }
     
+    //sets the datasource
     override func viewDidAppear(_ animated: Bool) {
         view.addSubview(directoryCollection)
         directoryCollection.delegate = self
         directoryCollection.dataSource = self
     }
     
+    //returns number of cells
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return data.count
     }
     
+    //sets content of each cell from data array and styles cells
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let width = (view.frame.size.width - 10)/3
         let layout = directoryCollection.collectionViewLayout as! UICollectionViewFlowLayout

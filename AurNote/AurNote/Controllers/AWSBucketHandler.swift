@@ -17,14 +17,12 @@ class AWSBucketHandler {
     let myIdentityPoolId = "us-east-2:ef1afe1f-3760-4199-8d9b-e60ba9679866"
     let configuration: AWSServiceConfiguration
     var allFiles = [String]()
-    var view: UICollectionView
     var folderMap = [String: [String]]()
     
     
-    
-    init(id: String, view: UICollectionView) {
+    //initializes and configures credential provider
+    init(id: String) {
         self.userId = id
-        self.view = view
         
         // initializing credential provider
         let credentialsProvider:AWSCognitoCredentialsProvider = AWSCognitoCredentialsProvider(regionType: .USEast2, identityPoolId: myIdentityPoolId)
@@ -33,6 +31,7 @@ class AWSBucketHandler {
 
     }
     
+    //gets the names of all files in the user's directory
     func getAllFiles(completion: @escaping (AnyObject?)->()) {
         
         //register the config
@@ -56,7 +55,7 @@ class AWSBucketHandler {
         }
     }
 
-    
+    //isolates directory names and returns to caller, ensures non-redundancy
     public func getDirectories() -> Array<String> {
         var data = [String]()
         for str in self.allFiles {
