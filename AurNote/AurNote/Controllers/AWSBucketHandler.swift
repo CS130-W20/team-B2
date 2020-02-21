@@ -61,6 +61,7 @@ class AWSBucketHandler {
 
     //isolates directory names and returns to caller, ensures non-redundancy
     /// Extracts the list of directories from the file names to populate the splash page of user folders
+    /// Return - Array<String> which contains the names of all user folders (unique)
     public func getDirectories() -> Array<String> {
         var data = [String]()
         for str in self.allFiles {
