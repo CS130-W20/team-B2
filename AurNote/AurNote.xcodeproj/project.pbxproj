@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,9 +15,12 @@
 		2AC429FA23F9F6CA00F122C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AC429F923F9F6CA00F122C5 /* Assets.xcassets */; };
 		2AC429FD23F9F6CA00F122C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AC429FB23F9F6CA00F122C5 /* LaunchScreen.storyboard */; };
 		2AC42A0B23FA0B4100F122C5 /* NoteManagement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AC42A0A23FA0B4100F122C5 /* NoteManagement.storyboard */; };
+		9F14215A23FF70A900DC4C29 /* Login-google.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F14215923FF70A900DC4C29 /* Login-google.swift */; };
+		A04A213B6055CF12EA4588C5 /* Pods_AurNote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D0F31A15F7DF52E27DD0288 /* Pods_AurNote.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D0F31A15F7DF52E27DD0288 /* Pods_AurNote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AurNote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AC429EB23F9F6CA00F122C5 /* AurNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AurNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AC429EE23F9F6CA00F122C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AC429F023F9F6CA00F122C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +31,9 @@
 		2AC429FC23F9F6CA00F122C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2AC429FE23F9F6CA00F122C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AC42A0A23FA0B4100F122C5 /* NoteManagement.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NoteManagement.storyboard; sourceTree = "<group>"; };
+		5E54E04253C93888F4A7D519 /* Pods-AurNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurNote.release.xcconfig"; path = "Target Support Files/Pods-AurNote/Pods-AurNote.release.xcconfig"; sourceTree = "<group>"; };
+		9F14215923FF70A900DC4C29 /* Login-google.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login-google.swift"; sourceTree = "<group>"; };
+		CEAB6A6CA726A3B313BD1572 /* Pods-AurNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurNote.debug.xcconfig"; path = "Target Support Files/Pods-AurNote/Pods-AurNote.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A04A213B6055CF12EA4588C5 /* Pods_AurNote.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +53,8 @@
 			children = (
 				2AC429ED23F9F6CA00F122C5 /* AurNote */,
 				2AC429EC23F9F6CA00F122C5 /* Products */,
+				54406169C746AD7AE51B7B50 /* Pods */,
+				6409322F12A9DDF0BDBBA4A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +83,7 @@
 			children = (
 				2AC429F223F9F6CA00F122C5 /* FirstViewController.swift */,
 				2AC429F423F9F6CA00F122C5 /* SecondViewController.swift */,
+				9F14215923FF70A900DC4C29 /* Login-google.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -105,6 +115,23 @@
 			path = Configurations;
 			sourceTree = "<group>";
 		};
+		54406169C746AD7AE51B7B50 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB6A6CA726A3B313BD1572 /* Pods-AurNote.debug.xcconfig */,
+				5E54E04253C93888F4A7D519 /* Pods-AurNote.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6409322F12A9DDF0BDBBA4A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D0F31A15F7DF52E27DD0288 /* Pods_AurNote.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -112,9 +139,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2AC42A0123F9F6CA00F122C5 /* Build configuration list for PBXNativeTarget "AurNote" */;
 			buildPhases = (
+				106BB475AA8AE866051A2E07 /* [CP] Check Pods Manifest.lock */,
 				2AC429E723F9F6CA00F122C5 /* Sources */,
 				2AC429E823F9F6CA00F122C5 /* Frameworks */,
 				2AC429E923F9F6CA00F122C5 /* Resources */,
+				1A3C48B2AAB301704A15179B /* [CP] Embed Pods Frameworks */,
+				D15C8FE85947AA2B2AC14715 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -172,11 +202,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		106BB475AA8AE866051A2E07 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AurNote-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1A3C48B2AAB301704A15179B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AurNote/Pods-AurNote-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AurNote/Pods-AurNote-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AurNote/Pods-AurNote-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D15C8FE85947AA2B2AC14715 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AurNote/Pods-AurNote-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AurNote/Pods-AurNote-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AurNote/Pods-AurNote-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2AC429E723F9F6CA00F122C5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F14215A23FF70A900DC4C29 /* Login-google.swift in Sources */,
 				2AC429F523F9F6CA00F122C5 /* SecondViewController.swift in Sources */,
 				2AC429F323F9F6CA00F122C5 /* FirstViewController.swift in Sources */,
 				2AC429EF23F9F6CA00F122C5 /* AppDelegate.swift in Sources */,
@@ -322,6 +412,7 @@
 		};
 		2AC42A0223F9F6CA00F122C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEAB6A6CA726A3B313BD1572 /* Pods-AurNote.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -341,6 +432,7 @@
 		};
 		2AC42A0323F9F6CA00F122C5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E54E04253C93888F4A7D519 /* Pods-AurNote.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

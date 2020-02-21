@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F5c-Lg-hn3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PjQ-uV-vMP">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -8,69 +8,34 @@
     </dependencies>
     <scenes>
         <!--InitialViewController-->
-        <scene sceneID="yM4-b0-KWM">
+        <scene sceneID="2hk-uM-QmY">
             <objects>
-                <viewController title="InitialViewController" id="F5c-Lg-hn3" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="oIb-N5-Cgo">
+                <viewController title="InitialViewController" id="PjQ-uV-vMP" customClass="LoginController" customModule="AurNote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Ga-ec-5jG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thm-cD-55Q">
-                                <rect key="frame" x="208" y="555" width="38" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Login"/>
-                                <connections>
-                                    <segue destination="9x4-H7-T0B" kind="show" id="Tpu-55-H7f"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vA1-yA-BhQ">
-                                <rect key="frame" x="202" y="647" width="50" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="SignUp"/>
-                                <connections>
-                                    <segue destination="Faa-qf-rnk" kind="show" id="FlT-Wk-6k7"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kw9-q3-7Ox" customClass="GIDSignInButton">
+                                <rect key="frame" x="87" y="379" width="240" height="138"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="nc7-Rh-Cpt"/>
+                        <constraints>
+                            <constraint firstItem="Kw9-q3-7Ox" firstAttribute="centerY" secondItem="R0l-an-2JZ" secondAttribute="centerY" id="5Me-4g-4v1"/>
+                            <constraint firstItem="Kw9-q3-7Ox" firstAttribute="leading" secondItem="R0l-an-2JZ" secondAttribute="leading" constant="87" id="IJe-Hg-D4Y"/>
+                            <constraint firstItem="Kw9-q3-7Ox" firstAttribute="centerX" secondItem="R0l-an-2JZ" secondAttribute="centerX" id="ddU-Nh-shP"/>
+                            <constraint firstItem="Kw9-q3-7Ox" firstAttribute="top" secondItem="R0l-an-2JZ" secondAttribute="top" constant="340" id="hxR-Bw-99F"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="R0l-an-2JZ"/>
                     </view>
+                    <connections>
+                        <outlet property="signInButton" destination="Kw9-q3-7Ox" id="jdk-c4-odg"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ID0-RD-E7s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uRT-fj-v2I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1546" y="-214"/>
-        </scene>
-        <!--LoginViewController-->
-        <scene sceneID="az2-gY-Hvz">
-            <objects>
-                <viewController title="LoginViewController" id="9x4-H7-T0B" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dXl-fY-NMh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="a8b-UM-MfH"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="MmF-oo-764"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XSW-q2-pay" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2445" y="-528"/>
-        </scene>
-        <!--SignUpViewController-->
-        <scene sceneID="AhN-Ae-DMo">
-            <objects>
-                <viewController title="SignUpViewController" id="Faa-qf-rnk" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="29U-ks-PFK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="8XG-6l-1jW"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="9MW-O3-D7R"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NfT-ql-fhw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2445" y="347"/>
+            <point key="canvasLocation" x="1545" y="-234"/>
         </scene>
     </scenes>
 </document>
