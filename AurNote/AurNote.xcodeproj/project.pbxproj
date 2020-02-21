@@ -11,7 +11,6 @@
 		104C18C623FD476C00CDDB2D /* NoteManagementController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104C18C523FD476C00CDDB2D /* NoteManagementController.swift */; };
 		2AC429EF23F9F6CA00F122C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC429EE23F9F6CA00F122C5 /* AppDelegate.swift */; };
 		2AC429F123F9F6CA00F122C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC429F023F9F6CA00F122C5 /* SceneDelegate.swift */; };
-		2AC429F323F9F6CA00F122C5 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC429F223F9F6CA00F122C5 /* FirstViewController.swift */; };
 		2AC429F523F9F6CA00F122C5 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC429F423F9F6CA00F122C5 /* SecondViewController.swift */; };
 		2AC429F823F9F6CA00F122C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AC429F623F9F6CA00F122C5 /* Main.storyboard */; };
 		2AC429FA23F9F6CA00F122C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AC429F923F9F6CA00F122C5 /* Assets.xcassets */; };
@@ -24,6 +23,8 @@
 		2EA47C9223FD1F5800DE5CBA /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA47C8E23FD1F5800DE5CBA /* Utilities.swift */; };
 		2EA47C9423FD209600DE5CBA /* ARAnnotation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EA47C9323FD209600DE5CBA /* ARAnnotation.storyboard */; };
 		79F1DA2704A3E3F8E736CB23 /* Pods_AurNote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BEBB0BE26BE8FFE01C9157E /* Pods_AurNote.framework */; };
+		9F49164B23FFA1FC00C0C6EF /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 9F49164A23FFA1FC00C0C6EF /* Podfile */; };
+		9FC6CCD123FFA8F900F811B9 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC6CCD023FFA8F900F811B9 /* LoginController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +34,6 @@
 		2AC429EB23F9F6CA00F122C5 /* AurNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AurNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AC429EE23F9F6CA00F122C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AC429F023F9F6CA00F122C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2AC429F223F9F6CA00F122C5 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		2AC429F423F9F6CA00F122C5 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		2AC429F723F9F6CA00F122C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2AC429F923F9F6CA00F122C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -46,6 +46,8 @@
 		2EA47C8D23FD1F5800DE5CBA /* AlteredImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlteredImage.swift; sourceTree = "<group>"; };
 		2EA47C8E23FD1F5800DE5CBA /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		2EA47C9323FD209600DE5CBA /* ARAnnotation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ARAnnotation.storyboard; sourceTree = "<group>"; };
+		9F49164A23FFA1FC00C0C6EF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		9FC6CCD023FFA8F900F811B9 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		C16A32E5556F9D9D7F3D7838 /* Pods-AurNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurNote.release.xcconfig"; path = "Target Support Files/Pods-AurNote/Pods-AurNote.release.xcconfig"; sourceTree = "<group>"; };
 		CB7BC88BD745B72BC06869CC /* Pods-AurNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurNote.debug.xcconfig"; path = "Target Support Files/Pods-AurNote/Pods-AurNote.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,9 +98,9 @@
 			isa = PBXGroup;
 			children = (
 				2EA47C8923FD1F0200DE5CBA /* ARAnnotationViewController.swift */,
-				2AC429F223F9F6CA00F122C5 /* FirstViewController.swift */,
 				2AC429F423F9F6CA00F122C5 /* SecondViewController.swift */,
 				104C18C523FD476C00CDDB2D /* NoteManagementController.swift */,
+				9FC6CCD023FFA8F900F811B9 /* LoginController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -129,6 +131,7 @@
 		2AC42A0723F9F83E00F122C5 /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
+				9F49164A23FFA1FC00C0C6EF /* Podfile */,
 				2AC429EE23F9F6CA00F122C5 /* AppDelegate.swift */,
 				2AC429F023F9F6CA00F122C5 /* SceneDelegate.swift */,
 				2AC429FE23F9F6CA00F122C5 /* Info.plist */,
@@ -165,6 +168,7 @@
 				2AC429E823F9F6CA00F122C5 /* Frameworks */,
 				2AC429E923F9F6CA00F122C5 /* Resources */,
 				7A6D30D7BA6CA3D5094AECA4 /* [CP] Embed Pods Frameworks */,
+				675A646143C3DE2C77E79E57 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F49164B23FFA1FC00C0C6EF /* Podfile in Resources */,
 				2AC429FD23F9F6CA00F122C5 /* LaunchScreen.storyboard in Resources */,
 				2EA47C9423FD209600DE5CBA /* ARAnnotation.storyboard in Resources */,
 				2AC429FA23F9F6CA00F122C5 /* Assets.xcassets in Resources */,
@@ -246,6 +251,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		675A646143C3DE2C77E79E57 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AurNote/Pods-AurNote-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AurNote/Pods-AurNote-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AurNote/Pods-AurNote-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7A6D30D7BA6CA3D5094AECA4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -270,11 +292,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FC6CCD123FFA8F900F811B9 /* LoginController.swift in Sources */,
 				2AC429F523F9F6CA00F122C5 /* SecondViewController.swift in Sources */,
 				104C18C623FD476C00CDDB2D /* NoteManagementController.swift in Sources */,
 				1007569923FE7773009D0822 /* AWSBucketHandler.swift in Sources */,
 				2EA47C9123FD1F5800DE5CBA /* AlteredImage.swift in Sources */,
-				2AC429F323F9F6CA00F122C5 /* FirstViewController.swift in Sources */,
 				2EA47C9023FD1F5800DE5CBA /* RectangleDetector.swift in Sources */,
 				2EA47C8F23FD1F5800DE5CBA /* VisualizationNode.swift in Sources */,
 				2EA47C8A23FD1F0200DE5CBA /* ARAnnotationViewController.swift in Sources */,
@@ -426,7 +448,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HBHDXQ6W6U;
+				DEVELOPMENT_TEAM = NQXPP6346K;
 				INFOPLIST_FILE = AurNote/Configurations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -446,7 +468,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HBHDXQ6W6U;
+				DEVELOPMENT_TEAM = NQXPP6346K;
 				INFOPLIST_FILE = AurNote/Configurations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (

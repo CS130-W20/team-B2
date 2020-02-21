@@ -10,42 +10,65 @@
         <!--InitialViewController-->
         <scene sceneID="yM4-b0-KWM">
             <objects>
-                <viewController title="InitialViewController" id="F5c-Lg-hn3" sceneMemberID="viewController">
+                <viewController title="InitialViewController" id="F5c-Lg-hn3" customClass="LoginController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oIb-N5-Cgo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thm-cD-55Q">
-                                <rect key="frame" x="208" y="555" width="38" height="30"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qZf-qT-51d" customClass="GIDSignInButton">
+                                <rect key="frame" x="107" y="395" width="240" height="138"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xm1-Vu-TKJ">
+                                <rect key="frame" x="117" y="608" width="220" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Login"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYC-n2-VH7">
+                                <rect key="frame" x="81" y="156" width="127" height="169"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="SIGN OUT"/>
                                 <connections>
-                                    <segue destination="9x4-H7-T0B" kind="show" id="Tpu-55-H7f"/>
+                                    <action selector="didTapSignOut:" destination="F5c-Lg-hn3" eventType="touchUpInside" id="jQQ-22-Zfw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vA1-yA-BhQ">
-                                <rect key="frame" x="202" y="647" width="50" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTM-Js-g5j">
+                                <rect key="frame" x="216" y="156" width="127" height="169"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="SignUp"/>
+                                <state key="normal" title="DISCONNECT"/>
                                 <connections>
-                                    <segue destination="Faa-qf-rnk" kind="show" id="FlT-Wk-6k7"/>
+                                    <action selector="didTapDisconnect:" destination="F5c-Lg-hn3" eventType="touchUpInside" id="v6h-kh-AXh"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qZf-qT-51d" firstAttribute="centerY" secondItem="nc7-Rh-Cpt" secondAttribute="centerY" id="QOI-G7-PU7"/>
+                            <constraint firstItem="qZf-qT-51d" firstAttribute="leading" secondItem="nc7-Rh-Cpt" secondAttribute="leading" constant="87" id="ed2-Bj-uiE"/>
+                            <constraint firstItem="qZf-qT-51d" firstAttribute="centerX" secondItem="nc7-Rh-Cpt" secondAttribute="centerX" id="fVv-TY-Bxm"/>
+                            <constraint firstItem="qZf-qT-51d" firstAttribute="top" secondItem="nc7-Rh-Cpt" secondAttribute="top" constant="340" id="pGz-lB-cn4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nc7-Rh-Cpt"/>
                     </view>
+                    <connections>
+                        <outlet property="disconnectButton" destination="WTM-Js-g5j" id="CAe-gr-hL6"/>
+                        <outlet property="signInButton" destination="qZf-qT-51d" id="ECV-X5-rWr"/>
+                        <outlet property="signOutButton" destination="AYC-n2-VH7" id="xkb-3e-rBw"/>
+                        <outlet property="statusText" destination="xm1-Vu-TKJ" id="xZn-57-5tR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ID0-RD-E7s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1546" y="-214"/>
+            <point key="canvasLocation" x="1544.9275362318842" y="-214.28571428571428"/>
         </scene>
         <!--LoginViewController-->
         <scene sceneID="az2-gY-Hvz">
             <objects>
                 <viewController title="LoginViewController" id="9x4-H7-T0B" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dXl-fY-NMh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXV-wf-luF">
@@ -64,23 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XSW-q2-pay" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2445" y="-528"/>
-        </scene>
-        <!--SignUpViewController-->
-        <scene sceneID="AhN-Ae-DMo">
-            <objects>
-                <viewController title="SignUpViewController" id="Faa-qf-rnk" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="29U-ks-PFK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="8XG-6l-1jW"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="9MW-O3-D7R"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NfT-ql-fhw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2445" y="347"/>
+            <point key="canvasLocation" x="2462" y="-214"/>
         </scene>
         <!--ARAnnotationViewController-->
         <scene sceneID="dPV-lB-YEq">
