@@ -80,6 +80,14 @@
                                     <segue destination="F5c-Lg-hn3" kind="presentation" modalPresentationStyle="overFullScreen" id="eZG-5o-KeA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psZ-Nx-xnE">
+                                <rect key="frame" x="183" y="685" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Images"/>
+                                <connections>
+                                    <segue destination="Onq-Bv-8ih" kind="show" id="uIp-Zv-5cW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="a8b-UM-MfH"/>
@@ -113,6 +121,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X8k-SM-Fum" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3201" y="-224"/>
+        </scene>
+        <!--ImageCapture-->
+        <scene sceneID="ZMw-3X-tsM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ImageCapture" id="Onq-Bv-8ih" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="4aw-yv-ARz"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7yS-3G-dyf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2949" y="-25"/>
         </scene>
     </scenes>
 </document>
