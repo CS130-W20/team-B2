@@ -1,5 +1,5 @@
-# Sample Project Title
-Briefly describe your project here.
+# AuRNote
+An AR note taking experience integrating AR-embedded images with handwritten notes, as well as sharing and cloud storage functionality.
 
 ## Directory Structure
 Explain how the code is organized
