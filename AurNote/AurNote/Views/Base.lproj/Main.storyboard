@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--InitialViewController-->
+        <!--LoginViewController-->
         <scene sceneID="yM4-b0-KWM">
             <objects>
-                <viewController title="InitialViewController" id="F5c-Lg-hn3" customClass="LoginController" sceneMemberID="viewController">
+                <viewController title="LoginViewController" id="F5c-Lg-hn3" customClass="LoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oIb-N5-Cgo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,29 +19,6 @@
                                 <rect key="frame" x="107" y="395" width="240" height="138"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xm1-Vu-TKJ">
-                                <rect key="frame" x="117" y="608" width="220" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYC-n2-VH7">
-                                <rect key="frame" x="81" y="156" width="127" height="169"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="SIGN OUT"/>
-                                <connections>
-                                    <action selector="didTapSignOut:" destination="F5c-Lg-hn3" eventType="touchUpInside" id="jQQ-22-Zfw"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTM-Js-g5j">
-                                <rect key="frame" x="216" y="156" width="127" height="169"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="DISCONNECT"/>
-                                <connections>
-                                    <action selector="didTapDisconnect:" destination="F5c-Lg-hn3" eventType="touchUpInside" id="v6h-kh-AXh"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -53,20 +30,20 @@
                         <viewLayoutGuide key="safeArea" id="nc7-Rh-Cpt"/>
                     </view>
                     <connections>
-                        <outlet property="disconnectButton" destination="WTM-Js-g5j" id="CAe-gr-hL6"/>
                         <outlet property="signInButton" destination="qZf-qT-51d" id="ECV-X5-rWr"/>
                         <outlet property="signOutButton" destination="AYC-n2-VH7" id="xkb-3e-rBw"/>
                         <outlet property="statusText" destination="xm1-Vu-TKJ" id="xZn-57-5tR"/>
+                        <segue destination="9x4-H7-T0B" kind="presentation" identifier="loginSuccessful" modalPresentationStyle="overFullScreen" id="NsQ-XU-VaZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ID0-RD-E7s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1544.9275362318842" y="-214.28571428571428"/>
         </scene>
-        <!--LoginViewController-->
+        <!--LoggedInViewController-->
         <scene sceneID="az2-gY-Hvz">
             <objects>
-                <viewController title="LoginViewController" id="9x4-H7-T0B" sceneMemberID="viewController">
+                <viewController title="LoggedInViewController" id="9x4-H7-T0B" customClass="LoggedInViewController" customModule="AurNote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dXl-fY-NMh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -79,11 +56,39 @@
                                     <segue destination="qus-EG-wYm" kind="show" id="Cnu-RP-Z0h"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xm1-Vu-TKJ">
+                                <rect key="frame" x="97" y="266" width="220" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYo-8e-7kt">
+                                <rect key="frame" x="172" y="477" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Note View"/>
+                                <connections>
+                                    <segue destination="Ecd-NN-K4H" kind="show" id="R8D-A9-pw6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYC-n2-VH7">
+                                <rect key="frame" x="144" y="494" width="127" height="169"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="SIGN OUT"/>
+                                <connections>
+                                    <action selector="didTapSignOut:" destination="F5c-Lg-hn3" eventType="touchUpInside" id="jQQ-22-Zfw"/>
+                                    <segue destination="F5c-Lg-hn3" kind="presentation" modalPresentationStyle="overFullScreen" id="eZG-5o-KeA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="a8b-UM-MfH"/>
                     </view>
                     <navigationItem key="navigationItem" id="MmF-oo-764"/>
+                    <connections>
+                        <outlet property="signOutButton" destination="AYC-n2-VH7" id="GDK-z9-qzr"/>
+                        <outlet property="statusText" destination="xm1-Vu-TKJ" id="f7O-8l-JKG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XSW-q2-pay" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -92,12 +97,22 @@
         <!--ARAnnotationViewController-->
         <scene sceneID="dPV-lB-YEq">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="ARAnnotationViewController" storyboardName="ARAnnotation" referencedIdentifier="ARAnnotationViewController" id="qus-EG-wYm" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="ARAnnotation" referencedIdentifier="ARAnnotationViewController" id="qus-EG-wYm" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="WJJ-UO-abJ"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wAs-rh-EgP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3201" y="-528"/>
+        </scene>
+        <!--NoteManagementViewController-->
+        <scene sceneID="2Xh-JI-v4Y">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="NoteManagementViewController" storyboardName="NoteManagement" referencedIdentifier="NoteManagementViewController" id="Ecd-NN-K4H" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="HBr-Eu-IdT"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X8k-SM-Fum" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3201" y="-224"/>
         </scene>
     </scenes>
 </document>
