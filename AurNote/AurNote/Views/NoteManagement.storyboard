@@ -150,7 +150,7 @@
         <!--Navigation Controller-->
         <scene sceneID="AzE-1M-WRF">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="y0o-gr-pjK" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NoteManagementViewController" automaticallyAdjustsScrollViewInsets="NO" id="y0o-gr-pjK" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9fz-tW-afi">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

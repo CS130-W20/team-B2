@@ -11,7 +11,7 @@
 		104C18C623FD476C00CDDB2D /* NoteManagementController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104C18C523FD476C00CDDB2D /* NoteManagementController.swift */; };
 		2AC429EF23F9F6CA00F122C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC429EE23F9F6CA00F122C5 /* AppDelegate.swift */; };
 		2AC429F123F9F6CA00F122C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC429F023F9F6CA00F122C5 /* SceneDelegate.swift */; };
-		2AC429F523F9F6CA00F122C5 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC429F423F9F6CA00F122C5 /* SecondViewController.swift */; };
+		2AC429F523F9F6CA00F122C5 /* LoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC429F423F9F6CA00F122C5 /* LoggedInViewController.swift */; };
 		2AC429F823F9F6CA00F122C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AC429F623F9F6CA00F122C5 /* Main.storyboard */; };
 		2AC429FA23F9F6CA00F122C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AC429F923F9F6CA00F122C5 /* Assets.xcassets */; };
 		2AC429FD23F9F6CA00F122C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AC429FB23F9F6CA00F122C5 /* LaunchScreen.storyboard */; };
@@ -34,7 +34,7 @@
 		2AC429EB23F9F6CA00F122C5 /* AurNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AurNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AC429EE23F9F6CA00F122C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AC429F023F9F6CA00F122C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2AC429F423F9F6CA00F122C5 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		2AC429F423F9F6CA00F122C5 /* LoggedInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInViewController.swift; sourceTree = "<group>"; };
 		2AC429F723F9F6CA00F122C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2AC429F923F9F6CA00F122C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2AC429FC23F9F6CA00F122C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				2EA47C8923FD1F0200DE5CBA /* ARAnnotationViewController.swift */,
-				2AC429F423F9F6CA00F122C5 /* SecondViewController.swift */,
+				2AC429F423F9F6CA00F122C5 /* LoggedInViewController.swift */,
 				104C18C523FD476C00CDDB2D /* NoteManagementController.swift */,
 				9FC6CCD023FFA8F900F811B9 /* LoginController.swift */,
 			);
@@ -293,7 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FC6CCD123FFA8F900F811B9 /* LoginController.swift in Sources */,
-				2AC429F523F9F6CA00F122C5 /* SecondViewController.swift in Sources */,
+				2AC429F523F9F6CA00F122C5 /* LoggedInViewController.swift in Sources */,
 				104C18C623FD476C00CDDB2D /* NoteManagementController.swift in Sources */,
 				1007569923FE7773009D0822 /* AWSBucketHandler.swift in Sources */,
 				2EA47C9123FD1F5800DE5CBA /* AlteredImage.swift in Sources */,
@@ -448,7 +448,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NQXPP6346K;
+				DEVELOPMENT_TEAM = HBHDXQ6W6U;
 				INFOPLIST_FILE = AurNote/Configurations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -468,7 +468,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NQXPP6346K;
+				DEVELOPMENT_TEAM = HBHDXQ6W6U;
 				INFOPLIST_FILE = AurNote/Configurations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
