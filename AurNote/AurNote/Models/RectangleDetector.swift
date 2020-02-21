@@ -35,6 +35,7 @@ class RectangleDetector {
     /// Search for rectangles in the camera's pixel buffer,
     ///  if a search is not already running.
     /// - Tag: SerializeVision
+    /// - Parameter pixelBuffer: pixel buffer of current user environment
 	private func search(in pixelBuffer: CVPixelBuffer) {
         guard !isBusy else { return }
         isBusy = true
@@ -83,6 +84,9 @@ class RectangleDetector {
     /// Check for a rectangle result.
     /// If one is found, crop the camera image and correct its perspective.
     /// - Tag: CropCameraImage
+    /// - Parameters:
+    ///   - request: vision request
+    ///   - error: error
     private func completedVisionRequest(_ request: VNRequest?, error: Error?) {
         defer {
             isBusy = false
