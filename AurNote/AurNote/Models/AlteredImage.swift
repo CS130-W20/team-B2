@@ -48,6 +48,9 @@ class AlteredImage {
     
     /// Displays the altered image using the anchor and node provided by ARKit.
     /// - Tag: AddVisualizationNode
+    /// - Parameters:
+    ///   - anchor: augmented reality anchor
+    ///   - node: scene node
     func add(_ anchor: ARAnchor, node: SCNNode) {
         if let imageAnchor = anchor as? ARImageAnchor, imageAnchor.referenceImage == referenceImage {
             self.anchor = imageAnchor
@@ -66,6 +69,7 @@ class AlteredImage {
      the current image tracking session. This, in turn, enables Vision to start looking for a new
      rectangular shape in the camera feed.
      - Tag: AnchorWasUpdated
+     - Parameter anchor: anchor to update to
      */
     func update(_ anchor: ARAnchor) {
         if let imageAnchor = anchor as? ARImageAnchor, self.anchor == anchor {
