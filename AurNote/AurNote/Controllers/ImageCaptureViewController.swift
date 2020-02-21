@@ -1,3 +1,8 @@
+/*
+Abstract:
+A view controller that allows users to upload photos to the app and receive image overlay codes for them.
+*/
+
 //
 //  ImageCaptureViewController.swift
 //  AurNote
@@ -37,6 +42,7 @@ class ImageCaptureViewController: UIViewController, UIImagePickerControllerDeleg
     @IBOutlet weak var savedImage: UIImageView!
     @IBOutlet weak var codeMessage: UILabel!
     
+    /// requests user's permission to access their camera
     func requestCameraPermission() {
         AVCaptureDevice.requestAccess(for: .video, completionHandler: {accessGranted in
             guard accessGranted == true else {return}
@@ -44,6 +50,7 @@ class ImageCaptureViewController: UIViewController, UIImagePickerControllerDeleg
         })
     }
     
+    /// opens the camera
     func presentCamera() {
         let photoPicker = UIImagePickerController()
         photoPicker.sourceType = .camera
@@ -52,6 +59,7 @@ class ImageCaptureViewController: UIViewController, UIImagePickerControllerDeleg
         self.present(photoPicker, animated: true, completion: nil)
     }
     
+    /// alerts the user that they have not given access to the camera
     func alertCameraAccessNeeded() {
         let settingsAppURL = URL(string: UIApplication.openSettingsURLString)!
         let alert = UIAlertController(title: "Need Camera Access", message: "Camera access needed to make full use of this app", preferredStyle: UIAlertController.Style.alert)
@@ -62,6 +70,12 @@ class ImageCaptureViewController: UIViewController, UIImagePickerControllerDeleg
         present(alert, animated: true)
     }
     
+    /// takes the image passed from either the camera or the Photo Library,
+    /// generates a code for it, and stores it according to that code
+    /// - Parameters:
+    ///  - picker: source that picked the image
+    ///  - info: photo data
+
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         var image: UIImage!
         if let img = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
@@ -93,6 +107,11 @@ class ImageCaptureViewController: UIViewController, UIImagePickerControllerDeleg
         case fileSystem
     }
     
+    /// stores image and associates it with a code
+    /// - Parameters:
+    ///  - image: image to be stored
+    ///  - key: code to associate with the image
+    ///  - storageType: type of storage (filesystem or other)
     private func store(image: UIImage, forKey key: String, withStorageType storageType: StorageType) {
         if let pngRepresentation = image.pngData() {
             switch storageType {
@@ -112,6 +131,10 @@ class ImageCaptureViewController: UIViewController, UIImagePickerControllerDeleg
         }
     }
     
+    /// retrieves image from the user's filesystem based on given code
+    /// - Parameters:
+    ///  - key: code associated with the desired image
+    ///  - storageType: type of storage (filesystem or other)
     private func retrieveImage(forKey key: String, inStorageType storageType: StorageType) -> UIImage? {
         switch storageType {
         case .fileSystem:
@@ -131,6 +154,8 @@ class ImageCaptureViewController: UIViewController, UIImagePickerControllerDeleg
         return nil
     }
     
+    /// helper function that gets the filepath for an image based on its code
+    /// - Parameter key: code associated with the desired image
     private func filePath(forKey key: String) -> URL? {
         let fileManager = FileManager.default
         guard let documentURL = fileManager.urls(for: .documentDirectory, in: FileManager.SearchPathDomainMask.userDomainMask).first else {
@@ -139,6 +164,8 @@ class ImageCaptureViewController: UIViewController, UIImagePickerControllerDeleg
         return documentURL.appendingPathComponent(key + ".png")
     }
     
+    /// - Parameter length: the length of the random string you want to generate
+    /// generates a random string of specified length to be used as a code
     func randomString(length: Int) -> String {
       let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
       return String((0..<length).map{ _ in letters.randomElement()! })
