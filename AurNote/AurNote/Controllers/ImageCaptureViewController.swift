@@ -89,15 +89,15 @@ class ImageCaptureViewController: UIViewController, UIImagePickerControllerDeleg
         print(code)
         store(image: image, forKey: code, withStorageType: StorageType.fileSystem)
         
-        // example of retrieving and displaying saved image
-//        DispatchQueue.global(qos: .background).async {
-//            if let savedImage = self.retrieveImage(forKey: code, inStorageType: StorageType.fileSystem) {
-//                DispatchQueue.main.async {
-//                    self.savedImage.image = savedImage
-//                }
-//            }
-//        }
-        codeMessage.text = "Image saved with code:\n" + code
+//         example of retrieving and displaying saved image
+        DispatchQueue.global(qos: .background).async {
+            if let savedImage = self.retrieveImage(forKey: code, inStorageType: StorageType.fileSystem) {
+                DispatchQueue.main.async {
+                    self.savedImage.image = savedImage
+                }
+            }
+        }
+        codeMessage.text = String(code)
         
         picker.dismiss(animated: true, completion: nil)
     }
