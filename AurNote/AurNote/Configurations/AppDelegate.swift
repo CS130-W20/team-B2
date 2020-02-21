@@ -45,7 +45,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
         // Perform any operations when the user disconnects from app here.
-        
+        NotificationCenter.default.post(
+        name: Notification.Name(rawValue: "ToggleAuthUINotification"),
+        object: nil,
+        userInfo: ["statusText": "User has disconnected."])
     }
 
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
@@ -55,6 +58,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
           } else {
             print("\(error.localizedDescription)")
           }
+            NotificationCenter.default.post(
+            name: Notification.Name(rawValue: "ToggleAuthUINotification"), object: nil, userInfo: nil)
           return
         }
         // Perform any operations on signed in user here.
@@ -65,8 +70,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         let familyName = user.profile.familyName
         let email = user.profile.email
         // Any operations follow here
+        
+        NotificationCenter.default.post(
+        name: Notification.Name(rawValue: "ToggleAuthUINotification"),
+        object: nil,
+        userInfo: ["statusText": "Signed in user:\(fullName!)"])
     }
-
-
 }
 

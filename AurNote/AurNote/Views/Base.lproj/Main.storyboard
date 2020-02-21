@@ -19,6 +19,30 @@
                                 <rect key="frame" x="87" y="379" width="240" height="138"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cc0-wf-7P6">
+                                <rect key="frame" x="74" y="212" width="121" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="SIGN OUT"/>
+                                <connections>
+                                    <action selector="didTapSignOut:" destination="PjQ-uV-vMP" eventType="touchUpInside" id="nLE-AW-waw"/>
+                                    <action selector="didTapSignOut:" destination="uRT-fj-v2I" eventType="touchUpInside" id="t14-lZ-MeP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDw-XB-2yd">
+                                <rect key="frame" x="217" y="226" width="96" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="DISCONNECT"/>
+                                <connections>
+                                    <action selector="didTapDisconnect:" destination="PjQ-uV-vMP" eventType="touchUpInside" id="04z-0q-70R"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cks-zt-jPG">
+                                <rect key="frame" x="104" y="551" width="223" height="259"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -30,12 +54,15 @@
                         <viewLayoutGuide key="safeArea" id="R0l-an-2JZ"/>
                     </view>
                     <connections>
+                        <outlet property="disconnectButton" destination="MDw-XB-2yd" id="wks-HW-zAa"/>
                         <outlet property="signInButton" destination="Kw9-q3-7Ox" id="jdk-c4-odg"/>
+                        <outlet property="signOutButton" destination="Cc0-wf-7P6" id="KAe-28-jSc"/>
+                        <outlet property="statusText" destination="cks-zt-jPG" id="LB9-sM-QHO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uRT-fj-v2I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1545" y="-234"/>
+            <point key="canvasLocation" x="1544.9275362318842" y="-234.375"/>
         </scene>
     </scenes>
 </document>
