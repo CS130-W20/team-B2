@@ -47,6 +47,16 @@
                     <view key="view" contentMode="scaleToFill" id="dXl-fY-NMh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXV-wf-luF">
+                                <rect key="frame" x="192" y="406" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="AR"/>
+                                <connections>
+                                    <segue destination="qus-EG-wYm" kind="show" id="Cnu-RP-Z0h"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="a8b-UM-MfH"/>
                     </view>
@@ -71,6 +81,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NfT-ql-fhw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2445" y="347"/>
+        </scene>
+        <!--ARAnnotationViewController-->
+        <scene sceneID="dPV-lB-YEq">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ARAnnotationViewController" storyboardName="ARAnnotation" referencedIdentifier="ARAnnotationViewController" id="qus-EG-wYm" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="WJJ-UO-abJ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wAs-rh-EgP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3201" y="-528"/>
         </scene>
     </scenes>
 </document>
