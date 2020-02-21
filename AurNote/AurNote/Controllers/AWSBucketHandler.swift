@@ -12,6 +12,8 @@ import AWSCore
 import AWSCognito
 import AWSS3
 
+/// AWSBucketHandler makes all requests to the S3 bucket using the configuration specified
+/// This class is instantiated and passed through many view controllers
 class AWSBucketHandler {
     var userId: String
     let myIdentityPoolId = "us-east-2:ef1afe1f-3760-4199-8d9b-e60ba9679866"
@@ -20,7 +22,8 @@ class AWSBucketHandler {
     var folderMap = [String: [String]]()
     
     
-    //initializes and configures credential provider
+    ///initializes and configures credential provider with userpool id and credentials
+    /// - Parameter id: a unique identifier for the logged in user, also the name of their folder in the S3 bucket
     init(id: String) {
         self.userId = id
         
@@ -31,7 +34,8 @@ class AWSBucketHandler {
 
     }
     
-    //gets the names of all files in the user's directory
+    ///gets the names of all files in the user's directory and stores it in a global variable
+    /// - Parameter completion: this is an event callback that lets the caller execute some function after the request completes
     func getAllFiles(completion: @escaping (AnyObject?)->()) {
         
         //register the config
@@ -56,6 +60,7 @@ class AWSBucketHandler {
     }
 
     //isolates directory names and returns to caller, ensures non-redundancy
+    /// Extracts the list of directories from the file names to populate the splash page of user folders
     public func getDirectories() -> Array<String> {
         var data = [String]()
         for str in self.allFiles {
