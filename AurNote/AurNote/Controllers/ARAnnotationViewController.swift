@@ -38,7 +38,7 @@ class ARAnnotationViewController: UIViewController {
         
         searchForNewImageToTrack()
 	}
-    
+    /// Searches for a new image to track when previous image is nothing is currently being tracked
     func searchForNewImageToTrack() {
         alteredImage?.delegate = nil
         alteredImage = nil
@@ -49,7 +49,10 @@ class ARAnnotationViewController: UIViewController {
         showMessage("Look for a rectangular image.", autoHide: false)
     }
     
-    /// - Tag: ImageTrackingSession
+    /// Runs image tracking session
+    /// - Parameters:
+    ///   - trackingImages: A set of AR Reference images to track
+    ///   - runOptions: Options for the AR session
     private func runImageTrackingSession(with trackingImages: Set<ARReferenceImage>,
                                          runOptions: ARSession.RunOptions = [.removeExistingAnchors]) {
         let configuration = ARImageTrackingConfiguration()
@@ -60,7 +63,10 @@ class ARAnnotationViewController: UIViewController {
     
     // The timer for message presentation.
     private var messageHideTimer: Timer?
-    
+    /// Shows message on screen when rectangle is not found
+    /// - Parameters:
+    ///   - message: The message to display
+    ///   - autoHide: by default message is hidden
     func showMessage(_ message: String, autoHide: Bool = true) {
         DispatchQueue.main.async {
             self.messageLabel.text = message
@@ -74,7 +80,8 @@ class ARAnnotationViewController: UIViewController {
             }
         }
     }
-    
+    /// Set message as hidden
+    /// - Parameter hide: boolean
     private func setMessageHidden(_ hide: Bool) {
         DispatchQueue.main.async {
             UIView.animate(withDuration: 0.25, delay: 0, options: [.beginFromCurrentState], animations: {
@@ -91,16 +98,30 @@ class ARAnnotationViewController: UIViewController {
 extension ARAnnotationViewController: ARSCNViewDelegate {
     
     /// - Tag: ImageWasRecognized
+    /// Adds image to node tree so that it can be rendered, sets message to be hidden as rectangle is found
+    /// - Parameters:
+    ///   - renderer: scene renderer
+    ///   - node: scene node to add anchor
+    ///   - anchor: ar anchor for the image that should be added
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         alteredImage?.add(anchor, node: node)
         setMessageHidden(true)
     }
 
     /// - Tag: DidUpdateAnchor
+    /// To update anchor when image is moved
+    /// - Parameters:
+    ///   - renderer: scene renderer
+    ///   - node: scene node to add anchor
+    ///   - anchor: ar anchor for the image that should be added
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
         alteredImage?.update(anchor)
     }
     
+    /// When errors in session
+    /// - Parameters:
+    ///   - session: AR session
+    ///   - error: The error
     func session(_ session: ARSession, didFailWithError error: Error) {
         guard let arError = error as? ARError else { return }
         
@@ -137,8 +158,9 @@ extension ARAnnotationViewController: ARSCNViewDelegate {
 }
 
 extension ARAnnotationViewController: RectangleDetectorDelegate {
-    /// Called when the app recognized a rectangular shape in the user's envirnment.
+    /// Called when the app recognized a rectangular shape in the user's environment.
     /// - Tag: CreateReferenceImage
+    /// - Parameter rectangleContent: the image corresponding to the content within rectangle detected
     func rectangleFound(rectangleContent: CIImage) {
         DispatchQueue.main.async {
             
@@ -174,6 +196,8 @@ extension ARAnnotationViewController: RectangleDetectorDelegate {
 
 /// Enables the app to create a new image from any rectangular shapes that may exist in the user's environment.
 extension ARAnnotationViewController: AlteredImageDelegate {
+    /// When tracking is lost, so that a new image is tracked
+    /// - Parameter alteredImage: the image that is no longer being tracked
     func alteredImageLostTracking(_ alteredImage: AlteredImage) {
         searchForNewImageToTrack()
     }
