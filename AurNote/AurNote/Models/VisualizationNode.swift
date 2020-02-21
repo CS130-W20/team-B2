@@ -29,6 +29,7 @@ class VisualizationNode: SCNNode {
     
     /// Assigns a new current image and fades from the previous image to it.
     /// - Tag: ImageFade
+    /// - Parameter alteredImage: image to display in the node
     func display(_ alteredImage: CGImage) {
         
         currentImage.geometry?.firstMaterial?.diffuse.contents = alteredImage
