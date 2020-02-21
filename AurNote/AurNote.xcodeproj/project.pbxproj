@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1007569923FE7773009D0822 /* AWSBucketHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1007569823FE7773009D0822 /* AWSBucketHandler.swift */; };
 		104C18C623FD476C00CDDB2D /* NoteManagementController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104C18C523FD476C00CDDB2D /* NoteManagementController.swift */; };
+		11F47E6823FFF2B9002677D8 /* ImageCapture.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F47E6723FFF2B9002677D8 /* ImageCapture.storyboard */; };
+		11F47E6A23FFF2C2002677D8 /* ImageCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F47E6923FFF2C2002677D8 /* ImageCaptureViewController.swift */; };
 		2AC429EF23F9F6CA00F122C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC429EE23F9F6CA00F122C5 /* AppDelegate.swift */; };
 		2AC429F123F9F6CA00F122C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC429F023F9F6CA00F122C5 /* SceneDelegate.swift */; };
 		2AC429F523F9F6CA00F122C5 /* LoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC429F423F9F6CA00F122C5 /* LoggedInViewController.swift */; };
@@ -31,6 +33,8 @@
 		0BEBB0BE26BE8FFE01C9157E /* Pods_AurNote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AurNote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1007569823FE7773009D0822 /* AWSBucketHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AWSBucketHandler.swift; path = AurNote/Controllers/AWSBucketHandler.swift; sourceTree = SOURCE_ROOT; };
 		104C18C523FD476C00CDDB2D /* NoteManagementController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteManagementController.swift; sourceTree = "<group>"; };
+		11F47E6723FFF2B9002677D8 /* ImageCapture.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImageCapture.storyboard; sourceTree = "<group>"; };
+		11F47E6923FFF2C2002677D8 /* ImageCaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCaptureViewController.swift; sourceTree = "<group>"; };
 		2AC429EB23F9F6CA00F122C5 /* AurNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AurNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AC429EE23F9F6CA00F122C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AC429F023F9F6CA00F122C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +101,7 @@
 		2AC42A0423F9F71C00F122C5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				11F47E6923FFF2C2002677D8 /* ImageCaptureViewController.swift */,
 				2EA47C8923FD1F0200DE5CBA /* ARAnnotationViewController.swift */,
 				2AC429F423F9F6CA00F122C5 /* LoggedInViewController.swift */,
 				104C18C523FD476C00CDDB2D /* NoteManagementController.swift */,
@@ -108,6 +113,7 @@
 		2AC42A0523F9F72F00F122C5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				11F47E6723FFF2B9002677D8 /* ImageCapture.storyboard */,
 				2EA47C9323FD209600DE5CBA /* ARAnnotation.storyboard */,
 				2AC42A0A23FA0B4100F122C5 /* NoteManagement.storyboard */,
 				2AC429FB23F9F6CA00F122C5 /* LaunchScreen.storyboard */,
@@ -222,6 +228,7 @@
 				2EA47C9423FD209600DE5CBA /* ARAnnotation.storyboard in Resources */,
 				2AC429FA23F9F6CA00F122C5 /* Assets.xcassets in Resources */,
 				2AC429F823F9F6CA00F122C5 /* Main.storyboard in Resources */,
+				11F47E6823FFF2B9002677D8 /* ImageCapture.storyboard in Resources */,
 				2AC42A0B23FA0B4100F122C5 /* NoteManagement.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,6 +305,7 @@
 				1007569923FE7773009D0822 /* AWSBucketHandler.swift in Sources */,
 				2EA47C9123FD1F5800DE5CBA /* AlteredImage.swift in Sources */,
 				2EA47C9023FD1F5800DE5CBA /* RectangleDetector.swift in Sources */,
+				11F47E6A23FFF2C2002677D8 /* ImageCaptureViewController.swift in Sources */,
 				2EA47C8F23FD1F5800DE5CBA /* VisualizationNode.swift in Sources */,
 				2EA47C8A23FD1F0200DE5CBA /* ARAnnotationViewController.swift in Sources */,
 				2EA47C9223FD1F5800DE5CBA /* Utilities.swift in Sources */,
@@ -448,14 +456,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HBHDXQ6W6U;
+				DEVELOPMENT_TEAM = LTW8N7Y82N;
 				INFOPLIST_FILE = AurNote/Configurations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = uclosangeles.cs130.AurNote;
+				PRODUCT_BUNDLE_IDENTIFIER = uclosangeles.cs130.AurNote2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
