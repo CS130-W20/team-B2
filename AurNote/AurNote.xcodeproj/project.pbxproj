@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1007569923FE7773009D0822 /* AWSBucketHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1007569823FE7773009D0822 /* AWSBucketHandler.swift */; };
 		104C18C623FD476C00CDDB2D /* NoteManagementController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104C18C523FD476C00CDDB2D /* NoteManagementController.swift */; };
+		10D17DFB240524E200786771 /* FileDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D17DFA240524E200786771 /* FileDisplayViewController.swift */; };
 		11F47E6823FFF2B9002677D8 /* ImageCapture.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F47E6723FFF2B9002677D8 /* ImageCapture.storyboard */; };
 		11F47E6A23FFF2C2002677D8 /* ImageCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F47E6923FFF2C2002677D8 /* ImageCaptureViewController.swift */; };
 		2AC429EF23F9F6CA00F122C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC429EE23F9F6CA00F122C5 /* AppDelegate.swift */; };
@@ -33,6 +34,7 @@
 		0BEBB0BE26BE8FFE01C9157E /* Pods_AurNote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AurNote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1007569823FE7773009D0822 /* AWSBucketHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AWSBucketHandler.swift; path = AurNote/Controllers/AWSBucketHandler.swift; sourceTree = SOURCE_ROOT; };
 		104C18C523FD476C00CDDB2D /* NoteManagementController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteManagementController.swift; sourceTree = "<group>"; };
+		10D17DFA240524E200786771 /* FileDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDisplayViewController.swift; sourceTree = "<group>"; };
 		11F47E6723FFF2B9002677D8 /* ImageCapture.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImageCapture.storyboard; sourceTree = "<group>"; };
 		11F47E6923FFF2C2002677D8 /* ImageCaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCaptureViewController.swift; sourceTree = "<group>"; };
 		2AC429EB23F9F6CA00F122C5 /* AurNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AurNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +108,7 @@
 				2AC429F423F9F6CA00F122C5 /* LoggedInViewController.swift */,
 				104C18C523FD476C00CDDB2D /* NoteManagementController.swift */,
 				9FC6CCD023FFA8F900F811B9 /* LoginController.swift */,
+				10D17DFA240524E200786771 /* FileDisplayViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				2EA47C8A23FD1F0200DE5CBA /* ARAnnotationViewController.swift in Sources */,
 				2EA47C9223FD1F5800DE5CBA /* Utilities.swift in Sources */,
 				2AC429EF23F9F6CA00F122C5 /* AppDelegate.swift in Sources */,
+				10D17DFB240524E200786771 /* FileDisplayViewController.swift in Sources */,
 				2AC429F123F9F6CA00F122C5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

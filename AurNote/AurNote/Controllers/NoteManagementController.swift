@@ -7,9 +7,6 @@
 //
 
 import UIKit
-import AWSCore
-import AWSCognito
-import AWSS3
 
 /// Represents each of the user's folders contains only a label for the folder name
 class DirectoryCollectionCell: UICollectionViewCell {
@@ -35,10 +32,10 @@ class NoteManagementController: UIViewController, UICollectionViewDelegate, UICo
     override func viewDidLoad() {
         super.viewDidLoad()
         data = []
-        let awsBucketHandler = AWSBucketHandler(id: userId)
-        awsBucketHandler.getAllFiles(completion: {result in
+        awsBucketHandler = AWSBucketHandler(id: userId)
+        awsBucketHandler!.getAllFiles(completion: {result in
             if(result != nil) {
-                self.data = awsBucketHandler.getDirectories()
+                self.data = self.awsBucketHandler!.getDirectories()
                 self.data.append("Add Folder")
             } else {
                 print("Error in getting files")
@@ -80,5 +77,17 @@ class NoteManagementController: UIViewController, UICollectionViewDelegate, UICo
         cell.layer.cornerRadius = 10;
         return cell
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is FileDisplayViewController {
+            let vc = segue.destination as? FileDisplayViewController
+            vc?.awsBucketHandler = self.awsBucketHandler
+            vc?.userId = self.userId
+            vc?.folderName = self.data[(directoryCollection.indexPathsForSelectedItems?.last!.row)!]
+        }
+    }
+    
+    
     
 }
