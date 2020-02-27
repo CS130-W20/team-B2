@@ -31,14 +31,12 @@ class FileDisplayViewController: UIViewController, UICollectionViewDelegate, UIC
     var userId = ""
     var awsBucketHandler: AWSBucketHandler? = nil
     var folderName = ""
-    var fileLabels = [String]()
-    var fileImages = [UIImage]()
+    var fileImages = [(String,UIImage)]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         folderLabel.text = folderName
-        fileLabels = awsBucketHandler!.returnfileLabelsInDirectory(folderName: folderName)
         awsBucketHandler?.getFilesInDirectory(folderName: folderName, completion: {result in
             if(result != nil) {
                 self.fileImages = (self.awsBucketHandler?.returnFilesInDirectory(folderName: self.folderName))!
@@ -50,7 +48,6 @@ class FileDisplayViewController: UIViewController, UICollectionViewDelegate, UIC
         view.addSubview(fileCollection)
         fileCollection.delegate = self
         fileCollection.dataSource = self
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -76,7 +73,7 @@ class FileDisplayViewController: UIViewController, UICollectionViewDelegate, UIC
         let layout = fileCollection.collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: width, height: width)
         let cell = fileCollection.dequeueReusableCell(withReuseIdentifier: "fileCollectionCell", for: indexPath) as! FileCollectionCell
-        cell.displayContent(name: fileLabels[indexPath.row], img: fileImages[indexPath.row])
+        cell.displayContent(name: fileImages[indexPath.row].0, img: fileImages[indexPath.row].1)
         cell.layer.masksToBounds = true
         cell.layer.cornerRadius = 10
         return cell

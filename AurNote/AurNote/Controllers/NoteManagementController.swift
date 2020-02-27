@@ -19,11 +19,23 @@ class DirectoryCollectionCell: UICollectionViewCell {
     }
 }
 
+class AddFolderCell: UICollectionViewCell {
+    @IBOutlet weak var addFolderImage: UIImageView!
+    @IBOutlet weak var addFolderLabel: UILabel!
+    
+    func displayContent() {
+        addFolderImage.image = UIImage(named: "add-folder")
+        addFolderLabel.text = "Add Folder"
+    }
+    
+}
+
 /// The view controller for the splash page which includes collection view
 class NoteManagementController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     var data = [String]()
     let userId = "testUser"         //change this to dynamically obtain signed in userId
     var awsBucketHandler: AWSBucketHandler? = nil
+    var newFolder:UITextField = UITextField()
     
 
     @IBOutlet weak var directoryCollection: UICollectionView!
@@ -48,6 +60,7 @@ class NoteManagementController: UIViewController, UICollectionViewDelegate, UICo
     ///sets the datasource after viewDidLoad runs
     /// - Parameter animated: if we want to animate the display
     override func viewDidAppear(_ animated: Bool) {
+        
         view.addSubview(directoryCollection)
         directoryCollection.delegate = self
         directoryCollection.dataSource = self
@@ -71,11 +84,59 @@ class NoteManagementController: UIViewController, UICollectionViewDelegate, UICo
         let width = (view.frame.size.width - 10)/3
         let layout = directoryCollection.collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: width, height: width)
-        let cell = directoryCollection.dequeueReusableCell(withReuseIdentifier: "directoryCollectionCell", for: indexPath) as! DirectoryCollectionCell
-        cell.displayContent(name: data[indexPath.row])
-        cell.layer.masksToBounds = true;
-        cell.layer.cornerRadius = 10;
-        return cell
+        let folderName = data[indexPath.row]
+        if(folderName == "Add Folder") {
+            var cell = directoryCollection.dequeueReusableCell(withReuseIdentifier: "addFolderCell", for: indexPath) as! AddFolderCell
+            cell.displayContent()
+            cell.layer.masksToBounds = true;
+            cell.layer.cornerRadius = 10;
+            return cell
+        } else {
+            var cell = directoryCollection.dequeueReusableCell(withReuseIdentifier: "directoryCollectionCell", for: indexPath) as! DirectoryCollectionCell
+            cell.displayContent(name: folderName)
+            cell.layer.masksToBounds = true;
+            cell.layer.cornerRadius = 10;
+            return cell
+        }
+        
+    }
+    
+    func configurationTextField(textField: UITextField!)
+    {
+        print("configurat hire the TextField")
+        if let tField = textField {
+
+            self.newFolder = textField!        //Save reference to the UITextField
+            self.newFolder.placeholder = "Folder Name"
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if(data[indexPath.row] == "Add Folder") {
+            var alert = UIAlertController(title: "Create folder", message: "Type in the name of your new folder.", preferredStyle: UIAlertController.Style.alert)
+
+            alert.addTextField(configurationHandler: configurationTextField)
+            
+            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: { (UIAlertAction) in
+                print("User clicked Cancel button")
+            }))
+
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler:{ (UIAlertAction)in
+                print("User click Ok button")
+                self.awsBucketHandler?.putDirectory(folderName: self.newFolder.text!, completion: {result in
+                    if(result != nil) {
+                        self.data = self.awsBucketHandler!.getDirectories()
+                        self.data.append("Add Folder")
+                    } else {
+                        print("Error putting directory")
+                    }
+                })
+            }))
+
+            self.present(alert, animated: true, completion: {
+                print("completion block")
+            })
+        }
     }
     
     

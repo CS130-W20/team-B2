@@ -21,7 +21,7 @@ class AWSBucketHandler {
     var allFiles = [String]()
     var folderMap = [String: [String]]()
     var s3: AWSS3
-    var folderToObjectMap = [String: [UIImage]]()
+    var folderToObjectMap = [String: [(String,UIImage)]]()
     let bucketName = "aurnotecs"
     
     
@@ -86,7 +86,7 @@ class AWSBucketHandler {
         return data
     }
     
-    func getObject(path: String, folderName: String, completion: @escaping (AnyObject?)->()) {
+    func getObject(path: String, folderName: String, fileName: String, completion: @escaping (AnyObject?)->()) {
         
         // Hard-coded names for the tutorial bucket and the file uploaded at the beginning
         let dwnPath = path.replacingOccurrences(of: "/", with: "-")
@@ -115,9 +115,9 @@ class AWSBucketHandler {
                 let imgData = NSData(contentsOf: downloadFilePath!)
                 let image = UIImage(data: imgData! as Data)
                 if(self.folderToObjectMap[folderName] != nil) {
-                    self.folderToObjectMap[folderName]?.append(image!)
+                    self.folderToObjectMap[folderName]?.append((fileName,image!))
                 } else {
-                    self.folderToObjectMap[folderName] = [image!]
+                    self.folderToObjectMap[folderName] = [(fileName,image!)]
                 }
             }
             completion(task)
@@ -134,7 +134,7 @@ class AWSBucketHandler {
         }
         for file in files! {
             let path = userId+"/"+folderName+"/"+file
-            getObject(path: path, folderName: folderName, completion: {result in
+            getObject(path: path, folderName: folderName, fileName: file, completion: {result in
                 if(result != nil) {
                     cnt = cnt! - 1
                     if(cnt == 0) {
@@ -149,13 +149,37 @@ class AWSBucketHandler {
         }
     }
     
-    public func returnFilesInDirectory(folderName: String) -> [UIImage]{
+    public func returnFilesInDirectory(folderName: String) -> [(String,UIImage)]{
         return folderToObjectMap[folderName]!
     }
     
-    public func returnfileLabelsInDirectory(folderName: String) -> [String] {
-        return folderMap[folderName]!
-    }
+
     
+    public func putDirectory(folderName: String, completion: @escaping (AnyObject?)->()) {
+        
+        // Set the logging to verbose so we can see in the debug console what is happening
+        AWSLogger.default().logLevel = .verbose
+
+        // Create a new put request to S3, and set its properties
+        let putRequest = AWSS3PutObjectRequest()
+        putRequest?.bucket = bucketName
+        putRequest?.key = userId + "/" + folderName + "/"
+        
+        // Start asynchronous upload
+        s3.putObject(putRequest!).continueWith { (task: AWSTask!) -> AnyObject? in
+            if task.error != nil {
+                print("Error putting")
+                print(task.error.debugDescription)
+            }
+            else {
+                print("Put complete")
+                // upload is complete, set the corresponding member vars
+                self.allFiles.append(self.userId + "/" + folderName + "/")
+                self.folderMap[folderName] = []
+            }
+            completion(task)
+            return nil
+        }
+    }
           
 }
