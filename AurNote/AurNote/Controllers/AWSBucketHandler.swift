@@ -68,7 +68,7 @@ class AWSBucketHandler {
     public func getDirectories() -> Array<String> {
         var data = [String]()
         for str in self.allFiles {
-            var dir = (String(str.dropFirst(self.userId.count + 1)))
+            let dir = (String(str.dropFirst(self.userId.count + 1)))
             let slashInd = dir.firstIndex(of: "/")
             if((slashInd) != nil) {
                 let dirName = String(dir.prefix(upTo: slashInd!))
@@ -91,10 +91,6 @@ class AWSBucketHandler {
         // Hard-coded names for the tutorial bucket and the file uploaded at the beginning
         let dwnPath = path.replacingOccurrences(of: "/", with: "-")
         let downloadFilePath = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(dwnPath)
-        
-        
-        // Set the logging to verbose so we can see in the debug console what is happening
-        AWSLogger.default().logLevel = .verbose
 
         // Create a new download request to S3, and set its properties
         let downloadRequest = AWSS3GetObjectRequest()
@@ -157,9 +153,6 @@ class AWSBucketHandler {
     
     public func putDirectory(folderName: String, completion: @escaping (AnyObject?)->()) {
         
-        // Set the logging to verbose so we can see in the debug console what is happening
-        AWSLogger.default().logLevel = .verbose
-
         // Create a new put request to S3, and set its properties
         let putRequest = AWSS3PutObjectRequest()
         putRequest?.bucket = bucketName
@@ -180,6 +173,39 @@ class AWSBucketHandler {
             completion(task)
             return nil
         }
+    }
+    
+    public func putFile(folderName: String, fileName: String, fileURL: String, completion: @escaping (AnyObject?)->()) {
+        
+        let uploadingFileURL = URL(fileURLWithPath: fileURL)
+        let img = UIImage(contentsOfFile: fileURL)
+
+        // Create a new put request to S3, and set its properties
+        let putRequest = AWSS3PutObjectRequest()
+        putRequest?.bucket = bucketName
+        putRequest?.key = userId + "/" + folderName + "/" + fileName
+        putRequest?.body = uploadingFileURL
+        
+        // Start asynchronous upload
+        s3.putObject(putRequest!).continueWith { (task: AWSTask!) -> AnyObject? in
+            if task.error != nil {
+                print("Error putting file")
+                print(task.error.debugDescription)
+            }
+            else {
+                print("Put file complete")
+                // upload is complete, set the corresponding member vars
+                self.allFiles.append(self.userId + "/" + folderName + "/" + fileName)
+                self.folderMap[folderName]?.append(fileName)
+                self.folderToObjectMap[folderName]?.append((fileName,img!))
+            }
+            completion(task)
+            return nil
+        }
+    }
+    
+    public func shareFile(folderName: String, email: String, completion: @escaping (AnyObject?)->()) {
+        completion(true as AnyObject)
     }
           
 }

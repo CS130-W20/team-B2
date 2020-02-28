@@ -89,13 +89,13 @@ class NoteManagementController: UIViewController, UICollectionViewDelegate, UICo
         layout.itemSize = CGSize(width: width, height: width)
         let folderName = data[indexPath.row]
         if(folderName == "Add Folder") {
-            var cell = directoryCollection.dequeueReusableCell(withReuseIdentifier: "addFolderCell", for: indexPath) as! AddFolderCell
+            let cell = directoryCollection.dequeueReusableCell(withReuseIdentifier: "addFolderCell", for: indexPath) as! AddFolderCell
             cell.displayContent()
             cell.layer.masksToBounds = true;
             cell.layer.cornerRadius = 10;
             return cell
         } else {
-            var cell = directoryCollection.dequeueReusableCell(withReuseIdentifier: "directoryCollectionCell", for: indexPath) as! DirectoryCollectionCell
+            let cell = directoryCollection.dequeueReusableCell(withReuseIdentifier: "directoryCollectionCell", for: indexPath) as! DirectoryCollectionCell
             cell.displayContent(name: folderName)
             cell.layer.masksToBounds = true;
             cell.layer.cornerRadius = 10;
@@ -107,7 +107,7 @@ class NoteManagementController: UIViewController, UICollectionViewDelegate, UICo
     func configurationTextField(textField: UITextField!)
     {
         print("configurat hire the TextField")
-        if let tField = textField {
+        if textField != nil {
 
             self.newFolder = textField!        //Save reference to the UITextField
             self.newFolder.placeholder = "Folder Name"
@@ -116,7 +116,7 @@ class NoteManagementController: UIViewController, UICollectionViewDelegate, UICo
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if(data[indexPath.row] == "Add Folder") {
-            var alert = UIAlertController(title: "Create folder", message: "Type in the name of your new folder.", preferredStyle: UIAlertController.Style.alert)
+            let alert = UIAlertController(title: "Create folder", message: "Type in the name of your new folder.", preferredStyle: UIAlertController.Style.alert)
 
             alert.addTextField(configurationHandler: configurationTextField)
             

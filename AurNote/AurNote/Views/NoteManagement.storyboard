@@ -197,10 +197,17 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="5z6-hD-8mP"/>
                     </view>
-                    <navigationItem key="navigationItem" id="evk-oY-7cx"/>
+                    <navigationItem key="navigationItem" id="evk-oY-7cx">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="plus" catalog="system" landscapeImage="plus" largeContentSizeImage="plus" id="kjr-dK-BtH"/>
+                            <barButtonItem title="Item" image="square.and.arrow.up" catalog="system" landscapeImage="square.and.arrow.up" largeContentSizeImage="square.and.arrow.up" id="IcK-PO-Jcw"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <connections>
+                        <outlet property="addFileBtn" destination="kjr-dK-BtH" id="lfL-D1-2Bl"/>
                         <outlet property="fileCollection" destination="Xd9-lp-5G6" id="uYR-sa-WaN"/>
                         <outlet property="folderLabel" destination="wMK-ba-kxp" id="7JX-vk-nR1"/>
+                        <outlet property="shareBtn" destination="IcK-PO-Jcw" id="HZn-q8-l2t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WS8-Ae-JhJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -226,4 +233,8 @@
             <point key="canvasLocation" x="744.92753623188412" y="-14.0625"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="64" height="56"/>
+        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
+    </resources>
 </document>

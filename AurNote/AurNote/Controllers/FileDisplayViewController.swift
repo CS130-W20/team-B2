@@ -27,11 +27,14 @@ class FileDisplayViewController: UIViewController, UICollectionViewDelegate, UIC
     @IBOutlet weak var folderLabel: UILabel!
     @IBOutlet weak var fileCollection: UICollectionView!
     
+    @IBOutlet weak var addFileBtn: UIBarButtonItem!
+    @IBOutlet weak var shareBtn: UIBarButtonItem!
     
     var userId = ""
     var awsBucketHandler: AWSBucketHandler? = nil
     var folderName = ""
     var fileImages = [(String,UIImage)]()
+    var email:UITextField = UITextField()
     
     
     override func viewDidLoad() {
@@ -51,6 +54,9 @@ class FileDisplayViewController: UIViewController, UICollectionViewDelegate, UIC
         view.addSubview(fileCollection)
         fileCollection.delegate = self
         fileCollection.dataSource = self
+
+        shareBtn.target = self
+        shareBtn.action = #selector(shareAction)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -82,5 +88,40 @@ class FileDisplayViewController: UIViewController, UICollectionViewDelegate, UIC
         return cell
     }
     
+    func configurationTextField(textField: UITextField!)
+    {
+        print("configure the TextField")
+        if textField != nil {
 
+            self.email = textField!        //Save reference to the UITextField
+            self.email.placeholder = "Email Address"
+        }
+    }
+    
+    @objc func shareAction (sender:UIButton) {
+        print("SHARE")
+        let alert = UIAlertController(title: "Invite A Collaborator", message: "The collaborator will recieve an email notification and see these files in thier Shared with Me folder.", preferredStyle: UIAlertController.Style.alert)
+
+        alert.addTextField(configurationHandler: configurationTextField)
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: { (UIAlertAction) in
+            print("User clicked Cancel button")
+        }))
+
+        alert.addAction(UIAlertAction(title: "Invite", style: UIAlertAction.Style.default, handler:{ (UIAlertAction)in
+            print("User click Invite button")
+            let emailText = self.email.text
+            self.awsBucketHandler?.shareFile(folderName: self.folderName, email: emailText! ,completion: {result in
+                if(result != nil) {
+                    print("File was shared")
+                } else {
+                    print("Error sharing file")
+                }
+            })
+        }))
+
+        self.present(alert, animated: true, completion: {
+            print("completion block")
+        })
+    }
 }
