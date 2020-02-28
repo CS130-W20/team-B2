@@ -49,6 +49,9 @@ class NoteManagementController: UIViewController, UICollectionViewDelegate, UICo
             if(result != nil) {
                 self.data = self.awsBucketHandler!.getDirectories()
                 self.data.append("Add Folder")
+                DispatchQueue.main.async {
+                    self.directoryCollection.reloadData()
+                }
             } else {
                 print("Error in getting files")
             }
@@ -123,10 +126,13 @@ class NoteManagementController: UIViewController, UICollectionViewDelegate, UICo
 
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler:{ (UIAlertAction)in
                 print("User click Ok button")
-                self.awsBucketHandler?.putDirectory(folderName: self.newFolder.text!, completion: {result in
+                let newFolderName = self.newFolder.text
+                self.awsBucketHandler?.putDirectory(folderName: newFolderName!, completion: {result in
                     if(result != nil) {
-                        self.data = self.awsBucketHandler!.getDirectories()
-                        self.data.append("Add Folder")
+                        self.data.insert(newFolderName!, at: self.data.count-1)
+                        DispatchQueue.main.async {
+                             self.directoryCollection.reloadData()
+                         }
                     } else {
                         print("Error putting directory")
                     }
