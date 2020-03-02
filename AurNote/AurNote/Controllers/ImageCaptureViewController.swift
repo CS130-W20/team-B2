@@ -85,8 +85,14 @@ class ImageCaptureViewController: UIViewController, UIImagePickerControllerDeleg
             image = img
         }
         
-        let code = imgStore.randomString(length: 6)
-        print(code)
+        var code = String()
+        while (true) {
+            code = imgStore.randomString(length: 6)
+            if (imgStore.retrieveImage(forKey: code, inStorageType: ImageStorer.StorageType.fileSystem) == nil) {
+                break
+            }
+        }
+//        print(code)
         imgStore.store(image: image, forKey: code, withStorageType: ImageStorer.StorageType.fileSystem)
         
 //         example of retrieving and displaying saved image
