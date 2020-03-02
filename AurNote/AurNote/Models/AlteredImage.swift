@@ -6,6 +6,7 @@ An object that augments a rectangular shape that exists in the physical environm
 import Foundation
 import ARKit
 import CoreML
+import Vision
 
 /// - Tag: AlteredImage
 class AlteredImage {
@@ -38,7 +39,7 @@ class AlteredImage {
         //  looking for a different image to track if this one isn't trackable.
         resetImageTrackingTimeout()
         
-        createAlteredImage()
+        createAlteredImage(imageContent: image)
     }
     
     deinit {
@@ -94,14 +95,40 @@ class AlteredImage {
     
     /// Alters the image's appearance by applying the "StyleTransfer" Core ML model to it.
     /// - Tag: CreateAlteredImage
-    func createAlteredImage() {
+    func createAlteredImage(imageContent: CIImage) {
         DispatchQueue.global().async { [weak self] in
             guard let self = self else { return }
+            var imageName = ""
+            let request = VNRecognizeTextRequest { request, error in
+                guard let observations = request.results as? [VNRecognizedTextObservation]
+                    else {
+                    fatalError("Received invalid observations")
+                }
+            
+                for observation in observations {
+                    guard let bestCandidate = observation.topCandidates(1).first else {
+                        print("No candidate")
+                        continue
+                    }
+                    //  print("Found this candidate: \(bestCandidate.string)")
+                    imageName += bestCandidate.string
+                }
+                print("name : \(imageName)")
+            }
+            request.usesLanguageCorrection = false
+            request.customWords = ["hello", "77", "TODO"]
+            let context = CIContext(options: nil)
+            let inputimage = context.createCGImage(imageContent, from: imageContent.extent)
+            let handler = VNImageRequestHandler(cgImage: inputimage!,orientation: CGImagePropertyOrientation.up, options: [:]) //might need to change orientation
+            do {
+                try handler.perform([request])
+            } catch {
+                print("Error: Text detection failed - vision request failed.")
+            }
             let image = UIImage(named: "graph")?.cgImage
             self.visualizationNode.display(image!)
         }
     }
-    
 }
 
 /**
