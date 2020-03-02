@@ -27,7 +27,6 @@ class LoginViewController: UIViewController {
             selector: #selector(LoginViewController.receiveToggleAuthUINotification(_:)),
             name: NSNotification.Name(rawValue: "ToggleAuthUINotification"),
             object: nil)
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

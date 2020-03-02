@@ -12,10 +12,14 @@ import UIKit
 class DirectoryCollectionCell: UICollectionViewCell {
 
     @IBOutlet weak var directoryName: UILabel!
+    @IBOutlet weak var directoryName2: UILabel!
     /// sets the  cell's name to the name of the folder
     /// - Parameter name: String name of the folder
     func displayContent(name: String) {
-        directoryName.text = name;
+        var localCopy = name.split(separator: " ")
+        let courseNumber = localCopy.popLast()
+        directoryName2.text = String(courseNumber!)
+        directoryName.text = localCopy.joined(separator: " ");
     }
 }
 
@@ -43,6 +47,7 @@ class NoteManagementController: UIViewController, UICollectionViewDelegate, UICo
     ///overrides function so the bucket handler is initialized and the names of the directories are recieved
     override func viewDidLoad() {
         super.viewDidLoad()
+                
         data = []
         awsBucketHandler = AWSBucketHandler(id: userId)
         awsBucketHandler!.getAllFiles(completion: {result in
@@ -59,6 +64,7 @@ class NoteManagementController: UIViewController, UICollectionViewDelegate, UICo
     
         
     }
+    
     
     ///sets the datasource after viewDidLoad runs
     /// - Parameter animated: if we want to animate the display
