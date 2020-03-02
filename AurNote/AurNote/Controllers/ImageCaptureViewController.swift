@@ -16,7 +16,7 @@ import AVKit
 
 class ImageCaptureViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     // TODO: create dictionary to store set of codes ?
-
+    var imgStore = ImageStorer()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -85,13 +85,13 @@ class ImageCaptureViewController: UIViewController, UIImagePickerControllerDeleg
             image = img
         }
         
-        let code = randomString(length: 6)
+        let code = imgStore.randomString(length: 6)
         print(code)
-        store(image: image, forKey: code, withStorageType: StorageType.fileSystem)
+        imgStore.store(image: image, forKey: code, withStorageType: ImageStorer.StorageType.fileSystem)
         
 //         example of retrieving and displaying saved image
         DispatchQueue.global(qos: .background).async {
-            if let savedImage = self.retrieveImage(forKey: code, inStorageType: StorageType.fileSystem) {
+            if let savedImage = self.imgStore.retrieveImage(forKey: code, inStorageType: ImageStorer.StorageType.fileSystem) {
                 DispatchQueue.main.async {
                     self.savedImage.image = savedImage
                 }
@@ -101,6 +101,10 @@ class ImageCaptureViewController: UIViewController, UIImagePickerControllerDeleg
         
         picker.dismiss(animated: true, completion: nil)
     }
+
+}
+
+class ImageStorer {
     
     enum StorageType {
         case userDefaults
@@ -112,7 +116,7 @@ class ImageCaptureViewController: UIViewController, UIImagePickerControllerDeleg
     ///  - image: image to be stored
     ///  - key: code to associate with the image
     ///  - storageType: type of storage (filesystem or other)
-    private func store(image: UIImage, forKey key: String, withStorageType storageType: StorageType) {
+    func store(image: UIImage, forKey key: String, withStorageType storageType: StorageType) {
         if let pngRepresentation = image.pngData() {
             switch storageType {
             case .fileSystem:
@@ -135,7 +139,7 @@ class ImageCaptureViewController: UIViewController, UIImagePickerControllerDeleg
     /// - Parameters:
     ///  - key: code associated with the desired image
     ///  - storageType: type of storage (filesystem or other)
-    private func retrieveImage(forKey key: String, inStorageType storageType: StorageType) -> UIImage? {
+    func retrieveImage(forKey key: String, inStorageType storageType: StorageType) -> UIImage? {
         switch storageType {
         case .fileSystem:
             // Retrieve image from disk
@@ -156,7 +160,7 @@ class ImageCaptureViewController: UIViewController, UIImagePickerControllerDeleg
     
     /// helper function that gets the filepath for an image based on its code
     /// - Parameter key: code associated with the desired image
-    private func filePath(forKey key: String) -> URL? {
+    func filePath(forKey key: String) -> URL? {
         let fileManager = FileManager.default
         guard let documentURL = fileManager.urls(for: .documentDirectory, in: FileManager.SearchPathDomainMask.userDomainMask).first else {
             return nil
@@ -167,7 +171,7 @@ class ImageCaptureViewController: UIViewController, UIImagePickerControllerDeleg
     /// - Parameter length: the length of the random string you want to generate
     /// generates a random string of specified length to be used as a code
     func randomString(length: Int) -> String {
-      let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+      let letters = "0123456789"
       return String((0..<length).map{ _ in letters.randomElement()! })
     }
 }

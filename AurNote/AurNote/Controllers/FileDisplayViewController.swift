@@ -22,12 +22,11 @@ class FileCollectionCell: UICollectionViewCell {
     
 }
 
-class FileDisplayViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class FileDisplayViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var folderLabel: UILabel!
     @IBOutlet weak var fileCollection: UICollectionView!
     
-    @IBOutlet weak var addFileBtn: UIBarButtonItem!
     @IBOutlet weak var shareBtn: UIBarButtonItem!
     
     var userId = ""
@@ -35,7 +34,40 @@ class FileDisplayViewController: UIViewController, UICollectionViewDelegate, UIC
     var folderName = ""
     var fileImages = [(String,UIImage)]()
     var email:UITextField = UITextField()
+    var imgStore = ImageStorer()
     
+    @IBAction func pickFile(_ sender: Any) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.allowsEditing = false
+        self.present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        var image: UIImage!
+        if let img = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            image = img
+        }
+        else if let img = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            image = img
+        }
+        
+        let code = imgStore.randomString(length: 10)
+        imgStore.store(image: image, forKey: code, withStorageType: ImageStorer.StorageType.fileSystem)
+        let fileName = imgStore.randomString(length: 9)
+        let filePath = imgStore.filePath(forKey: code)
+        print(code, fileName, folderName)
+        awsBucketHandler?.putFile(folderName: folderName, fileName: fileName, fileURL: filePath!, completion: {result in
+            if(result != nil) {
+                print("file added")
+                
+            } else {
+                print("Error in file display controller")
+            }
+        })
+        picker.dismiss(animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

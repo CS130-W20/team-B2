@@ -157,6 +157,7 @@ class AWSBucketHandler {
         let putRequest = AWSS3PutObjectRequest()
         putRequest?.bucket = bucketName
         putRequest?.key = userId + "/" + folderName + "/"
+//        putRequest?.acl = .publicReadWrite
         
         // Start asynchronous upload
         s3.putObject(putRequest!).continueWith { (task: AWSTask!) -> AnyObject? in
@@ -175,16 +176,19 @@ class AWSBucketHandler {
         }
     }
     
-    public func putFile(folderName: String, fileName: String, fileURL: String, completion: @escaping (AnyObject?)->()) {
-        
-        let uploadingFileURL = URL(fileURLWithPath: fileURL)
-        let img = UIImage(contentsOfFile: fileURL)
+    public func putFile(folderName: String, fileName: String, fileURL: URL, completion: @escaping (AnyObject?)->()) {
+        print("put the file")
+//        let uploadingFileURL = URL(fileURLWithPath: fileURL)
+        let fileData = FileManager.default.contents(atPath: fileURL.path)
+        let img = UIImage(data: fileData!)
 
         // Create a new put request to S3, and set its properties
         let putRequest = AWSS3PutObjectRequest()
         putRequest?.bucket = bucketName
         putRequest?.key = userId + "/" + folderName + "/" + fileName
-        putRequest?.body = uploadingFileURL
+        putRequest?.body = fileURL
+        putRequest?.contentLength = NSData(data: fileData!).count as NSNumber;
+//        putRequest?.acl = .publicRead
         
         // Start asynchronous upload
         s3.putObject(putRequest!).continueWith { (task: AWSTask!) -> AnyObject? in
