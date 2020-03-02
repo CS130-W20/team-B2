@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1007569923FE7773009D0822 /* AWSBucketHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1007569823FE7773009D0822 /* AWSBucketHandler.swift */; };
 		104C18C623FD476C00CDDB2D /* NoteManagementController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104C18C523FD476C00CDDB2D /* NoteManagementController.swift */; };
+		10D17DFB240524E200786771 /* FileDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D17DFA240524E200786771 /* FileDisplayViewController.swift */; };
 		11F47E6823FFF2B9002677D8 /* ImageCapture.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F47E6723FFF2B9002677D8 /* ImageCapture.storyboard */; };
 		11F47E6A23FFF2C2002677D8 /* ImageCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F47E6923FFF2C2002677D8 /* ImageCaptureViewController.swift */; };
 		2AC429EF23F9F6CA00F122C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC429EE23F9F6CA00F122C5 /* AppDelegate.swift */; };
@@ -24,15 +25,16 @@
 		2EA47C9123FD1F5800DE5CBA /* AlteredImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA47C8D23FD1F5800DE5CBA /* AlteredImage.swift */; };
 		2EA47C9223FD1F5800DE5CBA /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA47C8E23FD1F5800DE5CBA /* Utilities.swift */; };
 		2EA47C9423FD209600DE5CBA /* ARAnnotation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EA47C9323FD209600DE5CBA /* ARAnnotation.storyboard */; };
-		79F1DA2704A3E3F8E736CB23 /* Pods_AurNote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BEBB0BE26BE8FFE01C9157E /* Pods_AurNote.framework */; };
 		9F49164B23FFA1FC00C0C6EF /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 9F49164A23FFA1FC00C0C6EF /* Podfile */; };
 		9FC6CCD123FFA8F900F811B9 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC6CCD023FFA8F900F811B9 /* LoginController.swift */; };
+		ECA8A8C665854782FCEA3653 /* libPods-AurNote.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 036AE6A316BC869E7A4104CC /* libPods-AurNote.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0BEBB0BE26BE8FFE01C9157E /* Pods_AurNote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AurNote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		036AE6A316BC869E7A4104CC /* libPods-AurNote.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AurNote.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1007569823FE7773009D0822 /* AWSBucketHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AWSBucketHandler.swift; path = AurNote/Controllers/AWSBucketHandler.swift; sourceTree = SOURCE_ROOT; };
 		104C18C523FD476C00CDDB2D /* NoteManagementController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteManagementController.swift; sourceTree = "<group>"; };
+		10D17DFA240524E200786771 /* FileDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDisplayViewController.swift; sourceTree = "<group>"; };
 		11F47E6723FFF2B9002677D8 /* ImageCapture.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImageCapture.storyboard; sourceTree = "<group>"; };
 		11F47E6923FFF2C2002677D8 /* ImageCaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCaptureViewController.swift; sourceTree = "<group>"; };
 		2AC429EB23F9F6CA00F122C5 /* AurNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AurNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79F1DA2704A3E3F8E736CB23 /* Pods_AurNote.framework in Frameworks */,
+				ECA8A8C665854782FCEA3653 /* libPods-AurNote.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +108,7 @@
 				2AC429F423F9F6CA00F122C5 /* LoggedInViewController.swift */,
 				104C18C523FD476C00CDDB2D /* NoteManagementController.swift */,
 				9FC6CCD023FFA8F900F811B9 /* LoginController.swift */,
+				10D17DFA240524E200786771 /* FileDisplayViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -157,7 +160,7 @@
 		BD2DC4B725022A189EE76308 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0BEBB0BE26BE8FFE01C9157E /* Pods_AurNote.framework */,
+				036AE6A316BC869E7A4104CC /* libPods-AurNote.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -173,7 +176,6 @@
 				2AC429E723F9F6CA00F122C5 /* Sources */,
 				2AC429E823F9F6CA00F122C5 /* Frameworks */,
 				2AC429E923F9F6CA00F122C5 /* Resources */,
-				7A6D30D7BA6CA3D5094AECA4 /* [CP] Embed Pods Frameworks */,
 				675A646143C3DE2C77E79E57 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -275,23 +277,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AurNote/Pods-AurNote-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7A6D30D7BA6CA3D5094AECA4 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AurNote/Pods-AurNote-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AurNote/Pods-AurNote-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AurNote/Pods-AurNote-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -310,6 +295,7 @@
 				2EA47C8A23FD1F0200DE5CBA /* ARAnnotationViewController.swift in Sources */,
 				2EA47C9223FD1F5800DE5CBA /* Utilities.swift in Sources */,
 				2AC429EF23F9F6CA00F122C5 /* AppDelegate.swift in Sources */,
+				10D17DFB240524E200786771 /* FileDisplayViewController.swift in Sources */,
 				2AC429F123F9F6CA00F122C5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,14 +442,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LTW8N7Y82N;
+				DEVELOPMENT_TEAM = HBHDXQ6W6U;
 				INFOPLIST_FILE = AurNote/Configurations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = uclosangeles.cs130.AurNote2;
+				PRODUCT_BUNDLE_IDENTIFIER = ucla.cs130.AurNote2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

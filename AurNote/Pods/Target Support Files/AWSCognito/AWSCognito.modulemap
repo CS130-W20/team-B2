@@ -1,4 +1,4 @@
-framework module AWSCognito {
+module AWSCognito {
   umbrella header "AWSCognito-umbrella.h"
 
   export *

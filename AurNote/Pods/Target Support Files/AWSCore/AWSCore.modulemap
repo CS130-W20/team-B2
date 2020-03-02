@@ -1,4 +1,4 @@
-framework module AWSCore {
+module AWSCore {
   umbrella header "AWSCore-umbrella.h"
 
   export *

@@ -20,6 +20,9 @@ class AWSBucketHandler {
     let configuration: AWSServiceConfiguration
     var allFiles = [String]()
     var folderMap = [String: [String]]()
+    var s3: AWSS3
+    var folderToObjectMap = [String: [(String,UIImage)]]()
+    let bucketName = "aurnotecs"
     
     
     ///initializes and configures credential provider with userpool id and credentials
@@ -31,16 +34,16 @@ class AWSBucketHandler {
         let credentialsProvider:AWSCognitoCredentialsProvider = AWSCognitoCredentialsProvider(regionType: .USEast2, identityPoolId: myIdentityPoolId)
         configuration = AWSServiceConfiguration(region: .USEast2, credentialsProvider:credentialsProvider)
         AWSServiceManager.default().defaultServiceConfiguration = configuration
+        
+        //register the config
+       AWSS3.register(with: configuration, forKey: "defaultKey")
+       s3 = AWSS3.s3(forKey: "defaultKey")
 
     }
     
     ///gets the names of all files in the user's directory and stores it in a global variable
     /// - Parameter completion: this is an event callback that lets the caller execute some function after the request completes
     func getAllFiles(completion: @escaping (AnyObject?)->()) {
-        
-        //register the config
-        AWSS3.register(with: configuration, forKey: "defaultKey")
-        let s3 = AWSS3.s3(forKey: "defaultKey")
         
         let listRequest: AWSS3ListObjectsRequest = AWSS3ListObjectsRequest()
         listRequest.bucket = "aurnotecs"
@@ -65,7 +68,7 @@ class AWSBucketHandler {
     public func getDirectories() -> Array<String> {
         var data = [String]()
         for str in self.allFiles {
-            var dir = (String(str.dropFirst(self.userId.count + 1)))
+            let dir = (String(str.dropFirst(self.userId.count + 1)))
             let slashInd = dir.firstIndex(of: "/")
             if((slashInd) != nil) {
                 let dirName = String(dir.prefix(upTo: slashInd!))
@@ -81,6 +84,128 @@ class AWSBucketHandler {
         }
         print(folderMap)
         return data
+    }
+    
+    func getObject(path: String, folderName: String, fileName: String, completion: @escaping (AnyObject?)->()) {
+        
+        // Hard-coded names for the tutorial bucket and the file uploaded at the beginning
+        let dwnPath = path.replacingOccurrences(of: "/", with: "-")
+        let downloadFilePath = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(dwnPath)
+
+        // Create a new download request to S3, and set its properties
+        let downloadRequest = AWSS3GetObjectRequest()
+        downloadRequest!.bucket = bucketName
+        downloadRequest!.key  = path
+        downloadRequest!.downloadingFileURL = downloadFilePath
+        
+        // Start asynchronous download
+        s3.getObject(downloadRequest!).continueWith { (task: AWSTask!) -> AnyObject? in
+            if task.error != nil {
+                print("Error downloading")
+                print(task.error.debugDescription)
+            }
+            else {
+                print("Download complete")
+
+                // Download is complete, set the UIImageView to show the file that was downloaded
+                let imgData = NSData(contentsOf: downloadFilePath!)
+                let image = UIImage(data: imgData! as Data)
+                if(self.folderToObjectMap[folderName] != nil) {
+                    self.folderToObjectMap[folderName]?.append((fileName,image!))
+                } else {
+                    self.folderToObjectMap[folderName] = [(fileName,image!)]
+                }
+            }
+            completion(task)
+            return nil
+        }
+    }
+    
+    public func getFilesInDirectory(folderName: String, completion: @escaping (AnyObject?)->()) {
+        let files = folderMap[folderName]
+        var cnt = files?.count
+        if(cnt == folderToObjectMap[folderName]?.count) {
+            completion(true as AnyObject)
+            return
+        }
+        for file in files! {
+            let path = userId+"/"+folderName+"/"+file
+            getObject(path: path, folderName: folderName, fileName: file, completion: {result in
+                if(result != nil) {
+                    cnt = cnt! - 1
+                    if(cnt == 0) {
+                        completion(result)
+                        return
+                    }
+                    
+                } else {
+                    print("Error in getting object")
+                }
+            })
+        }
+    }
+    
+    public func returnFilesInDirectory(folderName: String) -> [(String,UIImage)]{
+        return folderToObjectMap[folderName]!
+    }
+    
+
+    
+    public func putDirectory(folderName: String, completion: @escaping (AnyObject?)->()) {
+        
+        // Create a new put request to S3, and set its properties
+        let putRequest = AWSS3PutObjectRequest()
+        putRequest?.bucket = bucketName
+        putRequest?.key = userId + "/" + folderName + "/"
+        
+        // Start asynchronous upload
+        s3.putObject(putRequest!).continueWith { (task: AWSTask!) -> AnyObject? in
+            if task.error != nil {
+                print("Error putting")
+                print(task.error.debugDescription)
+            }
+            else {
+                print("Put complete")
+                // upload is complete, set the corresponding member vars
+                self.allFiles.append(self.userId + "/" + folderName + "/")
+                self.folderMap[folderName] = []
+            }
+            completion(task)
+            return nil
+        }
+    }
+    
+    public func putFile(folderName: String, fileName: String, fileURL: String, completion: @escaping (AnyObject?)->()) {
+        
+        let uploadingFileURL = URL(fileURLWithPath: fileURL)
+        let img = UIImage(contentsOfFile: fileURL)
+
+        // Create a new put request to S3, and set its properties
+        let putRequest = AWSS3PutObjectRequest()
+        putRequest?.bucket = bucketName
+        putRequest?.key = userId + "/" + folderName + "/" + fileName
+        putRequest?.body = uploadingFileURL
+        
+        // Start asynchronous upload
+        s3.putObject(putRequest!).continueWith { (task: AWSTask!) -> AnyObject? in
+            if task.error != nil {
+                print("Error putting file")
+                print(task.error.debugDescription)
+            }
+            else {
+                print("Put file complete")
+                // upload is complete, set the corresponding member vars
+                self.allFiles.append(self.userId + "/" + folderName + "/" + fileName)
+                self.folderMap[folderName]?.append(fileName)
+                self.folderToObjectMap[folderName]?.append((fileName,img!))
+            }
+            completion(task)
+            return nil
+        }
+    }
+    
+    public func shareFile(folderName: String, email: String, completion: @escaping (AnyObject?)->()) {
+        completion(true as AnyObject)
     }
           
 }
