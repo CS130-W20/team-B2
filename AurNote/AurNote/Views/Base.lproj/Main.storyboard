@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F5c-Lg-hn3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F5c-Lg-hn3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -33,7 +33,7 @@
                         <outlet property="signInButton" destination="qZf-qT-51d" id="ECV-X5-rWr"/>
                         <outlet property="signOutButton" destination="AYC-n2-VH7" id="xkb-3e-rBw"/>
                         <outlet property="statusText" destination="xm1-Vu-TKJ" id="xZn-57-5tR"/>
-                        <segue destination="9x4-H7-T0B" kind="presentation" identifier="loginSuccessful" modalPresentationStyle="overFullScreen" id="NsQ-XU-VaZ"/>
+                        <segue destination="G7i-kb-g1K" kind="presentation" identifier="loginSuccessful" modalPresentationStyle="fullScreen" id="Jgu-hC-GpA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ID0-RD-E7s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -131,6 +131,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7yS-3G-dyf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2949" y="-25"/>
+        </scene>
+        <!--NoteManagementViewController-->
+        <scene sceneID="khL-uT-nKO">
+            <objects>
+                <viewControllerPlaceholder referencedIdentifier="NoteManagementViewController" id="G7i-kb-g1K" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="12m-iD-lvL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2210" y="-629"/>
         </scene>
     </scenes>
 </document>
