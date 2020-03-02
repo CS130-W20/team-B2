@@ -53,7 +53,14 @@ class FileDisplayViewController: UIViewController, UICollectionViewDelegate, UIC
             image = img
         }
         
-        let code = imgStore.randomString(length: 10)
+        var code = String()
+        while (true) {
+            code = imgStore.randomString(length: 10)
+            if (imgStore.retrieveImage(forKey: code, inStorageType: ImageStorer.StorageType.fileSystem) == nil) {
+                break
+            }
+        }
+        
         imgStore.store(image: image, forKey: code, withStorageType: ImageStorer.StorageType.fileSystem)
         let fileName = imgStore.randomString(length: 9)
         let filePath = imgStore.filePath(forKey: code)
