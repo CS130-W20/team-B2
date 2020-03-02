@@ -199,14 +199,13 @@
                         <rightBarButtonItems>
                             <barButtonItem title="Item" image="plus" catalog="system" landscapeImage="plus" largeContentSizeImage="plus" id="kjr-dK-BtH">
                                 <connections>
-                                    <segue destination="oea-db-xzZ" kind="show" id="041-SA-1Ew"/>
+                                    <action selector="pickFile:" destination="R3r-Mo-VGt" id="du1-NK-5bq"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="square.and.arrow.up" catalog="system" landscapeImage="square.and.arrow.up" largeContentSizeImage="square.and.arrow.up" id="IcK-PO-Jcw"/>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
-                        <outlet property="addFileBtn" destination="kjr-dK-BtH" id="lfL-D1-2Bl"/>
                         <outlet property="fileCollection" destination="Xd9-lp-5G6" id="uYR-sa-WaN"/>
                         <outlet property="folderLabel" destination="wMK-ba-kxp" id="7JX-vk-nR1"/>
                         <outlet property="shareBtn" destination="IcK-PO-Jcw" id="HZn-q8-l2t"/>
