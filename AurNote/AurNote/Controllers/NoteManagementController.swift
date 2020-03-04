@@ -175,6 +175,10 @@ class NoteManagementController: UIViewController, UICollectionViewDelegate, UICo
             vc?.awsBucketHandler = self.awsBucketHandler
             vc?.userId = self.userId
             vc?.folderName = self.data[(directoryCollection.indexPathsForSelectedItems?.last!.row)!]
+        } else if (segue.destination is SharedFoldersViewController) {
+            let vc = segue.destination as? SharedFoldersViewController
+            vc?.awsBucketHandler = self.awsBucketHandler
+            vc?.userId = self.userId
         }
     }
     

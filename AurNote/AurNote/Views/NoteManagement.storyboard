@@ -98,6 +98,7 @@
                                         <connections>
                                             <outlet property="sharedFolderImage" destination="tMv-Na-Pjv" id="tcf-Yc-LiZ"/>
                                             <outlet property="sharedFolderLabel" destination="vNW-GQ-4kH" id="N7W-8n-AY9"/>
+                                            <segue destination="BDj-4z-EeP" kind="show" id="zkG-eE-RD6"/>
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="addFolderCell" id="64c-Zy-IU5" customClass="AddFolderCell" customModule="AurNote" customModuleProvider="target">
@@ -161,6 +162,103 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Xw-rR-Kcp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1655.072463768116" y="-14.0625"/>
+        </scene>
+        <!--sharedFoldersViewController-->
+        <scene sceneID="Es7-Oj-vdq">
+            <objects>
+                <viewController title="sharedFoldersViewController" id="BDj-4z-EeP" customClass="SharedFoldersViewController" customModule="AurNote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dFd-UJ-Idb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shared with me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJI-ZS-uRB">
+                                <rect key="frame" x="20" y="88" width="374" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Tsq-FT-7dd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pVY-Ea-eCF">
+                                <rect key="frame" x="20" y="141" width="374" height="672"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iun-xc-MsT">
+                                    <size key="itemSize" width="156" height="138"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sharedCollectionCell" id="zSI-bN-pbx" customClass="SharedCollectionCell" customModule="AurNote" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pLS-sx-ehx">
+                                                    <rect key="frame" x="12.5" y="17" width="171" height="86"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Folder Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5V6-ha-VJa">
+                                                            <rect key="frame" x="0.0" y="0.0" width="125" height="43"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="testUser" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.34999999999999998" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RYh-mD-epL">
+                                                            <rect key="frame" x="26" y="43" width="73" height="43"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="1" green="0.90756441832812673" blue="0.5495471576471278" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="pLS-sx-ehx" firstAttribute="top" secondItem="zSI-bN-pbx" secondAttribute="top" constant="17" id="7qQ-XX-2Cp"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="pLS-sx-ehx" secondAttribute="bottom" constant="9" id="A3W-hv-hk7"/>
+                                            <constraint firstItem="pLS-sx-ehx" firstAttribute="centerY" secondItem="zSI-bN-pbx" secondAttribute="centerY" id="H3q-W4-Nsx"/>
+                                            <constraint firstItem="pLS-sx-ehx" firstAttribute="top" secondItem="zSI-bN-pbx" secondAttribute="top" constant="17" id="HgT-C4-U5x"/>
+                                            <constraint firstItem="pLS-sx-ehx" firstAttribute="leading" secondItem="zSI-bN-pbx" secondAttribute="leading" constant="12.5" id="LEn-Yg-dpm"/>
+                                            <constraint firstItem="pLS-sx-ehx" firstAttribute="leading" secondItem="zSI-bN-pbx" secondAttribute="leading" constant="12.5" id="RyC-yc-Vkj"/>
+                                            <constraint firstItem="pLS-sx-ehx" firstAttribute="centerX" secondItem="zSI-bN-pbx" secondAttribute="centerX" id="fJQ-kt-cfj"/>
+                                            <constraint firstItem="pLS-sx-ehx" firstAttribute="top" secondItem="zSI-bN-pbx" secondAttribute="topMargin" constant="9" id="kyA-dW-7Em"/>
+                                            <constraint firstItem="pLS-sx-ehx" firstAttribute="centerY" secondItem="zSI-bN-pbx" secondAttribute="centerY" id="m6E-yd-7Sw"/>
+                                            <constraint firstAttribute="bottom" secondItem="pLS-sx-ehx" secondAttribute="bottom" constant="17" id="r1h-7K-Akb"/>
+                                        </constraints>
+                                        <size key="customSize" width="150" height="120"/>
+                                        <connections>
+                                            <outlet property="sharedFolderName" destination="5V6-ha-VJa" id="n6I-bG-bhU"/>
+                                            <outlet property="usersName" destination="RYh-mD-epL" id="xfV-qE-zRU"/>
+                                            <segue destination="R3r-Mo-VGt" kind="show" id="9cU-io-Mjg"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="pVY-Ea-eCF" firstAttribute="bottom" secondItem="yqz-Di-KUk" secondAttribute="bottom" id="0F0-of-Z4L"/>
+                            <constraint firstItem="ZJI-ZS-uRB" firstAttribute="top" secondItem="yqz-Di-KUk" secondAttribute="top" id="44P-te-Gmi"/>
+                            <constraint firstItem="ZJI-ZS-uRB" firstAttribute="leading" secondItem="dFd-UJ-Idb" secondAttribute="leadingMargin" id="Jsf-TD-94M"/>
+                            <constraint firstItem="pVY-Ea-eCF" firstAttribute="top" secondItem="ZJI-ZS-uRB" secondAttribute="bottom" constant="8" id="K6z-HK-3tI"/>
+                            <constraint firstItem="ZJI-ZS-uRB" firstAttribute="trailing" secondItem="pVY-Ea-eCF" secondAttribute="trailing" id="OrV-9Y-uG0"/>
+                            <constraint firstItem="ZJI-ZS-uRB" firstAttribute="leading" secondItem="pVY-Ea-eCF" secondAttribute="leading" id="Pxx-hG-MGd"/>
+                            <constraint firstItem="ZJI-ZS-uRB" firstAttribute="trailing" secondItem="dFd-UJ-Idb" secondAttribute="trailingMargin" id="rqn-20-7eW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yqz-Di-KUk"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mmU-iM-178"/>
+                    <connections>
+                        <outlet property="sharedCollection" destination="pVY-Ea-eCF" id="fXO-3g-h6M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0L7-dh-ylC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2407.2463768115945" y="-871.20535714285711"/>
         </scene>
         <!--File Display View Controller-->
         <scene sceneID="woG-TV-Dpz">
@@ -232,6 +330,7 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="addBtn" destination="kjr-dK-BtH" id="K13-89-CIq"/>
                         <outlet property="fileCollection" destination="Xd9-lp-5G6" id="uYR-sa-WaN"/>
                         <outlet property="folderLabel" destination="wMK-ba-kxp" id="7JX-vk-nR1"/>
                         <outlet property="shareBtn" destination="IcK-PO-Jcw" id="HZn-q8-l2t"/>
@@ -329,4 +428,7 @@
         <image name="shared-folder" width="30" height="30"/>
         <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="9cU-io-Mjg"/>
+    </inferredMetricsTieBreakers>
 </document>
