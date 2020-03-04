@@ -68,7 +68,10 @@ class FileDisplayViewController: UIViewController, UICollectionViewDelegate, UIC
         awsBucketHandler?.putFile(folderName: folderName, fileName: fileName, fileURL: filePath!, completion: {result in
             if(result != nil) {
                 print("file added")
-                
+                self.fileImages = (self.awsBucketHandler?.returnFilesInDirectory(folderName: self.folderName))!
+                DispatchQueue.main.async {
+                    self.fileCollection.reloadData()
+                }
             } else {
                 print("Error in file display controller")
             }

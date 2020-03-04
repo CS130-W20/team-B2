@@ -23,6 +23,7 @@ class AWSBucketHandler {
     var s3: AWSS3
     var folderToObjectMap = [String: [(String,UIImage)]]()
     let bucketName = "aurnotecs"
+    let sharedFolderName = "shared_w_me"
     
     
     ///initializes and configures credential provider with userpool id and credentials
@@ -77,7 +78,9 @@ class AWSBucketHandler {
                     temp.removeFirst(1)
                     folderMap[dirName]?.append(temp)
                 } else {
-                    data.append(dirName)
+                    if( dirName != sharedFolderName) {
+                        data.append(dirName)
+                    }
                     folderMap[dirName] = []
                 }
             }
@@ -209,7 +212,76 @@ class AWSBucketHandler {
     }
     
     public func shareFile(folderName: String, email: String, completion: @escaping (AnyObject?)->()) {
-        completion(true as AnyObject)
+        
+        let atInd = email.firstIndex(of: "@")
+        if(atInd == nil) {
+            completion(nil)
+            return
+        }
+        let other_username = String(email.prefix(upTo: atInd!))
+        
+        let putRequest = AWSS3PutObjectRequest()
+        putRequest?.bucket = bucketName
+        putRequest?.key = userId + "/" + sharedFolderName + "/" + other_username + "/" + folderName
+
+        // Start asynchronous upload
+        s3.putObject(putRequest!).continueWith { (task: AWSTask!) -> AnyObject? in
+            if task.error != nil {
+                print("Error sharing folder")
+                print(task.error.debugDescription)
+            }
+            else {
+                print("Put file complete")
+                // upload is complete, set the corresponding member vars
+                self.allFiles.append(self.userId + "/" + self.sharedFolderName + "/" + other_username + "/" + folderName)
+                self.folderMap[self.sharedFolderName]?.append(other_username + "/" + folderName)
+            }
+            completion(task)
+            return nil
+        }
+    }
+    
+    public func getSharedDirectories() -> Array<String> {
+        return folderMap[self.sharedFolderName]!
+    }
+    
+    public func getFilesInSharedDirectory(path: String, folderName: String, completion: @escaping (AnyObject?)->()) {
+        
+        let listRequest: AWSS3ListObjectsRequest = AWSS3ListObjectsRequest()
+        listRequest.bucket = "aurnotecs"
+        listRequest.prefix = folderName + "/"
+
+        //make the request and populate data
+        var files = [String]()
+        print("made request")
+            s3.listObjects(listRequest).continueWith { (task) -> AnyObject? in
+            for object in (task.result?.contents)! {
+                files.append(object.key!)
+            }
+            var cnt = files.count
+                if(cnt == self.folderToObjectMap[folderName]?.count) {
+                completion(true as AnyObject)
+                return nil
+            }
+            for file in files {
+                let path = folderName + "/" + file
+                let atSlash = path.firstIndex(of: "/")
+                self.getObject(path: path, folderName: folderName, fileName: file, completion: {result in
+                   if(result != nil) {
+                        cnt = cnt - 1
+                       if(cnt == 0) {
+                           completion(result)
+                           return
+                       }
+                   } else {
+                       print("Error in getting object")
+                   }
+               })
+               }
+            
+            completion(task)
+            return nil
+        }
     }
           
 }
