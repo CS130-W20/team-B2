@@ -245,7 +245,11 @@ class AWSBucketHandler {
         return folderMap[self.sharedFolderName]!
     }
     
+<<<<<<< HEAD
     public func getFilesInSharedDirectory(folderName: String, completion: @escaping (AnyObject?)->()) {
+=======
+    public func getFilesInSharedDirectory(path: String, folderName: String, completion: @escaping (AnyObject?)->()) {
+>>>>>>> added notesharing ~framework~
         
         let listRequest: AWSS3ListObjectsRequest = AWSS3ListObjectsRequest()
         listRequest.bucket = "aurnotecs"
@@ -255,6 +259,7 @@ class AWSBucketHandler {
         var files = [String]()
         print("made request")
             s3.listObjects(listRequest).continueWith { (task) -> AnyObject? in
+<<<<<<< HEAD
                 for object in (task.result?.contents)! {
                     files.append(object.key!)
                 }
@@ -285,6 +290,33 @@ class AWSBucketHandler {
                        }
                    })
                 }
+=======
+            for object in (task.result?.contents)! {
+                files.append(object.key!)
+            }
+            var cnt = files.count
+                if(cnt == self.folderToObjectMap[folderName]?.count) {
+                completion(true as AnyObject)
+                return nil
+            }
+            for file in files {
+                let path = folderName + "/" + file
+                let atSlash = path.firstIndex(of: "/")
+                self.getObject(path: path, folderName: folderName, fileName: file, completion: {result in
+                   if(result != nil) {
+                        cnt = cnt - 1
+                       if(cnt == 0) {
+                           completion(result)
+                           return
+                       }
+                   } else {
+                       print("Error in getting object")
+                   }
+               })
+               }
+            
+            completion(task)
+>>>>>>> added notesharing ~framework~
             return nil
         }
     }

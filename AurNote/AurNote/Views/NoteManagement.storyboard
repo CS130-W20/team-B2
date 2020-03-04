@@ -98,7 +98,10 @@
                                         <connections>
                                             <outlet property="sharedFolderImage" destination="tMv-Na-Pjv" id="tcf-Yc-LiZ"/>
                                             <outlet property="sharedFolderLabel" destination="vNW-GQ-4kH" id="N7W-8n-AY9"/>
+<<<<<<< HEAD
                                             <segue destination="BDj-4z-EeP" kind="show" id="zkG-eE-RD6"/>
+=======
+>>>>>>> added notesharing ~framework~
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="addFolderCell" id="64c-Zy-IU5" customClass="AddFolderCell" customModule="AurNote" customModuleProvider="target">
