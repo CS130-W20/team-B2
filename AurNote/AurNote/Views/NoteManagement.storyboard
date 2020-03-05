@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4o7-rv-Pgf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4o7-rv-Pgf">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -130,7 +130,7 @@
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLx-iV-cEy">
-                                <rect key="frame" x="20" y="88" width="151" height="42.5"/>
+                                <rect key="frame" x="17.5" y="85" width="156" height="45.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="My Notes">
                                         <attributes>
@@ -323,14 +323,13 @@
                         <rightBarButtonItems>
                             <barButtonItem title="Item" image="plus" catalog="system" landscapeImage="plus" largeContentSizeImage="plus" id="kjr-dK-BtH">
                                 <connections>
-                                    <action selector="pickFile:" destination="R3r-Mo-VGt" id="du1-NK-5bq"/>
+                                    <segue destination="oea-db-xzZ" kind="showDetail" id="kHh-LC-f6I"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="square.and.arrow.up" catalog="system" landscapeImage="square.and.arrow.up" largeContentSizeImage="square.and.arrow.up" id="IcK-PO-Jcw"/>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
-                        <outlet property="addBtn" destination="kjr-dK-BtH" id="K13-89-CIq"/>
                         <outlet property="fileCollection" destination="Xd9-lp-5G6" id="uYR-sa-WaN"/>
                         <outlet property="folderLabel" destination="wMK-ba-kxp" id="7JX-vk-nR1"/>
                         <outlet property="shareBtn" destination="IcK-PO-Jcw" id="HZn-q8-l2t"/>

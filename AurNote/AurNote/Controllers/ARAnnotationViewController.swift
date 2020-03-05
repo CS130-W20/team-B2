@@ -7,13 +7,74 @@ import ARKit
 import Foundation
 import SceneKit
 import UIKit
+import WeScan
 
-class ARAnnotationViewController: UIViewController {
+class ARAnnotationViewController: UIViewController, ImageScannerControllerDelegate {
+    
+    func imageScannerController(_ scanner: ImageScannerController, didFinishScanningWithResults results: ImageScannerResults) {
+         scanner.dismiss(animated: true)
+        
+//        UIImageWriteToSavedPhotosAlbum(results.croppedScan.image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+        if results.doesUserPreferEnhancedScan {
+            processedImage = results.enhancedScan?.image ?? results.croppedScan.image
+        }
+        else {
+            processedImage = results.croppedScan.image
+        }
+        performSegue(withIdentifier: "sendImageToFileController", sender: nil)
+    }
+    
+    func imageScannerControllerDidCancel(_ scanner: ImageScannerController) {
+         scanner.dismiss(animated: true)
+    }
+    
+    func imageScannerController(_ scanner: ImageScannerController, didFailWithError error: Error) {
+         print(error)
+    }
+    
+    var capturedImageRaw: UIImage?
+    var processedImage: UIImage?
 
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet weak var messagePanel: UIView!
     @IBOutlet weak var messageLabel: UILabel!
+    @IBAction func didCapture(_ sender: Any) {
+        let image = sceneView.snapshot()
+        capturedImageRaw = image
+        
+        let scannerViewController = ImageScannerController(image: image, delegate: self)
+        present(scannerViewController, animated: true)
+        
+//        self.dismiss(animated: true, completion: nil)
+        
+//        UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+        
+//        performSegue(withIdentifier: "performScan", sender: nil)
+    }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+//    {
+//        if let vc = segue.destination as? ScanViewController
+//        {
+//            vc.capturedImage = capturedImageRaw
+//        }
+//    }
+//
+    @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        if let error = error {
+            // we got back an error!
+            let ac = UIAlertController(title: "Save error", message: error.localizedDescription, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        } else {
+            let ac = UIAlertController(title: "Saved!", message: "Your altered image has been saved to your photos.", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        }
+    }
 
+    
+    
     static var instance: ARAnnotationViewController?
     
     /// An object that detects rectangular shapes in the user's environment.

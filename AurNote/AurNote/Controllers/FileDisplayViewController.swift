@@ -37,6 +37,38 @@ class FileDisplayViewController: UIViewController, UICollectionViewDelegate, UIC
     var email:UITextField = UITextField()
     var imgStore = ImageStorer()
     var isShared = false
+    var capturedImage: UIImage?
+    
+    @IBAction func unwindFromCameraWithFailure(_ sender: UIStoryboardSegue) {
+        print("I am back home")
+    }
+    
+    @IBAction func unwindFromCameraWithSuccess(_ sender: UIStoryboardSegue) {
+        if sender.source is ARAnnotationViewController {
+            if let senderVC = sender.source as? ARAnnotationViewController {
+                capturedImage = senderVC.processedImage
+                
+                //writes to the photo gallery
+//                if let unwrappedImage = capturedImage {
+//                    UIImageWriteToSavedPhotosAlbum(unwrappedImage, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+//                }
+            }
+        }
+    }
+    
+    //func to write an image to disk
+    @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        if let error = error {
+            // we got back an error!
+            let ac = UIAlertController(title: "Save error", message: error.localizedDescription, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        } else {
+            let ac = UIAlertController(title: "Saved!", message: "Your altered image has been saved to your photos.", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        }
+    }
     
     @IBAction func pickFile(_ sender: Any) {
         let imagePicker = UIImagePickerController()
@@ -47,59 +79,60 @@ class FileDisplayViewController: UIViewController, UICollectionViewDelegate, UIC
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        var image: UIImage!
-        if let img = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
-            image = img
-        }
-        else if let img = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            image = img
-        }
-        
-        var code = String()
-        while (true) {
-            code = imgStore.randomString(length: 10)
-            if (imgStore.retrieveImage(forKey: code, inStorageType: ImageStorer.StorageType.fileSystem) == nil) {
-                break
+            var image: UIImage!
+            if let img = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+                image = img
             }
-        }
-        
-        imgStore.store(image: image, forKey: code, withStorageType: ImageStorer.StorageType.fileSystem)
-        let fileName = imgStore.randomString(length: 9)
-        let filePath = imgStore.filePath(forKey: code)
-        print(code, fileName, folderName)
-        awsBucketHandler?.putFile(folderName: folderName, fileName: fileName, fileURL: filePath!, completion: {result in
-            if(result != nil) {
-                print("file added")
-                self.fileImages = (self.awsBucketHandler?.returnFilesInDirectory(folderName: self.folderName))!
-                DispatchQueue.main.async {
-                    self.fileCollection.reloadData()
+            else if let img = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+                image = img
+            }
+            
+            var code = String()
+            while (true) {
+                code = imgStore.randomString(length: 10)
+                if (imgStore.retrieveImage(forKey: code, inStorageType: ImageStorer.StorageType.fileSystem) == nil) {
+                    break
                 }
-            } else {
-                print("Error in file display controller")
             }
-        })
-        picker.dismiss(animated: true, completion: nil)
-    }
-    
+            
+            imgStore.store(image: image, forKey: code, withStorageType: ImageStorer.StorageType.fileSystem)
+            let fileName = imgStore.randomString(length: 9)
+            let filePath = imgStore.filePath(forKey: code)
+            print(code, fileName, folderName)
+            awsBucketHandler?.putFile(folderName: folderName, fileName: fileName, fileURL: filePath!, completion: {result in
+                if(result != nil) {
+                    print("file added")
+                    self.fileImages = (self.awsBucketHandler?.returnFilesInDirectory(folderName: self.folderName))!
+                    DispatchQueue.main.async {
+                        self.fileCollection.reloadData()
+                    }
+                } else {
+                    print("Error in file display controller")
+                }
+            })
+            picker.dismiss(animated: true, completion: nil)
+        }
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         folderLabel.text = folderName
         if(self.isShared == true) {
             shareBtn.isEnabled = false
             addBtn.isEnabled = false
-            awsBucketHandler?.getFilesInSharedDirectory(folderName: folderName, completion: {
-                result in
-                if(result != nil) {
-                    self.fileImages = (self.awsBucketHandler?.returnFilesInDirectory(folderName: self.folderName))!
-                    DispatchQueue.main.async {
-                        self.fileCollection.reloadData()
-                    }
-                    
-                } else {
-                    print("Error in file display controller")
-                }
-            })
             
+//            awsBucketHandler?.getFilesInSharedDirectory(folderName: folderName, completion: {
+//                result in
+//                if(result != nil) {
+//                    self.fileImages = (self.awsBucketHandler?.returnFilesInDirectory(folderName: self.folderName))!
+//                    DispatchQueue.main.async {
+//                        self.fileCollection.reloadData()
+//                    }
+//                    
+//                } else {
+//                    print("Error in file display controller")
+//                }
+//            })
+//            
         } else {
             awsBucketHandler?.getFilesInDirectory(folderName: folderName, completion: {result in
                 if(result != nil) {

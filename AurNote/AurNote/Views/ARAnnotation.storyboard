@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -10,16 +10,16 @@
         <!--ARAnnotationViewController-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController storyboardIdentifier="ARAnnotationViewController" title="ARAnnotationViewController" id="BV1-FR-VrT" customClass="ARAnnotationViewController" customModule="AurNote" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ARAnnotationViewController" title="ARAnnotationViewController" modalPresentationStyle="overFullScreen" id="BV1-FR-VrT" customClass="ARAnnotationViewController" customModule="AurNote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RLh-bf-1c3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E6c-py-dvH" customClass="ARSCNView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </sceneKitView>
                             <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="100" translatesAutoresizingMaskIntoConstraints="NO" id="9e0-zv-RiN" userLabel="Message Panel">
-                                <rect key="frame" x="15" y="15" width="20" height="20"/>
+                                <rect key="frame" x="15" y="59" width="20" height="20"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="AVp-TR-4Nw">
                                     <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,15 +68,42 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8Z-Tf-ZeS">
+                                <rect key="frame" x="137.66666666666666" y="678" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="XmO-RU-5Mq"/>
+                                    <constraint firstAttribute="height" constant="100" id="d7u-oC-sbU"/>
+                                    <constraint firstAttribute="width" secondItem="G8Z-Tf-ZeS" secondAttribute="height" multiplier="1:1" id="qX4-Xj-vgZ"/>
+                                </constraints>
+                                <state key="normal" image="camera_shutter"/>
+                                <connections>
+                                    <action selector="didCapture:" destination="BV1-FR-VrT" eventType="touchUpInside" id="tXh-xB-8tv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INZ-It-lzq">
+                                <rect key="frame" x="330" y="59" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="OYh-RX-dYa"/>
+                                    <constraint firstAttribute="height" constant="30" id="W5l-g7-p9f"/>
+                                </constraints>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <segue destination="Vsj-qy-mwD" kind="unwind" unwindAction="unwindFromCameraWithFailure:" id="IXU-mP-RJL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="E6c-py-dvH" secondAttribute="bottom" id="6h6-BI-mhL"/>
                             <constraint firstItem="E6c-py-dvH" firstAttribute="top" secondItem="RLh-bf-1c3" secondAttribute="top" id="7gH-DS-Crg"/>
                             <constraint firstItem="E6c-py-dvH" firstAttribute="leading" secondItem="PvN-q5-0Ao" secondAttribute="leading" id="8nh-ZQ-AuM"/>
+                            <constraint firstItem="INZ-It-lzq" firstAttribute="top" secondItem="PvN-q5-0Ao" secondAttribute="top" constant="15" id="FNw-Ly-dJ1"/>
+                            <constraint firstItem="G8Z-Tf-ZeS" firstAttribute="centerX" secondItem="E6c-py-dvH" secondAttribute="centerX" id="I1m-hK-Jo7"/>
+                            <constraint firstItem="INZ-It-lzq" firstAttribute="trailing" secondItem="E6c-py-dvH" secondAttribute="trailing" constant="-15" id="OiT-Uj-CLy"/>
                             <constraint firstItem="9e0-zv-RiN" firstAttribute="top" secondItem="PvN-q5-0Ao" secondAttribute="top" constant="15" id="cQJ-u9-wJ6"/>
                             <constraint firstItem="9e0-zv-RiN" firstAttribute="leading" secondItem="E6c-py-dvH" secondAttribute="leading" constant="15" id="keQ-vs-rof"/>
                             <constraint firstItem="PvN-q5-0Ao" firstAttribute="trailing" secondItem="E6c-py-dvH" secondAttribute="trailing" id="lHd-lf-g1u"/>
+                            <constraint firstItem="G8Z-Tf-ZeS" firstAttribute="bottom" secondItem="PvN-q5-0Ao" secondAttribute="bottom" id="shP-Lw-INy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PvN-q5-0Ao"/>
                         <connections>
@@ -87,9 +114,12 @@
                         <outlet property="messageLabel" destination="Mqz-65-rAs" id="G3a-qn-5g9"/>
                         <outlet property="messagePanel" destination="9e0-zv-RiN" id="pKf-hp-Dvx"/>
                         <outlet property="sceneView" destination="E6c-py-dvH" id="Gr4-Uw-Z4A"/>
+                        <segue destination="m3u-43-shw" kind="presentation" identifier="performScan" id="Ndz-5m-eYZ"/>
+                        <segue destination="Vsj-qy-mwD" kind="unwind" identifier="sendImageToFileController" unwindAction="unwindFromCameraWithSuccess:" id="UDJ-Fa-GQJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+                <exit id="Vsj-qy-mwD" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="keY-lF-tGf">
                     <connections>
                         <action selector="didTap:" destination="BV1-FR-VrT" id="mYE-6g-cop"/>
@@ -97,7 +127,27 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="56.799999999999997" y="98.50074962518741"/>
+            <point key="canvasLocation" x="56.799999999999997" y="98.275862068965523"/>
+        </scene>
+        <!--Scan View Controller-->
+        <scene sceneID="hU0-8A-JeR">
+            <objects>
+                <viewController id="m3u-43-shw" customClass="ScanViewController" customModule="AurNote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Txc-2N-gI3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ZUW-Qn-P2R"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XCm-IA-OJH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3BU-yJ-zLc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="854" y="99"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera_shutter" width="128" height="128"/>
+        <image name="close" width="128" height="128"/>
+    </resources>
 </document>
