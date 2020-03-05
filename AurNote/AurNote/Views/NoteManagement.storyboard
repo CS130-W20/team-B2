@@ -331,7 +331,7 @@
                             <barButtonItem title="Item" image="plus" catalog="system" landscapeImage="plus" largeContentSizeImage="plus" id="kjr-dK-BtH">
                                 <connections>
                                     <action selector="pickFile:" destination="R3r-Mo-VGt" id="du1-NK-5bq"/>
-                                    <segue destination="oea-db-xzZ" kind="presentation" id="aGc-Yv-oAV"/>
+                                    <segue destination="oea-db-xzZ" kind="presentation" modalPresentationStyle="fullScreen" id="DbR-ws-JqA"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="square.and.arrow.up" catalog="system" landscapeImage="square.and.arrow.up" largeContentSizeImage="square.and.arrow.up" id="IcK-PO-Jcw"/>

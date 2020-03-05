@@ -9,4 +9,5 @@ target 'AurNote' do
   pod 'AWSS3'
   pod 'AWSCognito'
   pod 'GoogleSignIn'
+  pod 'WeScan', '>= 0.9'
 end

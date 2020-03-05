@@ -37,6 +37,38 @@ class FileDisplayViewController: UIViewController, UICollectionViewDelegate, UIC
     var email:UITextField = UITextField()
     var imgStore = ImageStorer()
     var isShared = false
+    var capturedImage: UIImage?
+    
+    @IBAction func unwindFromCameraWithFailure(_ sender: UIStoryboardSegue) {
+        print("I am back home")
+    }
+    
+    @IBAction func unwindFromCameraWithSuccess(_ sender: UIStoryboardSegue) {
+        if sender.source is ARAnnotationViewController {
+            if let senderVC = sender.source as? ARAnnotationViewController {
+                capturedImage = senderVC.processedImage
+                
+                //writes to the photo gallery
+//                if let unwrappedImage = capturedImage {
+//                    UIImageWriteToSavedPhotosAlbum(unwrappedImage, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+//                }
+            }
+        }
+    }
+    
+    //func to write an image to disk
+    @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        if let error = error {
+            // we got back an error!
+            let ac = UIAlertController(title: "Save error", message: error.localizedDescription, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        } else {
+            let ac = UIAlertController(title: "Saved!", message: "Your altered image has been saved to your photos.", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        }
+    }
     
     @IBAction func pickFile(_ sender: Any) {
         let imagePicker = UIImagePickerController()

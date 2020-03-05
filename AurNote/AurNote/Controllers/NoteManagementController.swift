@@ -182,6 +182,4 @@ class NoteManagementController: UIViewController, UICollectionViewDelegate, UICo
         }
     }
     
-    
-    
 }

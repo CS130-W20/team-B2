@@ -13,6 +13,7 @@ A view controller that allows users to upload photos to the app and receive imag
 
 import UIKit
 import AVKit
+import WeScan
 
 class ImageCaptureViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     // TODO: create dictionary to store set of codes ?
