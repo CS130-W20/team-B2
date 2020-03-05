@@ -98,14 +98,7 @@
                                         <connections>
                                             <outlet property="sharedFolderImage" destination="tMv-Na-Pjv" id="tcf-Yc-LiZ"/>
                                             <outlet property="sharedFolderLabel" destination="vNW-GQ-4kH" id="N7W-8n-AY9"/>
-<<<<<<< HEAD
-<<<<<<< HEAD
                                             <segue destination="BDj-4z-EeP" kind="show" id="zkG-eE-RD6"/>
-=======
->>>>>>> added notesharing ~framework~
-=======
-                                            <segue destination="BDj-4z-EeP" kind="show" id="zkG-eE-RD6"/>
->>>>>>> added shared views/pull
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="addFolderCell" id="64c-Zy-IU5" customClass="AddFolderCell" customModule="AurNote" customModuleProvider="target">
@@ -330,15 +323,13 @@
                         <rightBarButtonItems>
                             <barButtonItem title="Item" image="plus" catalog="system" landscapeImage="plus" largeContentSizeImage="plus" id="kjr-dK-BtH">
                                 <connections>
-                                    <action selector="pickFile:" destination="R3r-Mo-VGt" id="du1-NK-5bq"/>
-                                    <segue destination="oea-db-xzZ" kind="presentation" modalPresentationStyle="fullScreen" id="DbR-ws-JqA"/>
+                                    <segue destination="oea-db-xzZ" kind="showDetail" id="kHh-LC-f6I"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="square.and.arrow.up" catalog="system" landscapeImage="square.and.arrow.up" largeContentSizeImage="square.and.arrow.up" id="IcK-PO-Jcw"/>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
-                        <outlet property="addBtn" destination="kjr-dK-BtH" id="K13-89-CIq"/>
                         <outlet property="fileCollection" destination="Xd9-lp-5G6" id="uYR-sa-WaN"/>
                         <outlet property="folderLabel" destination="wMK-ba-kxp" id="7JX-vk-nR1"/>
                         <outlet property="shareBtn" destination="IcK-PO-Jcw" id="HZn-q8-l2t"/>

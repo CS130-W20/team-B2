@@ -245,15 +245,7 @@ class AWSBucketHandler {
         return folderMap[self.sharedFolderName]!
     }
     
-<<<<<<< HEAD
-<<<<<<< HEAD
-    public func getFilesInSharedDirectory(folderName: String, completion: @escaping (AnyObject?)->()) {
-=======
     public func getFilesInSharedDirectory(path: String, folderName: String, completion: @escaping (AnyObject?)->()) {
->>>>>>> added notesharing ~framework~
-=======
-    public func getFilesInSharedDirectory(folderName: String, completion: @escaping (AnyObject?)->()) {
->>>>>>> added shared views/pull
         
         let listRequest: AWSS3ListObjectsRequest = AWSS3ListObjectsRequest()
         listRequest.bucket = "aurnotecs"
@@ -263,70 +255,24 @@ class AWSBucketHandler {
         var files = [String]()
         print("made request")
             s3.listObjects(listRequest).continueWith { (task) -> AnyObject? in
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> added shared views/pull
-                for object in (task.result?.contents)! {
-                    files.append(object.key!)
-                }
-                var cnt = 0
-                if(files.count > cnt) {
-                    cnt = files.count - 1
-                }
-<<<<<<< HEAD
-                if(cnt == self.folderToObjectMap[folderName]?.count) {
-                    completion(true as AnyObject)
-                    return nil
-                }
-                for file in files {
-                    if(file.suffix(1) == "/") {
-                        continue
-                    }
-                    let atSlash = file.lastIndex(of: "/")
-                    var fileName = file.suffix(from: atSlash!)
-                    fileName.removeFirst()
-                    self.getObject(path: file, folderName: folderName, fileName: String(fileName), completion: {result in
-                       if(result != nil) {
-                            cnt = cnt - 1
-                           if(cnt == 0) {
-                               completion(result)
-                               return
-                           }
-                       } else {
-                           print("Error in getting object")
-                       }
-                   })
-                }
-=======
             for object in (task.result?.contents)! {
                 files.append(object.key!)
             }
             var cnt = files.count
-=======
->>>>>>> added shared views/pull
                 if(cnt == self.folderToObjectMap[folderName]?.count) {
-                    completion(true as AnyObject)
-                    return nil
-                }
-                for file in files {
-                    if(file.suffix(1) == "/") {
-                        continue
-                    }
-                    let atSlash = file.lastIndex(of: "/")
-                    var fileName = file.suffix(from: atSlash!)
-                    fileName.removeFirst()
-                    self.getObject(path: file, folderName: folderName, fileName: String(fileName), completion: {result in
-                       if(result != nil) {
-                            cnt = cnt - 1
-                           if(cnt == 0) {
-                               completion(result)
-                               return
-                           }
-                       } else {
-                           print("Error in getting object")
+                completion(true as AnyObject)
+                return nil
+            }
+            for file in files {
+                let path = folderName + "/" + file
+                let atSlash = path.firstIndex(of: "/")
+                self.getObject(path: path, folderName: folderName, fileName: file, completion: {result in
+                   if(result != nil) {
+                        cnt = cnt - 1
+                       if(cnt == 0) {
+                           completion(result)
+                           return
                        }
-<<<<<<< HEAD
                    } else {
                        print("Error in getting object")
                    }
@@ -334,11 +280,6 @@ class AWSBucketHandler {
                }
             
             completion(task)
->>>>>>> added notesharing ~framework~
-=======
-                   })
-                }
->>>>>>> added shared views/pull
             return nil
         }
     }
