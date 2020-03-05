@@ -34,6 +34,16 @@ class AddFolderCell: UICollectionViewCell {
     
 }
 
+class SharedFolderCell: UICollectionViewCell {
+
+    @IBOutlet weak var sharedFolderImage: UIImageView!
+    @IBOutlet weak var sharedFolderLabel: UILabel!
+    func displayContent() {
+        sharedFolderImage.image = UIImage(named: "shared-folder")
+        sharedFolderLabel.text = "Shared With Me"
+    }
+}
+
 /// The view controller for the splash page which includes collection view
 class NoteManagementController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     var data = [String]()
@@ -53,6 +63,7 @@ class NoteManagementController: UIViewController, UICollectionViewDelegate, UICo
         awsBucketHandler!.getAllFiles(completion: {result in
             if(result != nil) {
                 self.data = self.awsBucketHandler!.getDirectories()
+                self.data.append("shared_w_me")
                 self.data.append("Add Folder")
                 DispatchQueue.main.async {
                     self.directoryCollection.reloadData()
@@ -96,6 +107,12 @@ class NoteManagementController: UIViewController, UICollectionViewDelegate, UICo
         let folderName = data[indexPath.row]
         if(folderName == "Add Folder") {
             let cell = directoryCollection.dequeueReusableCell(withReuseIdentifier: "addFolderCell", for: indexPath) as! AddFolderCell
+            cell.displayContent()
+            cell.layer.masksToBounds = true;
+            cell.layer.cornerRadius = 10;
+            return cell
+        } else if(folderName == "shared_w_me") {
+            let cell = directoryCollection.dequeueReusableCell(withReuseIdentifier: "sharedFolderCell", for: indexPath) as! SharedFolderCell
             cell.displayContent()
             cell.layer.masksToBounds = true;
             cell.layer.cornerRadius = 10;
@@ -158,6 +175,10 @@ class NoteManagementController: UIViewController, UICollectionViewDelegate, UICo
             vc?.awsBucketHandler = self.awsBucketHandler
             vc?.userId = self.userId
             vc?.folderName = self.data[(directoryCollection.indexPathsForSelectedItems?.last!.row)!]
+        } else if (segue.destination is SharedFoldersViewController) {
+            let vc = segue.destination as? SharedFoldersViewController
+            vc?.awsBucketHandler = self.awsBucketHandler
+            vc?.userId = self.userId
         }
     }
     

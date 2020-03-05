@@ -28,6 +28,7 @@ class FileDisplayViewController: UIViewController, UICollectionViewDelegate, UIC
     @IBOutlet weak var fileCollection: UICollectionView!
     
     @IBOutlet weak var shareBtn: UIBarButtonItem!
+    @IBOutlet weak var addBtn: UIBarButtonItem!
     
     var userId = ""
     var awsBucketHandler: AWSBucketHandler? = nil
@@ -35,6 +36,7 @@ class FileDisplayViewController: UIViewController, UICollectionViewDelegate, UIC
     var fileImages = [(String,UIImage)]()
     var email:UITextField = UITextField()
     var imgStore = ImageStorer()
+    var isShared = false
     
     @IBAction func pickFile(_ sender: Any) {
         let imagePicker = UIImagePickerController()
@@ -68,7 +70,10 @@ class FileDisplayViewController: UIViewController, UICollectionViewDelegate, UIC
         awsBucketHandler?.putFile(folderName: folderName, fileName: fileName, fileURL: filePath!, completion: {result in
             if(result != nil) {
                 print("file added")
-                
+                self.fileImages = (self.awsBucketHandler?.returnFilesInDirectory(folderName: self.folderName))!
+                DispatchQueue.main.async {
+                    self.fileCollection.reloadData()
+                }
             } else {
                 print("Error in file display controller")
             }
@@ -79,23 +84,42 @@ class FileDisplayViewController: UIViewController, UICollectionViewDelegate, UIC
     override func viewDidLoad() {
         super.viewDidLoad()
         folderLabel.text = folderName
-        awsBucketHandler?.getFilesInDirectory(folderName: folderName, completion: {result in
-            if(result != nil) {
-                self.fileImages = (self.awsBucketHandler?.returnFilesInDirectory(folderName: self.folderName))!
-                DispatchQueue.main.async {
-                    self.fileCollection.reloadData()
+        if(self.isShared == true) {
+            shareBtn.isEnabled = false
+            addBtn.isEnabled = false
+            awsBucketHandler?.getFilesInSharedDirectory(folderName: folderName, completion: {
+                result in
+                if(result != nil) {
+                    self.fileImages = (self.awsBucketHandler?.returnFilesInDirectory(folderName: self.folderName))!
+                    DispatchQueue.main.async {
+                        self.fileCollection.reloadData()
+                    }
+                    
+                } else {
+                    print("Error in file display controller")
                 }
-                
-            } else {
-                print("Error in file display controller")
-            }
-        })
+            })
+            
+        } else {
+            awsBucketHandler?.getFilesInDirectory(folderName: folderName, completion: {result in
+                if(result != nil) {
+                    self.fileImages = (self.awsBucketHandler?.returnFilesInDirectory(folderName: self.folderName))!
+                    DispatchQueue.main.async {
+                        self.fileCollection.reloadData()
+                    }
+                    
+                } else {
+                    print("Error in file display controller")
+                }
+            })
+
+            shareBtn.target = self
+            shareBtn.action = #selector(shareAction)
+        }
         view.addSubview(fileCollection)
         fileCollection.delegate = self
         fileCollection.dataSource = self
 
-        shareBtn.target = self
-        shareBtn.action = #selector(shareAction)
     }
     
     override func viewDidAppear(_ animated: Bool) {
