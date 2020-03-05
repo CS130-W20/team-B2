@@ -35,6 +35,8 @@
 	<string>The camera is used for augmenting reality.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Needs photo library access so you can upload lecture pictures.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Needs photo library access so you can save captured pictures.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
