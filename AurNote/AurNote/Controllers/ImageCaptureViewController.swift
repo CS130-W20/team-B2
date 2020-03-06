@@ -88,7 +88,7 @@ class ImageCaptureViewController: UIViewController, UIImagePickerControllerDeleg
         
         var code = String()
         while (true) {
-            code = imgStore.randomString(length: 6)
+            code = imgStore.randomString(length: 4)
             if (imgStore.retrieveImage(forKey: code, inStorageType: ImageStorer.StorageType.fileSystem) == nil) {
                 break
             }
@@ -178,7 +178,7 @@ class ImageStorer {
     /// - Parameter length: the length of the random string you want to generate
     /// generates a random string of specified length to be used as a code
     func randomString(length: Int) -> String {
-      let letters = "0123456789"
+      let letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
       return String((0..<length).map{ _ in letters.randomElement()! })
     }
 }
