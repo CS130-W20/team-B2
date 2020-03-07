@@ -119,7 +119,7 @@ class AlteredImage {
             request.customWords = ["hello", "77", "TODO"]
             let context = CIContext(options: nil)
             let inputimage = context.createCGImage(imageContent, from: imageContent.extent)
-            let handler = VNImageRequestHandler(cgImage: inputimage!,orientation: CGImagePropertyOrientation.up, options: [:]) //might need to change orientation
+            let handler = VNImageRequestHandler(cgImage: inputimage!,orientation: CGImagePropertyOrientation.right, options: [:]) //might need to change orientation
             do {
                 try handler.perform([request])
             } catch {
