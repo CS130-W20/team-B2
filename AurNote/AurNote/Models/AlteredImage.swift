@@ -125,7 +125,13 @@ class AlteredImage {
             } catch {
                 print("Error: Text detection failed - vision request failed.")
             }
-            let image = UIImage(named: "graph")?.cgImage
+           // let image = UIImage(named: "graph")?.cgImage
+            var imgStore = ImageStorer()
+            var image = imgStore.retrieveImage(forKey: "ADKO", inStorageType: ImageStorer.StorageType.fileSystem)?.cgImage
+            if image == nil
+            {
+                image = UIImage(named: "graph")?.cgImage
+            }
             self.visualizationNode.display(image!)
         }
     }
