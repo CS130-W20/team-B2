@@ -127,7 +127,7 @@ class AlteredImage {
             }
            // let image = UIImage(named: "graph")?.cgImage
             var imgStore = ImageStorer()
-            var image = imgStore.retrieveImage(forKey: "ADKO", inStorageType: ImageStorer.StorageType.fileSystem)?.cgImage
+            var image = imgStore.retrieveImage(forKey: imageName, inStorageType: ImageStorer.StorageType.fileSystem)?.cgImage
             if image == nil
             {
                 image = UIImage(named: "graph")?.cgImage
