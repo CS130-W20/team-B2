@@ -16,11 +16,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Noy-YS-Dae">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Noy-YS-Dae">
                                 <rect key="frame" x="0.0" y="88" width="414" height="128"/>
                                 <subviews>
-                                    <searchBar contentMode="redraw" ambiguous="YES" misplaced="YES" text="" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="0Ep-BH-GOq">
-                                        <rect key="frame" x="0.0" y="84" width="414" height="44"/>
+                                    <searchBar contentMode="redraw" text="" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="0Ep-BH-GOq">
+                                        <rect key="frame" x="0.0" y="87" width="414" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="5sd-HW-7qV"/>
                                         </constraints>
@@ -41,8 +41,8 @@
                                     <constraint firstItem="0Ep-BH-GOq" firstAttribute="top" secondItem="Noy-YS-Dae" secondAttribute="top" constant="87" id="s06-9y-v8M"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Jcm-BT-p7J">
-                                <rect key="frame" x="0.0" y="216" width="414" height="597"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Jcm-BT-p7J">
+                                <rect key="frame" x="0.0" y="216" width="414" height="562"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="562" id="Iai-Mz-EaX"/>
@@ -149,6 +149,15 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Noy-YS-Dae" firstAttribute="trailing" secondItem="Jcm-BT-p7J" secondAttribute="trailing" id="9or-Xi-K7g"/>
+                            <constraint firstAttribute="bottom" secondItem="Noy-YS-Dae" secondAttribute="bottom" constant="680" id="RJj-CS-xNN"/>
+                            <constraint firstItem="Noy-YS-Dae" firstAttribute="leading" secondItem="Jcm-BT-p7J" secondAttribute="leading" id="RRZ-vM-rQv"/>
+                            <constraint firstItem="Noy-YS-Dae" firstAttribute="centerX" secondItem="KtI-FQ-veR" secondAttribute="centerX" id="c2y-dG-774"/>
+                            <constraint firstItem="Noy-YS-Dae" firstAttribute="leading" secondItem="DMV-3r-hcJ" secondAttribute="leading" id="c8Z-mO-9XP"/>
+                            <constraint firstItem="Jcm-BT-p7J" firstAttribute="top" secondItem="Noy-YS-Dae" secondAttribute="bottom" id="ito-0k-hPN"/>
+                            <constraint firstItem="Noy-YS-Dae" firstAttribute="top" secondItem="DMV-3r-hcJ" secondAttribute="top" id="laY-VW-fYC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="DMV-3r-hcJ"/>
                     </view>
                     <navigationItem key="navigationItem" id="0Ya-gc-8dC"/>
