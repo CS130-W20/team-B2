@@ -25,7 +25,7 @@ class SharedCollectionCell: UICollectionViewCell {
 
 class SharedFoldersViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     var data = [String]()
-    var userId = "testUser"         //change this to dynamically obtain signed in userId
+    var userId = AppDelegate.shared().userId         //change this to dynamically obtain signed in userId
     var awsBucketHandler: AWSBucketHandler? = nil
     
     @IBOutlet weak var sharedCollection: UICollectionView!

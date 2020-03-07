@@ -12,6 +12,8 @@ import GoogleSignIn
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+    var userId = String()
+    var awsBucketHandler: AWSBucketHandler? = nil
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         GIDSignIn.sharedInstance().clientID = "930103452014-l409qphrp28ru67qp8k9l24p7vfejmd0.apps.googleusercontent.com"
@@ -68,11 +70,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         let familyName = user.profile.familyName
         let email = user.profile.email
         // Any operations follow here
+        self.userId = email!
+        self.awsBucketHandler = AWSBucketHandler(id: self.userId)
         
         NotificationCenter.default.post(
         name: Notification.Name(rawValue: "ToggleAuthUINotification"),
         object: nil,
         userInfo: ["statusText": "Signed in user:\(fullName!)"])
+    }
+    
+    static func shared() -> AppDelegate {
+        return UIApplication.shared.delegate as! AppDelegate
     }
 }
 

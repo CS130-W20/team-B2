@@ -42,6 +42,43 @@ class AWSBucketHandler {
 
     }
     
+    public func initializeUser(completion: @escaping (AnyObject?)->()) {
+        
+        let headObjectsRequest = AWSS3HeadObjectRequest()
+        headObjectsRequest!.bucket = bucketName
+        headObjectsRequest!.key = userId + "/"
+        s3.headObject(headObjectsRequest!).continueWith { (task) -> AnyObject? in
+            if task.error != nil {
+                print("item does not exist")
+                let putRequest = AWSS3PutObjectRequest()
+                putRequest?.bucket = self.bucketName
+                putRequest?.key = self.userId + "/"
+                
+                // Start asynchronous upload
+                self.s3.putObject(putRequest!).continueWith { (task: AWSTask!) -> AnyObject? in
+                    if task.error != nil {
+                        print("Error putting")
+                        print(task.error.debugDescription)
+                    } else {
+                        print("Put complete")
+                        // upload is complete, set the corresponding member vars
+                        self.putDirectory(folderName: self.sharedFolderName, completion: { result in
+                            if(result == nil) {
+                                print("Did not add shared folder")
+                            }
+                            completion(result)
+                            return
+                        })
+                    }
+                    completion(task)
+                    return nil
+                }
+            }
+            completion(true as AnyObject)
+            return nil
+        }
+    }
+    
     ///gets the names of all files in the user's directory and stores it in a global variable
     /// - Parameter completion: this is an event callback that lets the caller execute some function after the request completes
     func getAllFiles(completion: @escaping (AnyObject?)->()) {
@@ -51,9 +88,9 @@ class AWSBucketHandler {
         listRequest.prefix = userId+"/"
 
         //make the request and populate data
-        allFiles = []
         print("made request")
-            s3.listObjects(listRequest).continueWith { (task) -> AnyObject? in
+        s3.listObjects(listRequest).continueWith { (task) -> AnyObject? in
+            self.allFiles.removeAll()
             for object in (task.result?.contents)! {
                 print("Object key = \(object.key!)")
                 self.allFiles.append(object.key!)
@@ -68,6 +105,10 @@ class AWSBucketHandler {
     /// Return - Array<String> which contains the names of all user folders (unique)
     public func getDirectories() -> Array<String> {
         var data = [String]()
+        folderMap.removeAll()
+        print("Printing all files:")
+        print(allFiles)
+        print(folderMap)
         for str in self.allFiles {
             let dir = (String(str.dropFirst(self.userId.count + 1)))
             let slashInd = dir.firstIndex(of: "/")
@@ -160,7 +201,6 @@ class AWSBucketHandler {
         let putRequest = AWSS3PutObjectRequest()
         putRequest?.bucket = bucketName
         putRequest?.key = userId + "/" + folderName + "/"
-//        putRequest?.acl = .publicReadWrite
         
         // Start asynchronous upload
         s3.putObject(putRequest!).continueWith { (task: AWSTask!) -> AnyObject? in
@@ -171,8 +211,10 @@ class AWSBucketHandler {
             else {
                 print("Put complete")
                 // upload is complete, set the corresponding member vars
-                self.allFiles.append(self.userId + "/" + folderName + "/")
-                self.folderMap[folderName] = []
+                if(folderName != self.sharedFolderName) {
+                    self.allFiles.append(self.userId + "/" + folderName + "/")
+                    self.folderMap[folderName] = []
+                }
             }
             completion(task)
             return nil
@@ -181,7 +223,6 @@ class AWSBucketHandler {
     
     public func putFile(folderName: String, fileName: String, fileURL: URL, completion: @escaping (AnyObject?)->()) {
         print("put the file")
-//        let uploadingFileURL = URL(fileURLWithPath: fileURL)
         let fileData = FileManager.default.contents(atPath: fileURL.path)
         let img = UIImage(data: fileData!)
 
@@ -191,7 +232,6 @@ class AWSBucketHandler {
         putRequest?.key = userId + "/" + folderName + "/" + fileName
         putRequest?.body = fileURL
         putRequest?.contentLength = NSData(data: fileData!).count as NSNumber;
-//        putRequest?.acl = .publicRead
         
         // Start asynchronous upload
         s3.putObject(putRequest!).continueWith { (task: AWSTask!) -> AnyObject? in
@@ -213,16 +253,16 @@ class AWSBucketHandler {
     
     public func shareFile(folderName: String, email: String, completion: @escaping (AnyObject?)->()) {
         
-        let atInd = email.firstIndex(of: "@")
-        if(atInd == nil) {
-            completion(nil)
-            return
-        }
-        let other_username = String(email.prefix(upTo: atInd!))
+//        let atInd = email.firstIndex(of: "@")
+//        if(atInd == nil) {
+//            completion(nil)
+//            return
+//        }
+//        let other_username = String(email.prefix(upTo: atInd!))
         
         let putRequest = AWSS3PutObjectRequest()
         putRequest?.bucket = bucketName
-        putRequest?.key = userId + "/" + sharedFolderName + "/" + other_username + "/" + folderName
+        putRequest?.key = email + "/" + sharedFolderName + "/" + userId + "/" + folderName
 
         // Start asynchronous upload
         s3.putObject(putRequest!).continueWith { (task: AWSTask!) -> AnyObject? in
@@ -232,9 +272,6 @@ class AWSBucketHandler {
             }
             else {
                 print("Put file complete")
-                // upload is complete, set the corresponding member vars
-                self.allFiles.append(self.userId + "/" + self.sharedFolderName + "/" + other_username + "/" + folderName)
-                self.folderMap[self.sharedFolderName]?.append(other_username + "/" + folderName)
             }
             completion(task)
             return nil
