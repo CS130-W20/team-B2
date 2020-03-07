@@ -20,7 +20,7 @@ class ImageCaptureViewController: UIViewController, CropViewControllerDelegate, 
     var imgStore = ImageStorer()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        openCamera(self)
         // Do any additional setup after loading the view.
     }
     @IBAction func openCamera(_ sender: Any) {
@@ -56,6 +56,7 @@ class ImageCaptureViewController: UIViewController, CropViewControllerDelegate, 
         photoPicker.sourceType = .camera
         photoPicker.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
         photoPicker.allowsEditing = false // for now, want to be able to crop in the future
+        photoPicker.modalPresentationStyle = .currentContext
         self.present(photoPicker, animated: true, completion: nil)
     }
     
@@ -117,7 +118,6 @@ class ImageCaptureViewController: UIViewController, CropViewControllerDelegate, 
                 codeMessage.text = String(code)
         cropViewController.dismiss(animated: true, completion: nil)
     }
-
 }
 
 class ImageStorer {
