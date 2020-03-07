@@ -37,7 +37,6 @@ class ImageCaptureViewController: UIViewController, UIImagePickerControllerDeleg
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = .photoLibrary
-        imagePicker.allowsEditing = true
         self.present(imagePicker, animated: true, completion: nil)
     }
     @IBOutlet weak var savedImage: UIImageView!
@@ -124,20 +123,20 @@ class ImageStorer {
     ///  - key: code to associate with the image
     ///  - storageType: type of storage (filesystem or other)
     func store(image: UIImage, forKey key: String, withStorageType storageType: StorageType) {
-        if let pngRepresentation = image.pngData() {
+        if let jpegRepresentation = image.jpegData(compressionQuality: 1.0) {
             switch storageType {
             case .fileSystem:
                 // save to disk
                 if let filePath = filePath(forKey: key) {
                     do {
-                        try pngRepresentation.write(to: filePath, options: .atomic)
+                        try jpegRepresentation.write(to: filePath, options: .atomic)
                     } catch let err {
                         print("Saving file resulted in error: ", err)
                     }
                 }
             case .userDefaults:
                 //save to user defaults
-                UserDefaults.standard.set(pngRepresentation, forKey: key)
+                UserDefaults.standard.set(jpegRepresentation, forKey: key)
             }
         }
     }
@@ -172,7 +171,7 @@ class ImageStorer {
         guard let documentURL = fileManager.urls(for: .documentDirectory, in: FileManager.SearchPathDomainMask.userDomainMask).first else {
             return nil
         }
-        return documentURL.appendingPathComponent(key + ".png")
+        return documentURL.appendingPathComponent(key + ".jpeg")
     }
     
     /// - Parameter length: the length of the random string you want to generate
