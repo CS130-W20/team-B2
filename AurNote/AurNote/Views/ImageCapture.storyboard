@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--ImageCaptureVC-->
+        <!--Capture-->
         <scene sceneID="q2y-kN-oxh">
             <objects>
-                <viewController storyboardIdentifier="ImageCaptureViewController" title="ImageCaptureVC" id="R1s-ja-f7e" customClass="ImageCaptureViewController" customModule="AurNote" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ImageCaptureViewController" title="Capture" id="R1s-ja-f7e" customClass="ImageCaptureViewController" customModule="AurNote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UX4-h5-cCg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

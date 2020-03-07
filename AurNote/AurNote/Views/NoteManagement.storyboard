@@ -386,10 +386,9 @@
         <!--DummyVC-->
         <scene sceneID="1GB-R6-Ak5">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TPv-ZL-zXT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController title="DummyVC" id="0U1-4o-Irb" customClass="CameraViewController" customModule="AurNote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C0L-3t-MAe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="fda-7S-o8g"/>
@@ -399,6 +398,7 @@
                         <segue destination="36d-xY-Q1D" kind="presentation" identifier="presentCode" id="25M-sd-64u"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TPv-ZL-zXT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-983" y="1288"/>
         </scene>
@@ -452,6 +452,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="25M-sd-64u"/>
-        <segue reference="9cU-io-Mjg"/>
+        <segue reference="gPB-Jk-NCa"/>
     </inferredMetricsTieBreakers>
 </document>

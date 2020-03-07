@@ -190,7 +190,12 @@ class AWSBucketHandler {
     }
     
     public func returnFilesInDirectory(folderName: String) -> [(String,UIImage)]{
-        return folderToObjectMap[folderName]!
+        if let uw = folderToObjectMap[folderName] {
+            return uw
+        }
+        else {
+            return []
+        }
     }
     
 
