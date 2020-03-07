@@ -15,22 +15,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qZf-qT-51d" customClass="GIDSignInButton">
-                                <rect key="frame" x="107" y="395" width="240" height="138"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ysc-EA-fhZ">
+                                <rect key="frame" x="48" y="734" width="318" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="6zo-06-cIO"/>
+                                    <constraint firstAttribute="width" secondItem="Ysc-EA-fhZ" secondAttribute="height" multiplier="337:72" id="Deu-5O-aMS"/>
+                                </constraints>
+                                <state key="normal" image="Google Sign-In Button"/>
+                                <connections>
+                                    <action selector="googleSignInButton:" destination="F5c-Lg-hn3" eventType="touchUpInside" id="Ong-2w-H3k"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_decals" translatesAutoresizingMaskIntoConstraints="NO" id="siZ-fS-9Td">
+                                <rect key="frame" x="77.5" y="144" width="259" height="394"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="259" id="Wsa-x4-FHT"/>
+                                    <constraint firstAttribute="height" constant="394" id="wna-xJ-1wr"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.31140691040000001" green="0.33967638020000002" blue="0.92950242760000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="qZf-qT-51d" firstAttribute="centerY" secondItem="nc7-Rh-Cpt" secondAttribute="centerY" id="QOI-G7-PU7"/>
-                            <constraint firstItem="qZf-qT-51d" firstAttribute="leading" secondItem="nc7-Rh-Cpt" secondAttribute="leading" constant="87" id="ed2-Bj-uiE"/>
-                            <constraint firstItem="qZf-qT-51d" firstAttribute="centerX" secondItem="nc7-Rh-Cpt" secondAttribute="centerX" id="fVv-TY-Bxm"/>
-                            <constraint firstItem="qZf-qT-51d" firstAttribute="top" secondItem="nc7-Rh-Cpt" secondAttribute="top" constant="340" id="pGz-lB-cn4"/>
+                            <constraint firstItem="siZ-fS-9Td" firstAttribute="top" secondItem="nc7-Rh-Cpt" secondAttribute="top" constant="100" id="Ihe-El-kVi"/>
+                            <constraint firstItem="nc7-Rh-Cpt" firstAttribute="bottom" secondItem="Ysc-EA-fhZ" secondAttribute="bottom" constant="60" id="Tb6-MJ-ult"/>
+                            <constraint firstItem="siZ-fS-9Td" firstAttribute="centerX" secondItem="nc7-Rh-Cpt" secondAttribute="centerX" id="gl5-7T-wQ3"/>
+                            <constraint firstItem="Ysc-EA-fhZ" firstAttribute="centerX" secondItem="nc7-Rh-Cpt" secondAttribute="centerX" id="h3U-eD-cT6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nc7-Rh-Cpt"/>
                     </view>
                     <connections>
-                        <outlet property="signInButton" destination="qZf-qT-51d" id="ECV-X5-rWr"/>
                         <outlet property="signOutButton" destination="AYC-n2-VH7" id="xkb-3e-rBw"/>
                         <outlet property="statusText" destination="xm1-Vu-TKJ" id="xZn-57-5tR"/>
                         <segue destination="G7i-kb-g1K" kind="presentation" identifier="loginSuccessful" modalPresentationStyle="fullScreen" id="Jgu-hC-GpA"/>
@@ -141,4 +154,8 @@
             <point key="canvasLocation" x="2210" y="-629"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Google Sign-In Button" width="337" height="72"/>
+        <image name="home_decals" width="226" height="380"/>
+    </resources>
 </document>
