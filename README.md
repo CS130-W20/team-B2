@@ -11,7 +11,8 @@ git clone https://github.com/CS130-W20/team-B2.git
 3. pod install
 - if you do not have cocoapods installed on your computer install it before this command
 4. open AurNote.xcworkspace
-5. Build (:
+5. Connect your iPhone device
+6. Build (:
 
 ## Relevant Links 
 Documentation: [AurNoteDocumentation.pdf](https://github.com/CS130-W20/team-B2/blob/master/AurNoteDocumentation.pdf)

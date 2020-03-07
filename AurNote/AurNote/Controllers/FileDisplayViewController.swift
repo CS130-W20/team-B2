@@ -47,7 +47,9 @@ class FileDisplayViewController: UIViewController, UICollectionViewDelegate, UIC
         if sender.source is ARAnnotationViewController {
             if let senderVC = sender.source as? ARAnnotationViewController {
                 capturedImage = senderVC.processedImage
-                
+                if let unwrappedImage = senderVC.processedImage {
+                    uploadToAWS(unwrappedImage)
+                }
                 //writes to the photo gallery
 //                if let unwrappedImage = capturedImage {
 //                    UIImageWriteToSavedPhotosAlbum(unwrappedImage, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
@@ -70,23 +72,7 @@ class FileDisplayViewController: UIViewController, UICollectionViewDelegate, UIC
         }
     }
     
-    @IBAction func pickFile(_ sender: Any) {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = .photoLibrary
-        imagePicker.allowsEditing = false
-        self.present(imagePicker, animated: true, completion: nil)
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-            var image: UIImage!
-            if let img = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
-                image = img
-            }
-            else if let img = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-                image = img
-            }
-            
+    func uploadToAWS(_ image: UIImage) {
             var code = String()
             while (true) {
                 code = imgStore.randomString(length: 10)
@@ -110,7 +96,6 @@ class FileDisplayViewController: UIViewController, UICollectionViewDelegate, UIC
                     print("Error in file display controller")
                 }
             })
-            picker.dismiss(animated: true, completion: nil)
         }
         
     override func viewDidLoad() {
