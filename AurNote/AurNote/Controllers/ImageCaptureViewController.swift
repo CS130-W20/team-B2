@@ -13,9 +13,9 @@ A view controller that allows users to upload photos to the app and receive imag
 
 import UIKit
 import AVKit
-import WeScan
+import CropViewController
 
-class ImageCaptureViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ImageCaptureViewController: UIViewController, CropViewControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     // TODO: create dictionary to store set of codes ?
     var imgStore = ImageStorer()
     override func viewDidLoad() {
@@ -85,27 +85,37 @@ class ImageCaptureViewController: UIViewController, UIImagePickerControllerDeleg
             image = img
         }
         
-        var code = String()
-        while (true) {
-            code = imgStore.randomString(length: 4)
-            if (imgStore.retrieveImage(forKey: code, inStorageType: ImageStorer.StorageType.fileSystem) == nil) {
-                break
-            }
-        }
-//        print(code)
-        imgStore.store(image: image, forKey: code, withStorageType: ImageStorer.StorageType.fileSystem)
+        picker.dismiss(animated: false, completion: {
+            let cropViewController = CropViewController(image: image)
+            cropViewController.delegate = self
+            self.present(cropViewController, animated: false, completion: nil)
+        })
         
-//         example of retrieving and displaying saved image
-        DispatchQueue.global(qos: .background).async {
-            if let savedImage = self.imgStore.retrieveImage(forKey: code, inStorageType: ImageStorer.StorageType.fileSystem) {
-                DispatchQueue.main.async {
-                    self.savedImage.image = savedImage
+    }
+    
+    func cropViewController(_ cropViewController: CropViewController, didCropToImage image: UIImage, withRect cropRect: CGRect, angle: Int) {
+        // 'image' is the newly cropped version of the original image
+                
+                var code = String()
+                while (true) {
+                    code = imgStore.randomString(length: 4)
+                    if (imgStore.retrieveImage(forKey: code, inStorageType: ImageStorer.StorageType.fileSystem) == nil) {
+                        break
+                    }
                 }
-            }
-        }
-        codeMessage.text = String(code)
-        
-        picker.dismiss(animated: true, completion: nil)
+        //        print(code)
+                imgStore.store(image: image, forKey: code, withStorageType: ImageStorer.StorageType.fileSystem)
+                
+        //         example of retrieving and displaying saved image
+                DispatchQueue.global(qos: .background).async {
+                    if let savedImage = self.imgStore.retrieveImage(forKey: code, inStorageType: ImageStorer.StorageType.fileSystem) {
+                        DispatchQueue.main.async {
+                            self.savedImage.image = savedImage
+                        }
+                    }
+                }
+                codeMessage.text = String(code)
+        cropViewController.dismiss(animated: true, completion: nil)
     }
 
 }

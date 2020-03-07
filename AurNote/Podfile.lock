@@ -9,6 +9,7 @@ PODS:
   - AWSCore (2.12.7)
   - AWSS3 (2.12.7):
     - AWSCore (= 2.12.7)
+  - CropViewController (2.5.2)
   - GoogleSignIn (5.0.2):
     - AppAuth (~> 1.2)
     - GTMAppAuth (~> 1.0)
@@ -26,6 +27,7 @@ PODS:
 DEPENDENCIES:
   - AWSCognito
   - AWSS3
+  - CropViewController
   - GoogleSignIn
   - WeScan (>= 0.9)
 
@@ -35,6 +37,7 @@ SPEC REPOS:
     - AWSCognito
     - AWSCore
     - AWSS3
+    - CropViewController
     - GoogleSignIn
     - GTMAppAuth
     - GTMSessionFetcher
@@ -45,11 +48,12 @@ SPEC CHECKSUMS:
   AWSCognito: 6d49ab5351072db2463c8c586ba89d3d07a48272
   AWSCore: 2f0f88ae94a63a198274d683c7d0e18709d7090b
   AWSS3: 40d2f99d91e34999789a534d95c80cc7c1135c6d
+  CropViewController: 1aac40093c5739e60d992b04724a55d12a689a4c
   GoogleSignIn: 7137d297ddc022a7e0aa4619c86d72c909fa7213
   GTMAppAuth: 4deac854479704f348309e7b66189e604cf5e01e
   GTMSessionFetcher: cea130bbfe5a7edc8d06d3f0d17288c32ffe9925
   WeScan: 843bc14af0aa32147086fb24aaf6e271334b3cda
 
-PODFILE CHECKSUM: 7de58e2a1fcfbba5f236f6ecb8240f94ea60eb23
+PODFILE CHECKSUM: e63b1e4c219bc837b6e938c4cf8f659e6aee9607
 
 COCOAPODS: 1.8.4

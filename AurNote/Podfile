@@ -10,4 +10,5 @@ target 'AurNote' do
   pod 'AWSCognito'
   pod 'GoogleSignIn'
   pod 'WeScan', '>= 0.9'
+  pod 'CropViewController'
 end
