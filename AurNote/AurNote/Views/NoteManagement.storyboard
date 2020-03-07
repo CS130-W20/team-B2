@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4o7-rv-Pgf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4o7-rv-Pgf">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,15 +16,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" text="" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="0Ep-BH-GOq">
-                                <rect key="frame" x="0.0" y="132" width="414" height="44"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Noy-YS-Dae">
+                                <rect key="frame" x="0.0" y="88" width="414" height="128"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" ambiguous="YES" misplaced="YES" text="" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="0Ep-BH-GOq">
+                                        <rect key="frame" x="0.0" y="84" width="414" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="5sd-HW-7qV"/>
+                                        </constraints>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Notes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLx-iV-cEy">
+                                        <rect key="frame" x="8" y="24" width="188" height="46"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="42"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="5sd-HW-7qV"/>
+                                    <constraint firstItem="0Ep-BH-GOq" firstAttribute="leading" secondItem="Noy-YS-Dae" secondAttribute="leading" id="2sF-uI-wql"/>
+                                    <constraint firstAttribute="trailing" secondItem="0Ep-BH-GOq" secondAttribute="trailing" id="Asw-4k-XSd"/>
+                                    <constraint firstItem="0Ep-BH-GOq" firstAttribute="top" secondItem="Noy-YS-Dae" secondAttribute="top" constant="87" id="s06-9y-v8M"/>
                                 </constraints>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Jcm-BT-p7J">
-                                <rect key="frame" x="0.0" y="181" width="414" height="562"/>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Jcm-BT-p7J">
+                                <rect key="frame" x="0.0" y="216" width="414" height="597"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="562" id="Iai-Mz-EaX"/>
@@ -69,7 +87,7 @@
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <connections>
-                                            <outlet property="directoryName" destination="Gkd-IR-Ik7" id="z13-2O-Lr5"/>
+                                            <outlet property="directoryName" destination="Gkd-IR-Ik7" id="0MC-hz-den"/>
                                             <outlet property="directoryName2" destination="py5-pP-M49" id="amu-pi-B0g"/>
                                             <segue destination="R3r-Mo-VGt" kind="show" id="gPB-Jk-NCa"/>
                                         </connections>
@@ -129,32 +147,11 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLx-iV-cEy">
-                                <rect key="frame" x="20" y="88" width="151" height="42.5"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="My Notes">
-                                        <attributes>
-                                            <font key="NSFont" metaFont="system" size="38"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="0Ep-BH-GOq" firstAttribute="leading" secondItem="KtI-FQ-veR" secondAttribute="leading" id="9Cg-zY-rmT"/>
-                            <constraint firstItem="0Ep-BH-GOq" firstAttribute="trailing" secondItem="Jcm-BT-p7J" secondAttribute="trailing" id="ABP-cA-62Z"/>
-                            <constraint firstItem="0Ep-BH-GOq" firstAttribute="top" secondItem="yLx-iV-cEy" secondAttribute="bottom" constant="1.5" id="GKL-Vc-FUC"/>
-                            <constraint firstAttribute="trailing" secondItem="0Ep-BH-GOq" secondAttribute="trailing" id="bwp-yD-evo"/>
-                            <constraint firstItem="0Ep-BH-GOq" firstAttribute="top" secondItem="KtI-FQ-veR" secondAttribute="top" constant="132" id="n2l-HI-npI"/>
-                            <constraint firstItem="0Ep-BH-GOq" firstAttribute="centerX" secondItem="yLx-iV-cEy" secondAttribute="centerX" constant="111.5" id="p0o-rK-Zlk"/>
-                            <constraint firstItem="0Ep-BH-GOq" firstAttribute="leading" secondItem="Jcm-BT-p7J" secondAttribute="leading" id="vpK-2P-42N"/>
-                            <constraint firstItem="Jcm-BT-p7J" firstAttribute="top" secondItem="0Ep-BH-GOq" secondAttribute="bottom" constant="5" id="vq7-Pd-cXC"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="DMV-3r-hcJ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="jvA-la-csd"/>
+                    <navigationItem key="navigationItem" id="0Ya-gc-8dC"/>
                     <connections>
                         <outlet property="directoryCollection" destination="Jcm-BT-p7J" id="iwW-1O-riO"/>
                     </connections>
@@ -429,6 +426,6 @@
         <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9cU-io-Mjg"/>
+        <segue reference="gPB-Jk-NCa"/>
     </inferredMetricsTieBreakers>
 </document>
