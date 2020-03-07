@@ -12,8 +12,10 @@ import UIKit
 
 @objc(LoginViewController)
 class LoginViewController: UIViewController {
-
-    @IBOutlet weak var signInButton: GIDSignInButton!
+    
+    @IBAction func googleSignInButton(_ sender: Any) {
+        GIDSignIn.sharedInstance().signIn()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
