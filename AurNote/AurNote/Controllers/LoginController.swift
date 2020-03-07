@@ -33,6 +33,10 @@ class LoginViewController: UIViewController {
         if (segue.identifier == "MainToTimer") {
             let vc = segue.destination as! LoggedInViewController
             vc.statusText.text = "Logged In"
+        } else if( segue.identifier == "loginSuccessful") {
+            let vc = segue.destination as? NoteManagementController
+            vc?.awsBucketHandler = AppDelegate.shared().awsBucketHandler
+            vc?.userId = AppDelegate.shared().userId
         }
     }
     
@@ -48,8 +52,7 @@ class LoginViewController: UIViewController {
     
     @objc func receiveToggleAuthUINotification(_ notification: NSNotification) {
       if notification.name.rawValue == "ToggleAuthUINotification" {
-        
-        performSegue(withIdentifier: "loginSuccessful", sender: nil)
+        self.performSegue(withIdentifier: "loginSuccessful", sender: nil)
       }
     }
 }

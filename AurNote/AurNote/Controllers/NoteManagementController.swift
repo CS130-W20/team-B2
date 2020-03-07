@@ -47,7 +47,7 @@ class SharedFolderCell: UICollectionViewCell {
 /// The view controller for the splash page which includes collection view
 class NoteManagementController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     var data = [String]()
-    let userId = "testUser"         //change this to dynamically obtain signed in userId
+    var userId: String = ""       //change this to dynamically obtain signed in userId
     var awsBucketHandler: AWSBucketHandler? = nil
     var newFolder:UITextField = UITextField()
     
@@ -57,23 +57,19 @@ class NoteManagementController: UIViewController, UICollectionViewDelegate, UICo
     ///overrides function so the bucket handler is initialized and the names of the directories are recieved
     override func viewDidLoad() {
         super.viewDidLoad()
-                
         data = []
-        awsBucketHandler = AWSBucketHandler(id: userId)
-        awsBucketHandler!.getAllFiles(completion: {result in
-            if(result != nil) {
-                self.data = self.awsBucketHandler!.getDirectories()
-                self.data.append("shared_w_me")
-                self.data.append("Add Folder")
-                DispatchQueue.main.async {
-                    self.directoryCollection.reloadData()
-                }
-            } else {
-                print("Error in getting files")
-            }
+        userId = AppDelegate.shared().userId
+        awsBucketHandler = AppDelegate.shared().awsBucketHandler
+        awsBucketHandler!.initializeUser(completion: { result in
+            self.awsBucketHandler!.getAllFiles(completion: { result in
+            self.data = self.awsBucketHandler!.getDirectories()
+                    self.data.append("shared_w_me")
+                    self.data.append("Add Folder")
+                    DispatchQueue.main.async {
+                        self.directoryCollection.reloadData()
+                    }
+                })
         })
-    
-        
     }
     
     
