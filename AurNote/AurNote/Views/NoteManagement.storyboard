@@ -343,10 +343,10 @@
             </objects>
             <point key="canvasLocation" x="2448" y="-14"/>
         </scene>
-        <!--Home-->
+        <!--NotesVC-->
         <scene sceneID="AzE-1M-WRF">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="y0o-gr-pjK" sceneMemberID="viewController">
+                <navigationController title="NotesVC" automaticallyAdjustsScrollViewInsets="NO" id="y0o-gr-pjK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" selectedImage="house.fill" id="bUa-ZB-j09"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -383,10 +383,29 @@
             </objects>
             <point key="canvasLocation" x="318" y="1088"/>
         </scene>
-        <!--Account-->
+        <!--DummyVC-->
+        <scene sceneID="1GB-R6-Ak5">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TPv-ZL-zXT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController title="DummyVC" id="0U1-4o-Irb" customClass="CameraViewController" customModule="AurNote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C0L-3t-MAe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="fda-7S-o8g"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="baX-9w-r8g"/>
+                    <connections>
+                        <segue destination="36d-xY-Q1D" kind="presentation" identifier="presentCode" id="25M-sd-64u"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-983" y="1288"/>
+        </scene>
+        <!--AccountVC-->
         <scene sceneID="7Cq-kj-nB3">
             <objects>
-                <viewController id="XVm-HZ-2D5" sceneMemberID="viewController">
+                <viewController title="AccountVC" id="XVm-HZ-2D5" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WbW-p4-FRp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -400,10 +419,10 @@
             </objects>
             <point key="canvasLocation" x="2410" y="1049"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--CameraVC-->
         <scene sceneID="B2I-Be-SD0">
             <objects>
-                <tabBarController storyboardIdentifier="NoteManagementViewController" id="4o7-rv-Pgf" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="NoteManagementViewController" title="CameraVC" id="4o7-rv-Pgf" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Gz0-OC-Kd4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -432,6 +451,7 @@
         <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="25M-sd-64u"/>
         <segue reference="9cU-io-Mjg"/>
     </inferredMetricsTieBreakers>
 </document>

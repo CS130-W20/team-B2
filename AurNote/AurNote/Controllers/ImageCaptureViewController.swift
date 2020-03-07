@@ -13,14 +13,14 @@ A view controller that allows users to upload photos to the app and receive imag
 
 import UIKit
 import AVKit
-import WeScan
+import CropViewController
 
-class ImageCaptureViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ImageCaptureViewController: UIViewController, CropViewControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     // TODO: create dictionary to store set of codes ?
     var imgStore = ImageStorer()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        openCamera(self)
         // Do any additional setup after loading the view.
     }
     @IBAction func openCamera(_ sender: Any) {
@@ -37,7 +37,6 @@ class ImageCaptureViewController: UIViewController, UIImagePickerControllerDeleg
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = .photoLibrary
-        imagePicker.allowsEditing = true
         self.present(imagePicker, animated: true, completion: nil)
     }
     @IBOutlet weak var savedImage: UIImageView!
@@ -57,6 +56,7 @@ class ImageCaptureViewController: UIViewController, UIImagePickerControllerDeleg
         photoPicker.sourceType = .camera
         photoPicker.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
         photoPicker.allowsEditing = false // for now, want to be able to crop in the future
+        photoPicker.modalPresentationStyle = .currentContext
         self.present(photoPicker, animated: true, completion: nil)
     }
     
@@ -86,29 +86,38 @@ class ImageCaptureViewController: UIViewController, UIImagePickerControllerDeleg
             image = img
         }
         
-        var code = String()
-        while (true) {
-            code = imgStore.randomString(length: 4)
-            if (imgStore.retrieveImage(forKey: code, inStorageType: ImageStorer.StorageType.fileSystem) == nil) {
-                break
-            }
-        }
-//        print(code)
-        imgStore.store(image: image, forKey: code, withStorageType: ImageStorer.StorageType.fileSystem)
+        picker.dismiss(animated: false, completion: {
+            let cropViewController = CropViewController(image: image)
+            cropViewController.delegate = self
+            self.present(cropViewController, animated: false, completion: nil)
+        })
         
-//         example of retrieving and displaying saved image
-        DispatchQueue.global(qos: .background).async {
-            if let savedImage = self.imgStore.retrieveImage(forKey: code, inStorageType: ImageStorer.StorageType.fileSystem) {
-                DispatchQueue.main.async {
-                    self.savedImage.image = savedImage
-                }
-            }
-        }
-        codeMessage.text = String(code)
-        
-        picker.dismiss(animated: true, completion: nil)
     }
-
+    
+    func cropViewController(_ cropViewController: CropViewController, didCropToImage image: UIImage, withRect cropRect: CGRect, angle: Int) {
+        // 'image' is the newly cropped version of the original image
+                
+                var code = String()
+                while (true) {
+                    code = imgStore.randomString(length: 4)
+                    if (imgStore.retrieveImage(forKey: code, inStorageType: ImageStorer.StorageType.fileSystem) == nil) {
+                        break
+                    }
+                }
+        //        print(code)
+                imgStore.store(image: image, forKey: code, withStorageType: ImageStorer.StorageType.fileSystem)
+                
+        //         example of retrieving and displaying saved image
+                DispatchQueue.global(qos: .background).async {
+                    if let savedImage = self.imgStore.retrieveImage(forKey: code, inStorageType: ImageStorer.StorageType.fileSystem) {
+                        DispatchQueue.main.async {
+                            self.savedImage.image = savedImage
+                        }
+                    }
+                }
+                codeMessage.text = String(code)
+        cropViewController.dismiss(animated: true, completion: nil)
+    }
 }
 
 class ImageStorer {
@@ -124,20 +133,20 @@ class ImageStorer {
     ///  - key: code to associate with the image
     ///  - storageType: type of storage (filesystem or other)
     func store(image: UIImage, forKey key: String, withStorageType storageType: StorageType) {
-        if let pngRepresentation = image.pngData() {
+        if let jpegRepresentation = image.jpegData(compressionQuality: 1.0) {
             switch storageType {
             case .fileSystem:
                 // save to disk
                 if let filePath = filePath(forKey: key) {
                     do {
-                        try pngRepresentation.write(to: filePath, options: .atomic)
+                        try jpegRepresentation.write(to: filePath, options: .atomic)
                     } catch let err {
                         print("Saving file resulted in error: ", err)
                     }
                 }
             case .userDefaults:
                 //save to user defaults
-                UserDefaults.standard.set(pngRepresentation, forKey: key)
+                UserDefaults.standard.set(jpegRepresentation, forKey: key)
             }
         }
     }
@@ -172,7 +181,7 @@ class ImageStorer {
         guard let documentURL = fileManager.urls(for: .documentDirectory, in: FileManager.SearchPathDomainMask.userDomainMask).first else {
             return nil
         }
-        return documentURL.appendingPathComponent(key + ".png")
+        return documentURL.appendingPathComponent(key + ".jpeg")
     }
     
     /// - Parameter length: the length of the random string you want to generate

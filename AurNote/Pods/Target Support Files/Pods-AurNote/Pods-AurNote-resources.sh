@@ -97,6 +97,7 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/CropViewController/TOCropViewControllerBundle.bundle"
   install_resource "${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle"
   install_resource "${PODS_ROOT}/WeScan/WeScan/Assets/enhance.png"
   install_resource "${PODS_ROOT}/WeScan/WeScan/Assets/enhance@2x.png"
@@ -121,6 +122,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/WeScan/WeScan/zh-Hant.lproj/Localizable.strings"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/CropViewController/TOCropViewControllerBundle.bundle"
   install_resource "${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle"
   install_resource "${PODS_ROOT}/WeScan/WeScan/Assets/enhance.png"
   install_resource "${PODS_ROOT}/WeScan/WeScan/Assets/enhance@2x.png"

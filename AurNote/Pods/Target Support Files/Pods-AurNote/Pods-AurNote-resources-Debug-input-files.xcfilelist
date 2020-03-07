@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-AurNote/Pods-AurNote-resources.sh
+${PODS_CONFIGURATION_BUILD_DIR}/CropViewController/TOCropViewControllerBundle.bundle
 ${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle
 ${PODS_ROOT}/WeScan/WeScan/Assets/enhance.png
 ${PODS_ROOT}/WeScan/WeScan/Assets/enhance@2x.png
