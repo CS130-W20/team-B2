@@ -193,6 +193,31 @@ class FileDisplayViewController: UIViewController, UICollectionViewDelegate, UIC
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView,
+             didSelectItemAt indexPath: IndexPath) {
+
+        let tappedCell = collectionView.cellForItem(at:indexPath) as! FileCollectionCell
+        print(tappedCell.fileImage.hashValue)
+        
+        let newImageView = UIImageView(image: tappedCell.fileImage.image)
+        newImageView.frame = UIScreen.main.bounds
+        newImageView.backgroundColor = .black
+        newImageView.contentMode = .scaleAspectFit
+        newImageView.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissFullscreenImage))
+        newImageView.addGestureRecognizer(tap)
+        
+        self.view.addSubview(newImageView)
+        self.navigationController?.isNavigationBarHidden = true
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    @objc func dismissFullscreenImage(_ sender: UITapGestureRecognizer) {
+        self.navigationController?.isNavigationBarHidden = false
+        self.tabBarController?.tabBar.isHidden = false
+        sender.view?.removeFromSuperview()
+    }
+    
     @objc func shareAction (sender:UIButton) {
         print("SHARE")
         let alert = UIAlertController(title: "Invite A Collaborator", message: "The collaborator will recieve an email notification and see these files in thier Shared with Me folder.", preferredStyle: UIAlertController.Style.alert)
