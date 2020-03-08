@@ -20,6 +20,7 @@ class DirectoryCollectionCell: UICollectionViewCell {
         let courseNumber = localCopy.popLast()
         directoryName2.text = String(courseNumber!)
         directoryName.text = localCopy.joined(separator: " ");
+        
     }
 }
 

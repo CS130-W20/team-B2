@@ -18,7 +18,20 @@ class FileCollectionCell: UICollectionViewCell {
     func displayContent(name: String, img: UIImage) {
 //        fileLabel.isHidden = true
 //        fileLabel.text = name
-        fileImage.image = img
+          fileImage.image = img
+        
+        self.contentView.layer.cornerRadius = 10.0
+        self.contentView.layer.borderWidth = 1.0
+        self.contentView.layer.borderColor = UIColor.clear.cgColor
+        self.contentView.layer.masksToBounds = true
+
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOffset = CGSize(width: 0, height: 2)
+        self.layer.shadowRadius = 4.0
+        self.layer.shadowOpacity = 0.15
+        self.layer.masksToBounds = false
+        self.layer.backgroundColor = UIColor.clear.cgColor
+        self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.contentView.layer.cornerRadius).cgPath
     }
     
 }
@@ -164,9 +177,9 @@ class FileDisplayViewController: UIViewController, UICollectionViewDelegate, UIC
         layout.itemSize = CGSize(width: width, height: 140)
         let cell = fileCollection.dequeueReusableCell(withReuseIdentifier: "fileCollectionCell", for: indexPath) as! FileCollectionCell
         cell.displayContent(name: fileImages[indexPath.row].0, img: fileImages[indexPath.row].1)
-        cell.layer.masksToBounds = true
-        cell.layer.cornerRadius = 10
-        cell.dropShadow()
+//        cell.layer.masksToBounds = true
+//        cell.layer.cornerRadius = 10
+//        cell.dropShadow()
         return cell
     }
     
