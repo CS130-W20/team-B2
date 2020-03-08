@@ -405,11 +405,43 @@
         <!--AccountVC-->
         <scene sceneID="7Cq-kj-nB3">
             <objects>
-                <viewController title="AccountVC" id="XVm-HZ-2D5" sceneMemberID="viewController">
+                <viewController title="AccountVC" id="XVm-HZ-2D5" customClass="AccountViewController" customModule="AurNote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WbW-p4-FRp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Soj-pX-l4v">
+                                <rect key="frame" x="24" y="631" width="327" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Soj-pX-l4v" secondAttribute="height" multiplier="327:68" id="20N-o0-ydD"/>
+                                    <constraint firstAttribute="width" constant="327" id="Bt8-qL-Smb"/>
+                                </constraints>
+                                <state key="normal" image="Logout Button"/>
+                                <connections>
+                                    <action selector="logoutButtonPressed:" destination="XVm-HZ-2D5" eventType="touchUpInside" id="TBc-Gw-S2r"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo (Team Page)" translatesAutoresizingMaskIntoConstraints="NO" id="DUo-pA-z6H">
+                                <rect key="frame" x="127.33333333333334" y="66.666666666666671" width="120.33333333333334" height="145.33333333333331"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120.33333333333333" id="Diq-ZE-wXB"/>
+                                    <constraint firstAttribute="width" secondItem="DUo-pA-z6H" secondAttribute="height" multiplier="24:29" id="utu-XV-Qdd"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Team" translatesAutoresizingMaskIntoConstraints="NO" id="SvS-6i-5wq">
+                                <rect key="frame" x="24" y="242" width="327" height="359"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.31140691040000001" green="0.33967638020000002" blue="0.92950242760000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="SvS-6i-5wq" firstAttribute="top" secondItem="DUo-pA-z6H" secondAttribute="bottom" constant="30" id="2r6-yr-ewS"/>
+                            <constraint firstItem="VnI-Zu-BtX" firstAttribute="bottom" secondItem="Soj-pX-l4v" secondAttribute="bottom" constant="30" id="5Dy-pD-6p1"/>
+                            <constraint firstItem="Soj-pX-l4v" firstAttribute="top" secondItem="SvS-6i-5wq" secondAttribute="bottom" constant="30" id="5aK-15-IgO"/>
+                            <constraint firstItem="DUo-pA-z6H" firstAttribute="centerX" secondItem="VnI-Zu-BtX" secondAttribute="centerX" id="RPU-Wy-g5Y"/>
+                            <constraint firstItem="SvS-6i-5wq" firstAttribute="centerX" secondItem="VnI-Zu-BtX" secondAttribute="centerX" id="SR1-nG-wVN"/>
+                            <constraint firstItem="SvS-6i-5wq" firstAttribute="width" secondItem="Soj-pX-l4v" secondAttribute="width" id="gLI-tl-OAO"/>
+                            <constraint firstItem="Soj-pX-l4v" firstAttribute="centerX" secondItem="VnI-Zu-BtX" secondAttribute="centerX" id="v3i-ES-Dv7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="VnI-Zu-BtX"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Account" image="person" catalog="system" selectedImage="person.fill" id="4g7-ZL-1PL"/>
@@ -417,7 +449,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pha-0D-oMM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2410" y="1049"/>
+            <point key="canvasLocation" x="2408.8000000000002" y="1048.5221674876848"/>
         </scene>
         <!--CameraVC-->
         <scene sceneID="B2I-Be-SD0">
@@ -440,6 +472,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Logo (Team Page)" width="114" height="135"/>
+        <image name="Logout Button" width="327" height="68"/>
+        <image name="Team" width="327" height="359"/>
         <image name="camera" catalog="system" width="64" height="48"/>
         <image name="camera.fill" catalog="system" width="64" height="48"/>
         <image name="house" catalog="system" width="64" height="54"/>
@@ -451,7 +486,7 @@
         <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="25M-sd-64u"/>
+        <segue reference="4Ke-lE-om4"/>
         <segue reference="gPB-Jk-NCa"/>
     </inferredMetricsTieBreakers>
 </document>
