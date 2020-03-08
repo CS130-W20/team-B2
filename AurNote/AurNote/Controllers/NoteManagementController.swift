@@ -45,18 +45,23 @@ class SharedFolderCell: UICollectionViewCell {
 }
 
 /// The view controller for the splash page which includes collection view
-class NoteManagementController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class NoteManagementController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchBarDelegate {
     var data = [String]()
     var userId: String = ""       //change this to dynamically obtain signed in userId
     var awsBucketHandler: AWSBucketHandler? = nil
     var newFolder:UITextField = UITextField()
-    
+    var search = UISearchController(searchResultsController: nil)
 
     @IBOutlet weak var directoryCollection: UICollectionView!
     
     ///overrides function so the bucket handler is initialized and the names of the directories are recieved
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.search.searchBar.delegate = self
+        self.navigationItem.searchController = search
+        
         data = []
         userId = AppDelegate.shared().userId
         awsBucketHandler = AppDelegate.shared().awsBucketHandler
@@ -164,6 +169,17 @@ class NoteManagementController: UIViewController, UICollectionViewDelegate, UICo
         }
     }
     
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        // Add your search logic here
+        print(searchText)
+        if (searchText.count > 0) {
+            directoryCollection.isHidden = true
+        }
+        else {
+            directoryCollection.isHidden = false
+        }
+
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is FileDisplayViewController {
