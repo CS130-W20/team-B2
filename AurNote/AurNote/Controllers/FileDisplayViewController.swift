@@ -199,7 +199,7 @@ class FileDisplayViewController: UIViewController, UICollectionViewDelegate, UIC
         let tappedCell = collectionView.cellForItem(at:indexPath) as! FileCollectionCell
         print(tappedCell.fileImage.hashValue)
         
-        let newImageView = UIImageView(image: tappedCell.fileImage.image)
+        let newImageView = EEZoomableImageView(image: tappedCell.fileImage.image)
         newImageView.frame = UIScreen.main.bounds
         newImageView.backgroundColor = .black
         newImageView.contentMode = .scaleAspectFit
