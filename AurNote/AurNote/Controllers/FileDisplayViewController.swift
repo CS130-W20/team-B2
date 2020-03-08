@@ -11,22 +11,20 @@ import UIKit
 class FileCollectionCell: UICollectionViewCell {
 
     @IBOutlet weak var fileImage: UIImageView!
-    @IBOutlet weak var fileLabel: UILabel!
+//    @IBOutlet weak var fileLabel: UILabel!
     
     /// sets the  cell's name to the name of the folder
     /// - Parameter name: String name of the folder
     func displayContent(name: String, img: UIImage) {
-        fileLabel.text = name
+//        fileLabel.isHidden = true
+//        fileLabel.text = name
         fileImage.image = img
     }
     
 }
 
 class FileDisplayViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
-    @IBOutlet weak var folderLabel: UILabel!
     @IBOutlet weak var fileCollection: UICollectionView!
-    
     @IBOutlet weak var shareBtn: UIBarButtonItem!
     @IBOutlet weak var addBtn: UIBarButtonItem!
     
@@ -100,7 +98,9 @@ class FileDisplayViewController: UIViewController, UICollectionViewDelegate, UIC
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        folderLabel.text = folderName
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationItem.title = folderName
+        
         if(self.isShared == true) {
             shareBtn.isEnabled = false
             addBtn.isEnabled = false
@@ -159,13 +159,14 @@ class FileDisplayViewController: UIViewController, UICollectionViewDelegate, UIC
     ///   - indexPath: IndexPath gets the cell that we want to modify
     /// - Return: UICollectionViewCell: the formatted collection view cell to add to the view
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let width = (view.frame.size.width - 10)/3
+        let width = 105
         let layout = fileCollection.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.itemSize = CGSize(width: width, height: width)
+        layout.itemSize = CGSize(width: width, height: 140)
         let cell = fileCollection.dequeueReusableCell(withReuseIdentifier: "fileCollectionCell", for: indexPath) as! FileCollectionCell
         cell.displayContent(name: fileImages[indexPath.row].0, img: fileImages[indexPath.row].1)
         cell.layer.masksToBounds = true
         cell.layer.cornerRadius = 10
+        cell.dropShadow()
         return cell
     }
     
