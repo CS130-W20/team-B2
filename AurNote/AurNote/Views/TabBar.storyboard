@@ -25,28 +25,31 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tab Bar (Background)" translatesAutoresizingMaskIntoConstraints="NO" id="eRF-tJ-qFY">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="113"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUF-ja-o1c">
-                                        <rect key="frame" x="180" y="24" width="54" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Camera"/>
-                                        <connections>
-                                            <action selector="didPressCameraButton:" destination="Ca9-GO-qpO" eventType="touchUpInside" id="4KR-W4-lUA"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQk-Sa-oJG">
-                                        <rect key="frame" x="306" y="51" width="57" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Account"/>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQk-Sa-oJG">
+                                        <rect key="frame" x="303" y="63" width="25" height="24"/>
+                                        <state key="normal" image="profile (unselected)"/>
+                                        <state key="selected" image="profile (selected)"/>
                                         <connections>
                                             <action selector="didPressTab:" destination="Ca9-GO-qpO" eventType="touchUpInside" id="Noc-db-4xJ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kom-Vg-ApH">
-                                        <rect key="frame" x="42" y="51" width="41" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Home"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kom-Vg-ApH">
+                                        <rect key="frame" x="89" y="63" width="22" height="24"/>
+                                        <state key="normal" image="home (unselected)"/>
+                                        <state key="selected" image="home (selected)"/>
                                         <connections>
                                             <action selector="didPressTab:" destination="Ca9-GO-qpO" eventType="touchUpInside" id="MNp-bH-Rek"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUF-ja-o1c">
+                                        <rect key="frame" x="165" y="0.0" width="84" height="84"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="MUF-ja-o1c" secondAttribute="height" multiplier="1:1" id="7NY-T3-l6C"/>
+                                            <constraint firstAttribute="width" constant="84" id="hgY-rq-O6m"/>
+                                        </constraints>
+                                        <state key="normal" image="Camera"/>
+                                        <connections>
+                                            <action selector="didPressCameraButton:" destination="Ca9-GO-qpO" eventType="touchUpInside" id="4KR-W4-lUA"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -54,9 +57,15 @@
                                 <constraints>
                                     <constraint firstItem="eRF-tJ-qFY" firstAttribute="leading" secondItem="tPp-Y1-IQs" secondAttribute="leading" id="5cL-io-mQz"/>
                                     <constraint firstAttribute="bottom" secondItem="eRF-tJ-qFY" secondAttribute="bottom" id="KMX-N0-gEP"/>
+                                    <constraint firstItem="tQk-Sa-oJG" firstAttribute="leading" secondItem="MUF-ja-o1c" secondAttribute="trailing" constant="54" id="LIc-Hm-eRN"/>
+                                    <constraint firstItem="MUF-ja-o1c" firstAttribute="centerX" secondItem="eRF-tJ-qFY" secondAttribute="centerX" id="LkV-t1-6NZ"/>
                                     <constraint firstAttribute="width" constant="414" id="NSd-RH-cLl"/>
+                                    <constraint firstItem="Kom-Vg-ApH" firstAttribute="top" secondItem="eRF-tJ-qFY" secondAttribute="top" constant="63" id="Ovh-Af-s0M"/>
+                                    <constraint firstItem="tQk-Sa-oJG" firstAttribute="top" secondItem="eRF-tJ-qFY" secondAttribute="top" constant="63" id="SVU-Vb-GYe"/>
+                                    <constraint firstItem="MUF-ja-o1c" firstAttribute="leading" secondItem="Kom-Vg-ApH" secondAttribute="trailing" constant="54" id="UwT-Wd-RY3"/>
                                     <constraint firstAttribute="trailing" secondItem="eRF-tJ-qFY" secondAttribute="trailing" id="l0O-O4-JGt"/>
                                     <constraint firstItem="eRF-tJ-qFY" firstAttribute="top" secondItem="tPp-Y1-IQs" secondAttribute="top" id="pVt-Gr-C43"/>
+                                    <constraint firstItem="MUF-ja-o1c" firstAttribute="top" secondItem="eRF-tJ-qFY" secondAttribute="top" id="uEc-dX-GZl"/>
                                     <constraint firstAttribute="height" constant="113" id="xCv-Bb-HbN"/>
                                 </constraints>
                             </view>
@@ -86,6 +95,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Camera" width="84" height="84"/>
         <image name="Tab Bar (Background)" width="375" height="113"/>
+        <image name="home (selected)" width="22" height="24"/>
+        <image name="home (unselected)" width="22" height="24"/>
+        <image name="profile (selected)" width="25" height="24"/>
+        <image name="profile (unselected)" width="25" height="24"/>
     </resources>
 </document>
