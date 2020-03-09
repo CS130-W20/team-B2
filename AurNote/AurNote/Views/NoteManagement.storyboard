@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4o7-rv-Pgf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -11,7 +11,7 @@
         <!--My Notes-->
         <scene sceneID="Fei-fd-m6q">
             <objects>
-                <viewController id="fQo-yv-UHT" customClass="NoteManagementController" customModule="AurNote" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NoteManagementViewController2" id="fQo-yv-UHT" customClass="NoteManagementController" customModule="AurNote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KtI-FQ-veR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -329,8 +329,7 @@
         <!--NotesVC-->
         <scene sceneID="AzE-1M-WRF">
             <objects>
-                <navigationController title="NotesVC" automaticallyAdjustsScrollViewInsets="NO" id="y0o-gr-pjK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" selectedImage="house.fill" id="bUa-ZB-j09"/>
+                <navigationController storyboardIdentifier="NoteManagementViewController" title="NotesVC" automaticallyAdjustsScrollViewInsets="NO" id="y0o-gr-pjK" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9fz-tW-afi">
@@ -356,45 +355,16 @@
             </objects>
             <point key="canvasLocation" x="3191" y="-14"/>
         </scene>
-        <!--ImageCaptureViewController-->
-        <scene sceneID="Eyp-sn-JeD">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="ImageCaptureViewController" storyboardName="ImageCapture" referencedIdentifier="ImageCaptureViewController" id="36d-xY-Q1D" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Capture" image="camera" catalog="system" selectedImage="camera.fill" id="CHg-65-MoO"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dAL-ct-GNg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="318" y="1088"/>
-        </scene>
-        <!--DummyVC-->
-        <scene sceneID="1GB-R6-Ak5">
-            <objects>
-                <viewController title="DummyVC" id="0U1-4o-Irb" customClass="CameraViewController" customModule="AurNote" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="C0L-3t-MAe">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="fda-7S-o8g"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="baX-9w-r8g"/>
-                    <connections>
-                        <segue destination="36d-xY-Q1D" kind="presentation" identifier="presentCode" id="25M-sd-64u"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TPv-ZL-zXT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-983" y="1288"/>
-        </scene>
         <!--AccountVC-->
         <scene sceneID="7Cq-kj-nB3">
             <objects>
-                <viewController title="AccountVC" id="XVm-HZ-2D5" customClass="AccountViewController" customModule="AurNote" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AccountViewController" title="AccountVC" id="XVm-HZ-2D5" customClass="AccountViewController" customModule="AurNote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WbW-p4-FRp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Soj-pX-l4v">
-                                <rect key="frame" x="24" y="631" width="327" height="68"/>
+                                <rect key="frame" x="24" y="611" width="327" height="68"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Soj-pX-l4v" secondAttribute="height" multiplier="327:68" id="20N-o0-ydD"/>
                                     <constraint firstAttribute="width" constant="327" id="Bt8-qL-Smb"/>
@@ -405,21 +375,21 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo (Team Page)" translatesAutoresizingMaskIntoConstraints="NO" id="DUo-pA-z6H">
-                                <rect key="frame" x="127.33333333333334" y="66.666666666666671" width="120.33333333333334" height="145.33333333333331"/>
+                                <rect key="frame" x="127.33333333333334" y="61.666666666666671" width="120.33333333333334" height="145.33333333333331"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120.33333333333333" id="Diq-ZE-wXB"/>
                                     <constraint firstAttribute="width" secondItem="DUo-pA-z6H" secondAttribute="height" multiplier="24:29" id="utu-XV-Qdd"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Team" translatesAutoresizingMaskIntoConstraints="NO" id="SvS-6i-5wq">
-                                <rect key="frame" x="24" y="242" width="327" height="359"/>
+                                <rect key="frame" x="24" y="232" width="327" height="359"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.31140691040000001" green="0.33967638020000002" blue="0.92950242760000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="SvS-6i-5wq" firstAttribute="top" secondItem="DUo-pA-z6H" secondAttribute="bottom" constant="30" id="2r6-yr-ewS"/>
-                            <constraint firstItem="VnI-Zu-BtX" firstAttribute="bottom" secondItem="Soj-pX-l4v" secondAttribute="bottom" constant="30" id="5Dy-pD-6p1"/>
-                            <constraint firstItem="Soj-pX-l4v" firstAttribute="top" secondItem="SvS-6i-5wq" secondAttribute="bottom" constant="30" id="5aK-15-IgO"/>
+                            <constraint firstItem="SvS-6i-5wq" firstAttribute="top" secondItem="DUo-pA-z6H" secondAttribute="bottom" constant="25" id="2r6-yr-ewS"/>
+                            <constraint firstItem="VnI-Zu-BtX" firstAttribute="bottom" secondItem="Soj-pX-l4v" secondAttribute="bottom" constant="50" id="5Dy-pD-6p1"/>
+                            <constraint firstItem="Soj-pX-l4v" firstAttribute="top" secondItem="SvS-6i-5wq" secondAttribute="bottom" constant="20" id="5aK-15-IgO"/>
                             <constraint firstItem="DUo-pA-z6H" firstAttribute="centerX" secondItem="VnI-Zu-BtX" secondAttribute="centerX" id="RPU-Wy-g5Y"/>
                             <constraint firstItem="SvS-6i-5wq" firstAttribute="centerX" secondItem="VnI-Zu-BtX" secondAttribute="centerX" id="SR1-nG-wVN"/>
                             <constraint firstItem="SvS-6i-5wq" firstAttribute="width" secondItem="Soj-pX-l4v" secondAttribute="width" id="gLI-tl-OAO"/>
@@ -427,31 +397,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VnI-Zu-BtX"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Account" image="person" catalog="system" selectedImage="person.fill" id="4g7-ZL-1PL"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pha-0D-oMM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2408.8000000000002" y="1048.5221674876848"/>
-        </scene>
-        <!--CameraVC-->
-        <scene sceneID="B2I-Be-SD0">
-            <objects>
-                <tabBarController storyboardIdentifier="NoteManagementViewController" title="CameraVC" id="4o7-rv-Pgf" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Gz0-OC-Kd4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="y0o-gr-pjK" kind="relationship" relationship="viewControllers" id="JfH-Ih-Umi"/>
-                        <segue destination="36d-xY-Q1D" kind="relationship" relationship="viewControllers" id="4Ke-lE-om4"/>
-                        <segue destination="XVm-HZ-2D5" kind="relationship" relationship="viewControllers" id="Iap-Fo-Vrh"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KSb-U5-2RQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-752" y="500"/>
+            <point key="canvasLocation" x="745" y="729"/>
         </scene>
         <!--Backup-->
         <scene sceneID="H7r-M2-cNE">
@@ -540,18 +490,11 @@
         <image name="Logo (Team Page)" width="114" height="135"/>
         <image name="Logout Button" width="327" height="68"/>
         <image name="Team" width="327" height="359"/>
-        <image name="camera" catalog="system" width="64" height="48"/>
-        <image name="camera.fill" catalog="system" width="64" height="48"/>
-        <image name="house" catalog="system" width="64" height="54"/>
-        <image name="house.fill" catalog="system" width="64" height="52"/>
-        <image name="person" catalog="system" width="64" height="58"/>
-        <image name="person.fill" catalog="system" width="64" height="60"/>
         <image name="plus" catalog="system" width="64" height="56"/>
         <image name="shared-folder" width="20" height="20"/>
         <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4Ke-lE-om4"/>
         <segue reference="gPB-Jk-NCa"/>
     </inferredMetricsTieBreakers>
 </document>

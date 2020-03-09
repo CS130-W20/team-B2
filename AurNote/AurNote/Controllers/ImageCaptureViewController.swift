@@ -23,6 +23,11 @@ class ImageCaptureViewController: UIViewController, CropViewControllerDelegate, 
         openCamera(self)
         // Do any additional setup after loading the view.
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+    }
+    
     @IBAction func openCamera(_ sender: Any) {
         let cameraAuthorizationStatus = AVCaptureDevice.authorizationStatus(for: .video)
         switch cameraAuthorizationStatus {
