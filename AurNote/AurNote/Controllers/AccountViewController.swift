@@ -15,4 +15,7 @@ class AccountViewController: UIViewController {
         GIDSignIn.sharedInstance()?.signOut()
 //        self.performSegue(withIdentifier: "logoutSuccessful", sender: nil)
     }
+    @IBAction func goBackToOneButtonTapped(_ sender: Any) {
+         performSegue(withIdentifier: "gobackToLogin", sender: self)
+    }
 }

@@ -17,6 +17,10 @@ class LoginViewController: UIViewController {
         GIDSignIn.sharedInstance().signIn()
     }
     
+    @IBAction func unwindToLoginScreen(segue:UIStoryboardSegue) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

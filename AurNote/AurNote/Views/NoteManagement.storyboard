@@ -368,11 +368,12 @@
                                 </constraints>
                                 <state key="normal" image="Logout Button"/>
                                 <connections>
+                                    <action selector="goBackToOneButtonTapped:" destination="XVm-HZ-2D5" eventType="touchUpInside" id="4p0-ch-RRC"/>
                                     <action selector="logoutButtonPressed:" destination="XVm-HZ-2D5" eventType="touchUpInside" id="TBc-Gw-S2r"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo (Team Page)" translatesAutoresizingMaskIntoConstraints="NO" id="DUo-pA-z6H">
-                                <rect key="frame" x="127.33333333333334" y="61.666666666666671" width="120.33333333333334" height="145.33333333333331"/>
+                                <rect key="frame" x="127.33333333333334" y="61.666666666666686" width="120.33333333333334" height="145.33333333333331"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120.33333333333333" id="Diq-ZE-wXB"/>
                                     <constraint firstAttribute="width" secondItem="DUo-pA-z6H" secondAttribute="height" multiplier="24:29" id="utu-XV-Qdd"/>
@@ -395,8 +396,12 @@
                         <viewLayoutGuide key="safeArea" id="VnI-Zu-BtX"/>
                     </view>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="mZJ-82-pmD" kind="unwind" identifier="gobackToLogin" unwindAction="unwindToLoginScreenWithSegue:" id="UVP-xa-Gyl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pha-0D-oMM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="mZJ-82-pmD" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="745" y="729"/>
         </scene>
@@ -493,6 +498,6 @@
         <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9cU-io-Mjg"/>
+        <segue reference="gPB-Jk-NCa"/>
     </inferredMetricsTieBreakers>
 </document>
