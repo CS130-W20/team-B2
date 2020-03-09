@@ -11,4 +11,5 @@ target 'AurNote' do
   pod 'GoogleSignIn'
   pod 'WeScan', '>= 0.9'
   pod 'CropViewController'
+  pod 'Firebase/MLVisionTextModel'
 end

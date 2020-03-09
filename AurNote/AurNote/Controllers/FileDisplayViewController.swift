@@ -8,6 +8,9 @@
 
 import UIKit
 
+/*global so that the parsed text is available always*/
+let handwriting = HandwritingManager()
+
 class FileCollectionCell: UICollectionViewCell {
 
     @IBOutlet weak var fileImage: UIImageView!
@@ -83,6 +86,10 @@ class FileDisplayViewController: UIViewController, UICollectionViewDelegate, UIC
             let fileName = imgStore.randomString(length: 9)
             let filePath = imgStore.filePath(forKey: code)
             print(code, fileName, folderName)
+        
+            /*before uploading, also parse for words*/
+            handwriting.processImage(uiImage: image, className: folderName, fileName: fileName)
+        
             awsBucketHandler?.putFile(folderName: folderName, fileName: fileName, fileURL: filePath!, completion: {result in
                 if(result != nil) {
                     print("file added")
