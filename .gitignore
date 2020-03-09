@@ -12,6 +12,7 @@ AurNote/*.xcscmblueprint
 AurNote/*.xccheckout
 .DS_Store
 AurNote/.DS_Store
+AurNote/GoogleService-Info.plist
 
 ## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
 AurNote/build/
