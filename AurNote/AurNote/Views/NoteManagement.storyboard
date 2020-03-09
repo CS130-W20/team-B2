@@ -119,19 +119,31 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <containerView opaque="NO" contentMode="scaleToFill" id="qRz-mG-XL6">
+                                <rect key="frame" x="0.0" y="85" width="375" height="641"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="GVy-WB-9Sk" kind="embed" id="do2-my-vSy"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Jcm-BT-p7J" firstAttribute="bottom" secondItem="DMV-3r-hcJ" secondAttribute="bottom" id="5KD-Tr-rSg"/>
                             <constraint firstItem="DMV-3r-hcJ" firstAttribute="trailing" secondItem="Jcm-BT-p7J" secondAttribute="trailing" id="87y-ou-tf1"/>
                             <constraint firstItem="Jcm-BT-p7J" firstAttribute="top" secondItem="DMV-3r-hcJ" secondAttribute="top" id="Fm3-78-0Ob"/>
+                            <constraint firstItem="qRz-mG-XL6" firstAttribute="trailing" secondItem="Jcm-BT-p7J" secondAttribute="trailing" id="HcO-dV-GbN"/>
                             <constraint firstItem="Jcm-BT-p7J" firstAttribute="leading" secondItem="DMV-3r-hcJ" secondAttribute="leading" id="J88-N7-SJ1"/>
+                            <constraint firstItem="qRz-mG-XL6" firstAttribute="top" secondItem="Jcm-BT-p7J" secondAttribute="top" id="KWw-v2-KRV"/>
+                            <constraint firstItem="qRz-mG-XL6" firstAttribute="leading" secondItem="Jcm-BT-p7J" secondAttribute="leading" id="Mcd-rX-VZg"/>
+                            <constraint firstItem="qRz-mG-XL6" firstAttribute="bottom" secondItem="Jcm-BT-p7J" secondAttribute="bottom" id="O1I-5P-p0q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DMV-3r-hcJ"/>
                     </view>
                     <navigationItem key="navigationItem" title="My Notes" id="IbY-fa-HmR"/>
                     <connections>
                         <outlet property="directoryCollection" destination="Jcm-BT-p7J" id="iwW-1O-riO"/>
+                        <outlet property="filteredResultsView" destination="qRz-mG-XL6" id="0Oj-lA-i1m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Xw-rR-Kcp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -513,6 +525,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pu4-iv-3pt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4134" y="-286"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="ArV-Sf-WY9">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Search" id="GVy-WB-9Sk" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KaL-Ns-BrD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3828" y="539"/>
         </scene>
     </scenes>
     <resources>

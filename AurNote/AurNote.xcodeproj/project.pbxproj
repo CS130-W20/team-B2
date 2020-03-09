@@ -19,6 +19,7 @@
 		2AB05D3824146DD000E72136 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB05D3724146DD000E72136 /* AccountViewController.swift */; };
 		2AB05D462415BA9900E72136 /* EEZoomableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB05D452415BA9900E72136 /* EEZoomableImageView.swift */; };
 		2AB05D7F2415CBE300E72136 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2AB05D7B2415CBE300E72136 /* GoogleService-Info.plist */; };
+		2AB05D912416060B00E72136 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AB05D902416060B00E72136 /* Search.storyboard */; };
 		2AC429EF23F9F6CA00F122C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC429EE23F9F6CA00F122C5 /* AppDelegate.swift */; };
 		2AC429F123F9F6CA00F122C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC429F023F9F6CA00F122C5 /* SceneDelegate.swift */; };
 		2AC429F523F9F6CA00F122C5 /* LoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC429F423F9F6CA00F122C5 /* LoggedInViewController.swift */; };
@@ -99,6 +100,7 @@
 		2AB05D3724146DD000E72136 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		2AB05D452415BA9900E72136 /* EEZoomableImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EEZoomableImageView.swift; sourceTree = "<group>"; };
 		2AB05D7B2415CBE300E72136 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2AB05D902416060B00E72136 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		2AC429EB23F9F6CA00F122C5 /* AurNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AurNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AC429EE23F9F6CA00F122C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AC429F023F9F6CA00F122C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				11F47E6723FFF2B9002677D8 /* ImageCapture.storyboard */,
 				2EA47C9323FD209600DE5CBA /* ARAnnotation.storyboard */,
 				2AC42A0A23FA0B4100F122C5 /* NoteManagement.storyboard */,
+				2AB05D902416060B00E72136 /* Search.storyboard */,
 				2AC429FB23F9F6CA00F122C5 /* LaunchScreen.storyboard */,
 				2AC429F623F9F6CA00F122C5 /* Main.storyboard */,
 				2AB05D452415BA9900E72136 /* EEZoomableImageView.swift */,
@@ -373,6 +376,7 @@
 				2AB05D7F2415CBE300E72136 /* GoogleService-Info.plist in Resources */,
 				10E137E72415D84500C95A24 /* GoogleService-Info.plist in Resources */,
 				2AC429FD23F9F6CA00F122C5 /* LaunchScreen.storyboard in Resources */,
+				2AB05D912416060B00E72136 /* Search.storyboard in Resources */,
 				2EA47C9423FD209600DE5CBA /* ARAnnotation.storyboard in Resources */,
 				2AC429FA23F9F6CA00F122C5 /* Assets.xcassets in Resources */,
 				2AC429F823F9F6CA00F122C5 /* Main.storyboard in Resources */,

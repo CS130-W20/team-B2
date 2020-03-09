@@ -170,6 +170,9 @@ class NoteManagementController: UIViewController, UICollectionViewDelegate, UICo
         }
     }
     
+    
+    @IBOutlet weak var filteredResultsView: UIView!
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         // Add your search logic here
         print(searchText)
