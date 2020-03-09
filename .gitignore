@@ -10,6 +10,8 @@ AurNote/AurNote.xcworkspace/xcuserdata/
 ## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
 AurNote/*.xcscmblueprint
 AurNote/*.xccheckout
+.DS_Store
+AurNote/.DS_Store
 
 ## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
 AurNote/build/
@@ -56,7 +58,7 @@ AurNote/.build/
 # you should judge for yourself, the pros and cons are mentioned at:
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 #
-# Pods/
+AurNote/Pods/
 #
 # Add this line if you want to avoid checking in source code from the Xcode workspace
 # *.xcworkspace

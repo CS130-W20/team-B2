@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>48599644268-kgfosbe776gebeitlrqjco8vl4p88ahi.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.48599644268-kgfosbe776gebeitlrqjco8vl4p88ahi</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBVv69h3liKZ_rIHoApyYeM6XLF_-o0z1Y</string>
+	<key>GCM_SENDER_ID</key>
+	<string>48599644268</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>uclosangeles.cs130.AurNote23</string>
+	<key>PROJECT_ID</key>
+	<string>newaurnote</string>
+	<key>STORAGE_BUCKET</key>
+	<string>newaurnote.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:48599644268:ios:8c3eed9b9ec446b9e64049</string>
+	<key>DATABASE_URL</key>
+	<string>https://newaurnote.firebaseio.com</string>
+</dict>
+</plist>
