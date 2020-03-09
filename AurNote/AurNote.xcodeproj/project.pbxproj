@@ -11,6 +11,7 @@
 		104C18C623FD476C00CDDB2D /* NoteManagementController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104C18C523FD476C00CDDB2D /* NoteManagementController.swift */; };
 		106E43B1240FA608004B5930 /* SharedFoldersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106E43B0240FA608004B5930 /* SharedFoldersViewController.swift */; };
 		10D17DFB240524E200786771 /* FileDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D17DFA240524E200786771 /* FileDisplayViewController.swift */; };
+		10E137E72415D84500C95A24 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 10E137E62415D84500C95A24 /* GoogleService-Info.plist */; };
 		11F47E6823FFF2B9002677D8 /* ImageCapture.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F47E6723FFF2B9002677D8 /* ImageCapture.storyboard */; };
 		11F47E6A23FFF2C2002677D8 /* ImageCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F47E6923FFF2C2002677D8 /* ImageCaptureViewController.swift */; };
 		200D3A0E2415B7AE00C961B7 /* HandwritingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200D3A0D2415B7AD00C961B7 /* HandwritingHandler.swift */; };
@@ -86,6 +87,7 @@
 		104C18C523FD476C00CDDB2D /* NoteManagementController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteManagementController.swift; sourceTree = "<group>"; };
 		106E43B0240FA608004B5930 /* SharedFoldersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedFoldersViewController.swift; sourceTree = "<group>"; };
 		10D17DFA240524E200786771 /* FileDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDisplayViewController.swift; sourceTree = "<group>"; };
+		10E137E62415D84500C95A24 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		11F47E6723FFF2B9002677D8 /* ImageCapture.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImageCapture.storyboard; sourceTree = "<group>"; };
 		11F47E6923FFF2C2002677D8 /* ImageCaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCaptureViewController.swift; sourceTree = "<group>"; };
 		200D3A0D2415B7AD00C961B7 /* HandwritingHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandwritingHandler.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				2AB05D7B2415CBE300E72136 /* GoogleService-Info.plist */,
+				10E137E62415D84500C95A24 /* GoogleService-Info.plist */,
 				2AC42A0623F9F73B00F122C5 /* Models */,
 				2AC42A0523F9F72F00F122C5 /* Views */,
 				2AC42A0423F9F71C00F122C5 /* Controllers */,
@@ -368,6 +371,7 @@
 			files = (
 				9F49164B23FFA1FC00C0C6EF /* Podfile in Resources */,
 				2AB05D7F2415CBE300E72136 /* GoogleService-Info.plist in Resources */,
+				10E137E72415D84500C95A24 /* GoogleService-Info.plist in Resources */,
 				2AC429FD23F9F6CA00F122C5 /* LaunchScreen.storyboard in Resources */,
 				2EA47C9423FD209600DE5CBA /* ARAnnotation.storyboard in Resources */,
 				2AC429FA23F9F6CA00F122C5 /* Assets.xcassets in Resources */,

@@ -101,6 +101,7 @@ PODS:
   - nanopb/encode (0.3.9011)
   - PromisesObjC (1.2.8)
   - Protobuf (3.11.4)
+  - SendGrid-Swift (0.1.2)
   - WeScan (1.4.0)
 
 DEPENDENCIES:
@@ -109,6 +110,7 @@ DEPENDENCIES:
   - CropViewController
   - Firebase/MLVisionTextModel
   - GoogleSignIn
+  - SendGrid-Swift
   - WeScan (>= 0.9)
 
 SPEC REPOS:
@@ -138,6 +140,7 @@ SPEC REPOS:
     - nanopb
     - PromisesObjC
     - Protobuf
+    - SendGrid-Swift
     - WeScan
 
 SPEC CHECKSUMS:
@@ -166,8 +169,9 @@ SPEC CHECKSUMS:
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   Protobuf: 176220c526ad8bd09ab1fb40a978eac3fef665f7
+  SendGrid-Swift: ac2a563f564d95e9c8e069db337279b442bed67e
   WeScan: 843bc14af0aa32147086fb24aaf6e271334b3cda
 
-PODFILE CHECKSUM: 842dbe83ad20f768addaf9865dabad827c37c6f7
+PODFILE CHECKSUM: 346f8e9fd705252483a4750e5c8877a1d16fc3ba
 
 COCOAPODS: 1.8.4

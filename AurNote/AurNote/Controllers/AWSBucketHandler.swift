@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SendGrid_Swift
 import UIKit
 import AWSCore
 import AWSCognito
@@ -24,6 +25,8 @@ class AWSBucketHandler {
     var folderToObjectMap = [String: [(String,UIImage)]]()
     let bucketName = "aurnotecs"
     let sharedFolderName = "shared_w_me"
+    let SENDGRID_API_KEY="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"
+    let SENDGRID_API_USER = "AuRNote"
     
     
     ///initializes and configures credential provider with userpool id and credentials
@@ -258,13 +261,6 @@ class AWSBucketHandler {
     
     public func shareFile(folderName: String, email: String, completion: @escaping (AnyObject?)->()) {
         
-//        let atInd = email.firstIndex(of: "@")
-//        if(atInd == nil) {
-//            completion(nil)
-//            return
-//        }
-//        let other_username = String(email.prefix(upTo: atInd!))
-        
         let putRequest = AWSS3PutObjectRequest()
         putRequest?.bucket = bucketName
         putRequest?.key = email + "/" + sharedFolderName + "/" + userId + "/" + folderName
@@ -277,6 +273,8 @@ class AWSBucketHandler {
             }
             else {
                 print("Put file complete")
+                self.sendMail(emailAddr: email, subject: "AuRNote: Someone shared a notebook with you!", text: "Hi there!\n\nWe are emailing to notify you that " + self.userId + " shared the notebook: '" + folderName + "' with you. To view the notebook visit your Shared with me folder on the app.\n\nBest, \nTeam AuRNote" )
+
             }
             completion(task)
             return nil
@@ -328,6 +326,24 @@ class AWSBucketHandler {
                    })
                 }
             return nil
+        }
+    }
+    
+    func sendMail(emailAddr: String, subject: String, text: String) {
+        let sendGrid = SendGrid(withAPIKey: SENDGRID_API_KEY)
+        
+        let content = SGContent(type: .plain, value: text)
+        let from = SGAddress(email: "noreply@aurnote.com")
+        let personalization = SGPersonalization(to: [ SGAddress(email: emailAddr) ])
+        
+        let email = SendGridEmail(personalizations: [personalization], from: from, subject: subject, content: [content])
+        
+        sendGrid.send(email: email) { (response, error) in
+            if let error = error {
+                print("Error sending email: \(error.localizedDescription)")
+            } else {
+                print("Email sent!")
+            }
         }
     }
           

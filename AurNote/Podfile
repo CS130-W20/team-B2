@@ -12,4 +12,5 @@ target 'AurNote' do
   pod 'WeScan', '>= 0.9'
   pod 'CropViewController'
   pod 'Firebase/MLVisionTextModel'
+  pod 'SendGrid-Swift'
 end
