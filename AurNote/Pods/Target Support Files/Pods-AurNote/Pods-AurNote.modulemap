@@ -1,6 +1,0 @@
-module Pods_AurNote {
-  umbrella header "Pods-AurNote-umbrella.h"
-
-  export *
-  module * { export * }
-}

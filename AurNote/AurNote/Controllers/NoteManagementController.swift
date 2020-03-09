@@ -173,6 +173,7 @@ class NoteManagementController: UIViewController, UICollectionViewDelegate, UICo
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         // Add your search logic here
         print(searchText)
+        //handwriting.allText[searchText.lowercased()].0
         if (searchText.count > 0) {
             directoryCollection.isHidden = true
         }

@@ -13,6 +13,7 @@
 		10D17DFB240524E200786771 /* FileDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D17DFA240524E200786771 /* FileDisplayViewController.swift */; };
 		11F47E6823FFF2B9002677D8 /* ImageCapture.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F47E6723FFF2B9002677D8 /* ImageCapture.storyboard */; };
 		11F47E6A23FFF2C2002677D8 /* ImageCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F47E6923FFF2C2002677D8 /* ImageCaptureViewController.swift */; };
+		200D3A0E2415B7AE00C961B7 /* HandwritingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200D3A0D2415B7AD00C961B7 /* HandwritingHandler.swift */; };
 		2AB05CD62410AD5600E72136 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB05CD52410AD5600E72136 /* ScanViewController.swift */; };
 		2AB05D3824146DD000E72136 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB05D3724146DD000E72136 /* AccountViewController.swift */; };
 		2AB05D462415BA9900E72136 /* EEZoomableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB05D452415BA9900E72136 /* EEZoomableImageView.swift */; };
@@ -86,6 +87,7 @@
 		10D17DFA240524E200786771 /* FileDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDisplayViewController.swift; sourceTree = "<group>"; };
 		11F47E6723FFF2B9002677D8 /* ImageCapture.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImageCapture.storyboard; sourceTree = "<group>"; };
 		11F47E6923FFF2C2002677D8 /* ImageCaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCaptureViewController.swift; sourceTree = "<group>"; };
+		200D3A0D2415B7AD00C961B7 /* HandwritingHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandwritingHandler.swift; sourceTree = "<group>"; };
 		2AB05CD52410AD5600E72136 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		2AB05CD72410BB6900E72136 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2AB05CD82410BB6900E72136 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -107,10 +109,8 @@
 		2EA47C8D23FD1F5800DE5CBA /* AlteredImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlteredImage.swift; sourceTree = "<group>"; };
 		2EA47C8E23FD1F5800DE5CBA /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		2EA47C9323FD209600DE5CBA /* ARAnnotation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ARAnnotation.storyboard; sourceTree = "<group>"; };
-		320EF620CBFE42CC7E3CFF15 /* Pods-AurNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AurNote.release.xcconfig"; path = "Target Support Files/Pods-AurNote/Pods-AurNote.release.xcconfig"; sourceTree = "<group>"; };
 		9F49164A23FFA1FC00C0C6EF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9FC6CCD023FFA8F900F811B9 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
-		D9F35D6002014EE50FE40B6F /* libPods-AurNote.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AurNote.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +118,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44E77AED8AED48C888119E6A /* libPods-AurNote.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,7 +129,6 @@
 			children = (
 				2AB05CD92410BCAF00E72136 /* WeScan.xcodeproj */,
 				2AB05CEA2410BD2600E72136 /* WeScan.xcodeproj */,
-				D9F35D6002014EE50FE40B6F /* libPods-AurNote.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -217,6 +215,7 @@
 		2AC42A0623F9F73B00F122C5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				200D3A0D2415B7AD00C961B7 /* HandwritingHandler.swift */,
 				1007569823FE7773009D0822 /* AWSBucketHandler.swift */,
 				2EA47C8D23FD1F5800DE5CBA /* AlteredImage.swift */,
 				2EA47C8C23FD1F5800DE5CBA /* RectangleDetector.swift */,
@@ -240,8 +239,6 @@
 		31C91E3A1B69BF136B63D0AF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2C5FEA1AB53A080B570D038E /* Pods-AurNote.debug.xcconfig */,
-				320EF620CBFE42CC7E3CFF15 /* Pods-AurNote.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -253,11 +250,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2AC42A0123F9F6CA00F122C5 /* Build configuration list for PBXNativeTarget "AurNote" */;
 			buildPhases = (
-				032E2304A7D8BC02720B8E11 /* [CP] Check Pods Manifest.lock */,
 				2AC429E723F9F6CA00F122C5 /* Sources */,
 				2AC429E823F9F6CA00F122C5 /* Frameworks */,
 				2AC429E923F9F6CA00F122C5 /* Resources */,
-				9E396D79D8085A7393D142E4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -372,48 +367,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		032E2304A7D8BC02720B8E11 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AurNote-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9E396D79D8085A7393D142E4 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AurNote/Pods-AurNote-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AurNote/Pods-AurNote-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AurNote/Pods-AurNote-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		2AC429E723F9F6CA00F122C5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -422,6 +375,7 @@
 				9FC6CCD123FFA8F900F811B9 /* LoginController.swift in Sources */,
 				2AC429F523F9F6CA00F122C5 /* LoggedInViewController.swift in Sources */,
 				2AB05D3824146DD000E72136 /* AccountViewController.swift in Sources */,
+				200D3A0E2415B7AE00C961B7 /* HandwritingHandler.swift in Sources */,
 				2AB05CD62410AD5600E72136 /* ScanViewController.swift in Sources */,
 				104C18C623FD476C00CDDB2D /* NoteManagementController.swift in Sources */,
 				1007569923FE7773009D0822 /* AWSBucketHandler.swift in Sources */,
@@ -577,7 +531,6 @@
 		};
 		2AC42A0223F9F6CA00F122C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2C5FEA1AB53A080B570D038E /* Pods-AurNote.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -597,7 +550,6 @@
 		};
 		2AC42A0323F9F6CA00F122C5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 320EF620CBFE42CC7E3CFF15 /* Pods-AurNote.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

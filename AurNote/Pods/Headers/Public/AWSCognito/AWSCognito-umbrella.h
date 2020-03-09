@@ -1,1 +1,0 @@
-../../../Target Support Files/AWSCognito/AWSCognito-umbrella.h
