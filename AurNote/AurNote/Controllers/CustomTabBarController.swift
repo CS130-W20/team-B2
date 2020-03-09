@@ -13,6 +13,7 @@ class CustomTabBarController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet var buttons: [UIButton]!
     @IBOutlet weak var cameraButton: UIButton!
+    @IBOutlet weak var tabBarView: UIView!
     
     var noteManagementViewController: UIViewController!
     var imageCaptureViewController: UIViewController!
@@ -33,6 +34,10 @@ class CustomTabBarController: UIViewController {
         
         buttons[selectedIndex].isSelected = true
         didPressTab(buttons[selectedIndex])
+        
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.methodOfReceivedNotification(notification:)), name: Notification.Name("TabBarToggle"), object: nil)
+        
     }
     
     @IBAction func didPressTab(_ sender: UIButton) {
@@ -56,6 +61,17 @@ class CustomTabBarController: UIViewController {
     
     @IBAction func didPressCameraButton(_ sender: Any) {
         present(imageCaptureViewController, animated: true, completion: nil)
+    }
+    
+    @objc func methodOfReceivedNotification(notification: Notification) {
+        if let UWInfo = notification.userInfo?["isHidden"] as? Bool {
+            if UWInfo == true {
+                self.tabBarView.isHidden = true
+            }
+            else {
+                self.tabBarView.isHidden = false
+            }
+        }
     }
     
 }

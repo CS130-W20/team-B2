@@ -168,7 +168,12 @@ class FileDisplayViewController: UIViewController, UICollectionViewDelegate, UIC
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        NotificationCenter.default.post(name: Notification.Name("TabBarToggle"), object: nil, userInfo: ["isHidden": true])
         fileCollection.reloadData()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        NotificationCenter.default.post(name: Notification.Name("TabBarToggle"), object: nil, userInfo: ["isHidden": false])
     }
     
     ///Tells the controller how many cells to display
