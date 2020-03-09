@@ -96,7 +96,7 @@ class FileDisplayViewController: UIViewController, UICollectionViewDelegate, UIC
             }
             
             imgStore.store(image: image, forKey: code, withStorageType: ImageStorer.StorageType.fileSystem)
-            let fileName = imgStore.randomString(length: 9)
+            let fileName = String(fileImages.count + 1) + "_" + folderName
             let filePath = imgStore.filePath(forKey: code)
             print(code, fileName, folderName)
         
@@ -144,6 +144,13 @@ class FileDisplayViewController: UIViewController, UICollectionViewDelegate, UIC
                     self.fileImages = (self.awsBucketHandler?.returnFilesInDirectory(folderName: self.folderName))!
                     DispatchQueue.main.async {
                         self.fileCollection.reloadData()
+                    }
+                    //add processing images here
+                    //only process if the file hasn't already been processed
+                    for image in self.fileImages{
+                        if !handwriting.fileNames.keys.contains(image.0){
+                            handwriting.processImage(uiImage: image.1, className: self.folderName, fileName: image.0)
+                        }
                     }
                     
                 } else {
