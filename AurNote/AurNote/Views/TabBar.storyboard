@@ -85,6 +85,7 @@
                     <connections>
                         <outlet property="cameraButton" destination="MUF-ja-o1c" id="ECD-9B-DfP"/>
                         <outlet property="contentView" destination="b0q-4J-CeH" id="WsZ-I0-peI"/>
+                        <outlet property="tabBarView" destination="tPp-Y1-IQs" id="PhZ-vd-fi4"/>
                         <outletCollection property="buttons" destination="Kom-Vg-ApH" collectionClass="NSMutableArray" id="k6o-EV-vd3"/>
                         <outletCollection property="buttons" destination="tQk-Sa-oJG" collectionClass="NSMutableArray" id="34x-xz-tld"/>
                     </connections>
