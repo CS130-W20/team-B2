@@ -52,6 +52,7 @@ class NoteManagementController: UIViewController, UICollectionViewDelegate, UICo
     var awsBucketHandler: AWSBucketHandler? = nil
     var newFolder:UITextField = UITextField()
     var search = UISearchController(searchResultsController: nil)
+    var matchingImages = [(String,UIImage)]()
 
     @IBOutlet weak var directoryCollection: UICollectionView!
     
@@ -179,11 +180,10 @@ class NoteManagementController: UIViewController, UICollectionViewDelegate, UICo
         //var matchingFilenames = [(String, String)]()
         //an array of all (foldername, filename) tuples that contained this word
         let matchingFilenames = handwriting.allText[searchText.lowercased()]
-        var matchingImages = [UIImage]()
         print(matchingFilenames)
         if (matchingFilenames != nil){
             for (_, file) in matchingFilenames!{
-                matchingImages.append(awsBucketHandler!.fileMap[file]!)
+                matchingImages.append((file,awsBucketHandler!.fileMap[file]!))
             }
         }
         //handwriting.allText[searchText.lowercased()].0
@@ -210,6 +210,9 @@ class NoteManagementController: UIViewController, UICollectionViewDelegate, UICo
             let vc = segue.destination as? SharedFoldersViewController
             vc?.awsBucketHandler = self.awsBucketHandler
             vc?.userId = self.userId
+        }else if(segue.destination is SearchViewController){
+            let vc = segue.destination as? SearchViewController
+            vc?.fileImages = self.matchingImages
         }
     }
     
