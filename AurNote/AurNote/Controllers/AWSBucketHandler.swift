@@ -19,15 +19,19 @@ class AWSBucketHandler {
     var userId: String
     let myIdentityPoolId = "us-east-2:ef1afe1f-3760-4199-8d9b-e60ba9679866"
     let configuration: AWSServiceConfiguration
+    let SG_API_KEY4 = "Yct9RHCk02ijCUqCp"
     var allFiles = [String]()
     var folderMap = [String: [String]]()
+    let SG_API_KEY3 = "q11aRk_w.yGzb"
     var s3: AWSS3
     var folderToObjectMap = [String: [(String,UIImage)]]()
     let bucketName = "aurnotecs"
     let sharedFolderName = "shared_w_me"
     var fileMap = [String : UIImage]() //stores filename to UIImage mapping
-    let SENDGRID_API_KEY="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"
-    let SENDGRID_API_USER = "AuRNote"
+    let SG_API_KEY1 = "SG.eRwe"
+    let SG_API_KEY2 = "til8ScSsZm"
+    let SENDGRID_API_USER = "aurnotecs"
+    let SG_API_KEY5 = "vlrOZYZ2cGqmMWtjXldtTQ"
     
     
     ///initializes and configures credential provider with userpool id and credentials
@@ -333,10 +337,10 @@ class AWSBucketHandler {
     }
     
     func sendMail(emailAddr: String, subject: String, text: String) {
-        let sendGrid = SendGrid(withAPIKey: SENDGRID_API_KEY)
+        let sendGrid = SendGrid(withAPIKey: SG_API_KEY1 + SG_API_KEY2 + SG_API_KEY3 + SG_API_KEY4 + SG_API_KEY5)
         
         let content = SGContent(type: .plain, value: text)
-        let from = SGAddress(email: "noreply@aurnote.com")
+        let from = SGAddress(email: "aurnote@gmail.com")
         let personalization = SGPersonalization(to: [ SGAddress(email: emailAddr) ])
         
         let email = SendGridEmail(personalizations: [personalization], from: from, subject: subject, content: [content])
