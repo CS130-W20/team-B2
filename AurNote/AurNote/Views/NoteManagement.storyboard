@@ -26,6 +26,16 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="25" minY="25" maxX="25" maxY="25"/>
                                 </collectionViewFlowLayout>
+                                <containerView key="backgroundView" opaque="NO" contentMode="scaleToFill" id="qRz-mG-XL6">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <segue destination="GVy-WB-9Sk" kind="embed" id="do2-my-vSy"/>
+                                    </connections>
+                                </containerView>
                                 <cells>
                                     <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="directoryCollectionCell" id="M8r-JG-NMK" customClass="DirectoryCollectionCell" customModule="AurNote" customModuleProvider="target">
                                         <rect key="frame" x="25" y="25" width="150" height="120"/>
@@ -61,7 +71,7 @@
                                         <connections>
                                             <outlet property="directoryName" destination="Gkd-IR-Ik7" id="0MC-hz-den"/>
                                             <outlet property="directoryName2" destination="py5-pP-M49" id="amu-pi-B0g"/>
-                                            <segue destination="R3r-Mo-VGt" kind="show" id="gPB-Jk-NCa"/>
+                                            <segue destination="R3r-Mo-VGt" kind="show" identifier="hola" id="gPB-Jk-NCa"/>
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sharedFolderCell" id="UWO-Dg-fQx" customClass="SharedFolderCell" customModule="AurNote" customModuleProvider="target">
@@ -88,7 +98,7 @@
                                         <connections>
                                             <outlet property="sharedFolderImage" destination="tMv-Na-Pjv" id="tcf-Yc-LiZ"/>
                                             <outlet property="sharedFolderLabel" destination="vNW-GQ-4kH" id="N7W-8n-AY9"/>
-                                            <segue destination="BDj-4z-EeP" kind="show" id="zkG-eE-RD6"/>
+                                            <segue destination="BDj-4z-EeP" kind="show" identifier="yolo" id="zkG-eE-RD6"/>
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="addFolderCell" id="64c-Zy-IU5" customClass="AddFolderCell" customModule="AurNote" customModuleProvider="target">
@@ -119,28 +129,24 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <containerView opaque="NO" contentMode="scaleToFill" id="qRz-mG-XL6">
-                                <rect key="frame" x="0.0" y="85" width="375" height="641"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <segue destination="GVy-WB-9Sk" kind="embed" id="do2-my-vSy"/>
-                                </connections>
-                            </containerView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Jcm-BT-p7J" firstAttribute="bottom" secondItem="DMV-3r-hcJ" secondAttribute="bottom" id="5KD-Tr-rSg"/>
                             <constraint firstItem="DMV-3r-hcJ" firstAttribute="trailing" secondItem="Jcm-BT-p7J" secondAttribute="trailing" id="87y-ou-tf1"/>
                             <constraint firstItem="Jcm-BT-p7J" firstAttribute="top" secondItem="DMV-3r-hcJ" secondAttribute="top" id="Fm3-78-0Ob"/>
-                            <constraint firstItem="qRz-mG-XL6" firstAttribute="trailing" secondItem="Jcm-BT-p7J" secondAttribute="trailing" id="HcO-dV-GbN"/>
                             <constraint firstItem="Jcm-BT-p7J" firstAttribute="leading" secondItem="DMV-3r-hcJ" secondAttribute="leading" id="J88-N7-SJ1"/>
-                            <constraint firstItem="qRz-mG-XL6" firstAttribute="top" secondItem="Jcm-BT-p7J" secondAttribute="top" id="KWw-v2-KRV"/>
-                            <constraint firstItem="qRz-mG-XL6" firstAttribute="leading" secondItem="Jcm-BT-p7J" secondAttribute="leading" id="Mcd-rX-VZg"/>
-                            <constraint firstItem="qRz-mG-XL6" firstAttribute="bottom" secondItem="Jcm-BT-p7J" secondAttribute="bottom" id="O1I-5P-p0q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DMV-3r-hcJ"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" title="My Notes" id="IbY-fa-HmR"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="directoryCollection" destination="Jcm-BT-p7J" id="iwW-1O-riO"/>
                         <outlet property="filteredResultsView" destination="qRz-mG-XL6" id="0Oj-lA-i1m"/>
@@ -148,7 +154,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Xw-rR-Kcp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1653.5999999999999" y="-14.77832512315271"/>
+            <point key="canvasLocation" x="1564" y="0.0"/>
         </scene>
         <!--sharedFoldersViewController-->
         <scene sceneID="Es7-Oj-vdq">
@@ -231,8 +237,15 @@
                             <constraint firstItem="ZJI-ZS-uRB" firstAttribute="trailing" secondItem="dFd-UJ-Idb" secondAttribute="trailingMargin" id="rqn-20-7eW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yqz-Di-KUk"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" id="mmU-iM-178"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="sharedCollection" destination="pVY-Ea-eCF" id="fXO-3g-h6M"/>
                     </connections>
@@ -316,6 +329,9 @@
                             <barButtonItem title="Item" image="square.and.arrow.up" catalog="system" landscapeImage="square.and.arrow.up" largeContentSizeImage="square.and.arrow.up" id="IcK-PO-Jcw"/>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="addBtn" destination="kjr-dK-BtH" id="aCd-yz-8mq"/>
                         <outlet property="fileCollection" destination="Xd9-lp-5G6" id="uYR-sa-WaN"/>
@@ -324,7 +340,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WS8-Ae-JhJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2448" y="-14"/>
+            <point key="canvasLocation" x="2601" y="-15"/>
         </scene>
         <!--NotesVC-->
         <scene sceneID="AzE-1M-WRF">
@@ -337,6 +353,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="fQo-yv-UHT" kind="relationship" relationship="rootViewController" id="nXb-Xg-ZtB"/>
                     </connections>
@@ -396,6 +415,10 @@
                             <constraint firstItem="Soj-pX-l4v" firstAttribute="centerX" secondItem="VnI-Zu-BtX" secondAttribute="centerX" id="v3i-ES-Dv7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VnI-Zu-BtX"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>

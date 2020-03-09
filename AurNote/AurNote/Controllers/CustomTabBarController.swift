@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Hero
 
 class CustomTabBarController: UIViewController {
     @IBOutlet weak var contentView: UIView!

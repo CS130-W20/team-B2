@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Hero
 
 /// Represents each of the user's folders contains only a label for the folder name
 class DirectoryCollectionCell: UICollectionViewCell {
@@ -201,6 +202,13 @@ class NoteManagementController: UIViewController, UICollectionViewDelegate, UICo
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "yolo" {
+            let dest = segue.destination as! SharedFoldersViewController
+            dest.hero.modalAnimationType = .selectBy(presenting: .zoomSlide(direction: .left), dismissing: .zoomSlide(direction: .right))
+        } else if (segue.identifier == "hola") {
+            let dest = segue.destination as! FileDisplayViewController
+            dest.hero.modalAnimationType = .selectBy(presenting: .zoomSlide(direction: .left), dismissing: .zoomSlide(direction: .right))
+        }
         if segue.destination is FileDisplayViewController {
             let vc = segue.destination as? FileDisplayViewController
             vc?.awsBucketHandler = self.awsBucketHandler
@@ -212,5 +220,4 @@ class NoteManagementController: UIViewController, UICollectionViewDelegate, UICo
             vc?.userId = self.userId
         }
     }
-    
 }

@@ -13,4 +13,5 @@ target 'AurNote' do
   pod 'CropViewController'
   pod 'Firebase/MLVisionTextModel'
   pod 'SendGrid-Swift'
+  pod 'Hero'
 end

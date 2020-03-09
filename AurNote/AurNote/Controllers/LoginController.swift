@@ -9,6 +9,7 @@
 import Foundation
 import GoogleSignIn
 import UIKit
+import Hero
 
 @objc(LoginViewController)
 class LoginViewController: UIViewController {
@@ -37,6 +38,7 @@ class LoginViewController: UIViewController {
             vc.statusText.text = "Logged In"
         } else if( segue.identifier == "loginSuccessful") {
             let vc = segue.destination as? NoteManagementController
+            vc?.hero.modalAnimationType = .selectBy(presenting: .zoomSlide(direction: .left), dismissing: .zoomSlide(direction: .right))
             vc?.awsBucketHandler = AppDelegate.shared().awsBucketHandler
             vc?.userId = AppDelegate.shared().userId
         }
