@@ -82,7 +82,7 @@ class NoteManagementController: UIViewController, UICollectionViewDelegate, UICo
     ///sets the datasource after viewDidLoad runs
     /// - Parameter animated: if we want to animate the display
     override func viewDidAppear(_ animated: Bool) {
-        
+        filteredResultsView.isHidden = true
         view.addSubview(directoryCollection)
         directoryCollection.delegate = self
         directoryCollection.dataSource = self
@@ -194,6 +194,10 @@ class NoteManagementController: UIViewController, UICollectionViewDelegate, UICo
             directoryCollection.isHidden = false
         }
 
+        
+        // you can use this to show the view
+        // the view controller is in Search.storyboard
+        filteredResultsView.isHidden = false
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
