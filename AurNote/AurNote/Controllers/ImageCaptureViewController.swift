@@ -91,10 +91,30 @@ class ImageCaptureViewController: UIViewController, CropViewControllerDelegate, 
             image = img
         }
         
+                var code = String()
+                while (true) {
+                    code = imgStore.randomString(length: 4)
+                    if (imgStore.retrieveImage(forKey: code, inStorageType: ImageStorer.StorageType.fileSystem) == nil) {
+                        break
+                    }
+                }
+        //        print(code)
+                imgStore.store(image: image, forKey: code, withStorageType: ImageStorer.StorageType.fileSystem)
+                
+        //         example of retrieving and displaying saved image
+                DispatchQueue.global(qos: .background).async {
+                    if let savedImage = self.imgStore.retrieveImage(forKey: code, inStorageType: ImageStorer.StorageType.fileSystem) {
+                        DispatchQueue.main.async {
+                            self.savedImage.image = savedImage
+                        }
+                    }
+                }
+                codeMessage.text = String(code)
+        
         picker.dismiss(animated: false, completion: {
-            let cropViewController = CropViewController(image: image)
-            cropViewController.delegate = self
-            self.present(cropViewController, animated: false, completion: nil)
+//            let cropViewController = CropViewController(image: image)
+//            cropViewController.delegate = self
+//            self.present(cropViewController, animated: false, completion: nil)
         })
         
     }
