@@ -44,8 +44,6 @@
                         <viewLayoutGuide key="safeArea" id="nc7-Rh-Cpt"/>
                     </view>
                     <connections>
-                        <outlet property="signOutButton" destination="AYC-n2-VH7" id="xkb-3e-rBw"/>
-                        <outlet property="statusText" destination="xm1-Vu-TKJ" id="xZn-57-5tR"/>
                         <segue destination="G7i-kb-g1K" kind="presentation" identifier="loginSuccessful" modalPresentationStyle="fullScreen" id="Jgu-hC-GpA"/>
                     </connections>
                 </viewController>
@@ -53,105 +51,13 @@
             </objects>
             <point key="canvasLocation" x="1544.9275362318842" y="-214.28571428571428"/>
         </scene>
-        <!--LoggedInViewController-->
-        <scene sceneID="az2-gY-Hvz">
-            <objects>
-                <viewController title="LoggedInViewController" id="9x4-H7-T0B" customClass="LoggedInViewController" customModule="AurNote" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dXl-fY-NMh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXV-wf-luF">
-                                <rect key="frame" x="192" y="406" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="AR"/>
-                                <connections>
-                                    <segue destination="qus-EG-wYm" kind="show" id="Cnu-RP-Z0h"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xm1-Vu-TKJ">
-                                <rect key="frame" x="97" y="266" width="220" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYo-8e-7kt">
-                                <rect key="frame" x="172" y="477" width="71" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Note View"/>
-                                <connections>
-                                    <segue destination="Ecd-NN-K4H" kind="show" id="R8D-A9-pw6"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYC-n2-VH7">
-                                <rect key="frame" x="144" y="494" width="127" height="169"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="SIGN OUT"/>
-                                <connections>
-                                    <action selector="didTapSignOut:" destination="F5c-Lg-hn3" eventType="touchUpInside" id="jQQ-22-Zfw"/>
-                                    <segue destination="F5c-Lg-hn3" kind="presentation" modalPresentationStyle="overFullScreen" id="eZG-5o-KeA"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psZ-Nx-xnE">
-                                <rect key="frame" x="183" y="685" width="50" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Images"/>
-                                <connections>
-                                    <segue destination="Onq-Bv-8ih" kind="show" id="uIp-Zv-5cW"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="a8b-UM-MfH"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="MmF-oo-764"/>
-                    <connections>
-                        <outlet property="signOutButton" destination="AYC-n2-VH7" id="GDK-z9-qzr"/>
-                        <outlet property="statusText" destination="xm1-Vu-TKJ" id="f7O-8l-JKG"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XSW-q2-pay" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2462" y="-214"/>
-        </scene>
-        <!--ARAnnotationViewController-->
-        <scene sceneID="dPV-lB-YEq">
-            <objects>
-                <viewControllerPlaceholder storyboardName="ARAnnotation" referencedIdentifier="ARAnnotationViewController" id="qus-EG-wYm" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="WJJ-UO-abJ"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wAs-rh-EgP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3201" y="-528"/>
-        </scene>
-        <!--NoteManagementViewController-->
-        <scene sceneID="2Xh-JI-v4Y">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="NoteManagementViewController" storyboardName="NoteManagement" referencedIdentifier="NoteManagementViewController" id="Ecd-NN-K4H" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="HBr-Eu-IdT"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="X8k-SM-Fum" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3201" y="-224"/>
-        </scene>
-        <!--ImageCapture-->
-        <scene sceneID="ZMw-3X-tsM">
-            <objects>
-                <viewControllerPlaceholder storyboardName="ImageCapture" id="Onq-Bv-8ih" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="4aw-yv-ARz"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7yS-3G-dyf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2949" y="-25"/>
-        </scene>
-        <!--NoteManagementViewController-->
+        <!--CustomTabBarViewController-->
         <scene sceneID="khL-uT-nKO">
             <objects>
-                <viewControllerPlaceholder referencedIdentifier="NoteManagementViewController" id="G7i-kb-g1K" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="TabBar" referencedIdentifier="CustomTabBarViewController" id="G7i-kb-g1K" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12m-iD-lvL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2210" y="-629"/>
+            <point key="canvasLocation" x="2222" y="-214"/>
         </scene>
     </scenes>
     <resources>
