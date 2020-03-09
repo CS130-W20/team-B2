@@ -82,6 +82,7 @@ class HandwritingManager{
     //let vision = Vision.vision()
     private lazy var vision = Vision.vision()
     var allText: [String: [(String, String)]] = [:]
+    var fileNames: [String: Int] = [:]
     //NSMutableDictionary* allTextNS = [NSMutableDictionary dictionary]
     //var allTextNS = [NSMutableDictionary()]
     //var allText: [String: [Int]] ()
@@ -113,6 +114,9 @@ class HandwritingManager{
                   for element in line.elements {
                       let elementText = element.text //as NSString
                         //print(elementText, " !!")
+                    if !self.fileNames.keys.contains(fileName){
+                        self.fileNames[fileName] = 0
+                    }
                     if self.allText.keys.contains(elementText){
                         self.allText[elementText.lowercased()]?.append((className,fileName))
                     }

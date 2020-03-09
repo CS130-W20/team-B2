@@ -173,6 +173,16 @@ class NoteManagementController: UIViewController, UICollectionViewDelegate, UICo
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         // Add your search logic here
         print(searchText)
+        //var matchingFilenames = [(String, String)]()
+        //an array of all (foldername, filename) tuples that contained this word
+        let matchingFilenames = handwriting.allText[searchText.lowercased()]
+        var matchingImages = [UIImage]()
+        print(matchingFilenames)
+        if (matchingFilenames != nil){
+            for (_, file) in matchingFilenames!{
+                matchingImages.append(awsBucketHandler!.fileMap[file]!)
+            }
+        }
         //handwriting.allText[searchText.lowercased()].0
         if (searchText.count > 0) {
             directoryCollection.isHidden = true

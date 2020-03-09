@@ -25,6 +25,7 @@ class AWSBucketHandler {
     var folderToObjectMap = [String: [(String,UIImage)]]()
     let bucketName = "aurnotecs"
     let sharedFolderName = "shared_w_me"
+    var fileMap = [String : UIImage]() //stores filename to UIImage mapping
     let SENDGRID_API_KEY="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"
     let SENDGRID_API_USER = "AuRNote"
     
@@ -157,6 +158,8 @@ class AWSBucketHandler {
                 // Download is complete, set the UIImageView to show the file that was downloaded
                 let imgData = NSData(contentsOf: downloadFilePath!)
                 let image = UIImage(data: imgData! as Data)
+                //populate the filename : UIImage mapping for use in search
+                self.fileMap[fileName] = image
                 if(self.folderToObjectMap[folderName] != nil) {
                     self.folderToObjectMap[folderName]?.append((fileName,image!))
                 } else {
