@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import AurNote
 
 class overlay_test: XCTestCase {
 
@@ -18,7 +19,7 @@ class overlay_test: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func box_detection_test() {
+    func test_box_detection() {
         //One rectangle on paper (should detect box)
             //PASS: detects one rectangle
             //FAIL: detects 0 or multiple rectangles
@@ -41,7 +42,7 @@ class overlay_test: XCTestCase {
         //Overlays in different levels of closeness to the paper
             //PASS: overlays the box as long as the entire box is within the camera and easily visible to the camera
             //FAIL: overlays image on wrong part of the paper, doesn’t fully overlay on the box
-
+        assert(true)
     }
 
     func overlay_perf() {
