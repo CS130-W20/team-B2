@@ -7,6 +7,10 @@
 //
 
 import XCTest
+import AWSCognito
+import AWSCore
+import AWSS3
+import AurNote
 
 class login_test: XCTestCase {
 
