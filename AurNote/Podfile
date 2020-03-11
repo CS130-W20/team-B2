@@ -14,3 +14,17 @@ target 'AurNote' do
   pod 'Firebase/MLVisionTextModel'
   pod 'SendGrid-Swift'
 end
+
+target 'AurNoteTests' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_modular_headers!
+
+  # Pods for AurNote
+  pod 'AWSS3'
+  pod 'AWSCognito'
+  pod 'GoogleSignIn'
+  pod 'WeScan', '>= 0.9'
+  pod 'CropViewController'
+  pod 'Firebase/MLVisionTextModel'
+  pod 'SendGrid-Swift'
+end

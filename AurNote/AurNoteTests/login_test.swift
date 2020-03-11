@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import AurNote
 
 class login_test: XCTestCase {
 
@@ -18,7 +19,7 @@ class login_test: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func login_test() {
+    func test_login() {
         // valid login credentials
             //PASS: Authenticated
             //FAIL: not authenticated and given access
