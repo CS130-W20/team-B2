@@ -448,6 +448,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "10B090A9241793C700074E7F"
+               BuildableName = "AurNoteTests.xctest"
+               BlueprintName = "AurNoteTests"
+               ReferencedContainer = "container:AurNote.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "10B0909B24178B2C00074E7F"
+               BuildableName = "AurNoteUITests.xctest"
+               BlueprintName = "AurNoteUITests"
+               ReferencedContainer = "container:AurNote.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
