@@ -40,8 +40,8 @@ class SharedFolderCell: UICollectionViewCell {
     @IBOutlet weak var sharedFolderImage: UIImageView!
     @IBOutlet weak var sharedFolderLabel: UILabel!
     func displayContent() {
-        sharedFolderImage.image = UIImage(named: "shared-folder")
-        sharedFolderLabel.text = "Shared With Me"
+        sharedFolderImage.image = UIImage(named: "Shared Icon")
+        sharedFolderLabel.text = "SHARED"
     }
 }
 

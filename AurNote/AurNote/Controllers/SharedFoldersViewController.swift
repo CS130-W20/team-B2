@@ -43,6 +43,7 @@ class SharedFoldersViewController: UIViewController, UICollectionViewDelegate, U
     ///sets the datasource after viewDidLoad runs
     /// - Parameter animated: if we want to animate the display
     override func viewDidAppear(_ animated: Bool) {
+        NotificationCenter.default.post(name: Notification.Name("TabBarToggle"), object: nil, userInfo: ["isHidden": true])
         view.addSubview(sharedCollection)
         sharedCollection.delegate = self
         sharedCollection.dataSource = self
@@ -85,5 +86,8 @@ class SharedFoldersViewController: UIViewController, UICollectionViewDelegate, U
         }
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        NotificationCenter.default.post(name: Notification.Name("TabBarToggle"), object: nil, userInfo: ["isHidden": false])
+    }
 
 }
