@@ -30,11 +30,11 @@ class AurNoteUITests: XCTestCase {
         
         let gidsigninbuttonButton = app.buttons["GIDSignInButton"]
         gidsigninbuttonButton.tap()
-        /*
+        
         app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.tap()
         gidsigninbuttonButton.tap()
         app.alerts["“AurNote” Wants to Use “google.com” to Sign In"].scrollViews.otherElements.buttons["Cancel"].tap()
-        */
+        
 
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
@@ -48,7 +48,7 @@ class AurNoteUITests: XCTestCase {
         
         let gidsigninbuttonButton = app.buttons["GIDSignInButton"]
         gidsigninbuttonButton.tap()
-        /*
+        
         app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.tap()
         app.alerts["“AurNote” Wants to Use “google.com” to Sign In"].scrollViews.otherElements.buttons["Cancel"].tap()
         
@@ -72,7 +72,7 @@ class AurNoteUITests: XCTestCase {
         let tabBarsQuery = XCUIApplication().tabBars
         tabBarsQuery.buttons["Favorites"].tap()
         tabBarsQuery.buttons["More"].tap()
- */
+ 
         
     }
 
