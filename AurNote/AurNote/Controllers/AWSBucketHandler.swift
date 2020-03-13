@@ -50,6 +50,8 @@ class AWSBucketHandler {
 
     }
     
+    /// Used to ensure the user has a directory and shared folder upon sign in, and if they do not it creates both in the AWS bucket
+    /// - Parameter completion: Returns a non nil value to the caller on completion of the api calls to AWS
     public func initializeUser(completion: @escaping (AnyObject?)->()) {
         
         let headObjectsRequest = AWSS3HeadObjectRequest()
@@ -138,6 +140,12 @@ class AWSBucketHandler {
         return data
     }
     
+    /// Gets ONE object of the specified path from the AWS bucket
+    /// - Parameters:
+    ///   - path: The full path of the object in the aws bucket
+    ///   - folderName: The name of the folder the object resides in
+    ///   - fileName: The name of object file
+    ///   - completion: returns a non nil value once the API call is completed
     func getObject(path: String, folderName: String, fileName: String, completion: @escaping (AnyObject?)->()) {
         
         // Hard-coded names for the tutorial bucket and the file uploaded at the beginning
@@ -175,6 +183,10 @@ class AWSBucketHandler {
         }
     }
     
+    /// Gets all the files in the specified directory and loads then into folderToObjectMap
+    /// - Parameters:
+    ///   - folderName: Name of the folder of which you want all the files
+    ///   - completion: returns a non nil value upon completion of getting all the objects in the folder
     public func getFilesInDirectory(folderName: String, completion: @escaping (AnyObject?)->()) {
         let files = folderMap[folderName]
         var cnt = files?.count
@@ -199,6 +211,8 @@ class AWSBucketHandler {
         }
     }
     
+    /// Returns a list of all the files in a directory in the form of (fileName, UIImage)
+    /// - Parameter folderName: name of the folder that you want all the files from
     public func returnFilesInDirectory(folderName: String) -> [(String,UIImage)]{
         if let uw = folderToObjectMap[folderName] {
             return uw
@@ -210,6 +224,10 @@ class AWSBucketHandler {
     
 
     
+    /// Add a folder to user's AWS bucket directory
+    /// - Parameters:
+    ///   - folderName: Name of the folder to add
+    ///   - completion: Returns non nil value to caller after completion of api call
     public func putDirectory(folderName: String, completion: @escaping (AnyObject?)->()) {
         
         // Create a new put request to S3, and set its properties
@@ -236,6 +254,12 @@ class AWSBucketHandler {
         }
     }
     
+    /// Adds a specified file image to the corresponding user directory
+    /// - Parameters:
+    ///   - folderName: Name of the folder to add
+    ///   - fileName: Name of the file
+    ///   - fileURL: source URL of the file to upload
+    ///   - completion: Returns non nil value to caller after completion of api call
     public func putFile(folderName: String, fileName: String, fileURL: URL, completion: @escaping (AnyObject?)->()) {
         print("put the file")
         let fileData = FileManager.default.contents(atPath: fileURL.path)
@@ -266,6 +290,11 @@ class AWSBucketHandler {
         }
     }
     
+    /// Share a folder with the specified user
+    /// - Parameters:
+    ///   - folderName: Name of the folder to share
+    ///   - email: email of the the user to share the folder with
+    ///   - completion: Returns non nil value to caller after completion of api call
     public func shareFile(folderName: String, email: String, completion: @escaping (AnyObject?)->()) {
         
         let putRequest = AWSS3PutObjectRequest()
@@ -288,10 +317,15 @@ class AWSBucketHandler {
         }
     }
     
+    /// returns the names of all the folders that were shared with a user
     public func getSharedDirectories() -> Array<String> {
         return folderMap[self.sharedFolderName]!
     }
     
+    /// Gets all the files that are shared with a user within a folder
+    /// - Parameters:
+    ///   - folderName: Name of the folder that was shared with the user
+    ///   - completion: Returns non nil value to caller after completion of api call
     public func getFilesInSharedDirectory(folderName: String, completion: @escaping (AnyObject?)->()) {
         
         let listRequest: AWSS3ListObjectsRequest = AWSS3ListObjectsRequest()
@@ -336,6 +370,11 @@ class AWSBucketHandler {
         }
     }
     
+    /// Sends an email to the specified user
+    /// - Parameters:
+    ///   - emailAddr: destination email address
+    ///   - subject: The subject line of the email
+    ///   - text: The message content of the email
     func sendMail(emailAddr: String, subject: String, text: String) {
         let sendGrid = SendGrid(withAPIKey: SG_API_KEY1 + SG_API_KEY2 + SG_API_KEY3 + SG_API_KEY4 + SG_API_KEY5)
         
