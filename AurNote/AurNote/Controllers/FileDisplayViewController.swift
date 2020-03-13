@@ -11,6 +11,7 @@ import UIKit
 /*global so that the parsed text is available always*/
 let handwriting = HandwritingManager()
 
+/// File cell in a directory
 class FileCollectionCell: UICollectionViewCell {
 
     @IBOutlet weak var fileImage: UIImageView!
@@ -39,6 +40,7 @@ class FileCollectionCell: UICollectionViewCell {
     
 }
 
+/// View inside a directory
 class FileDisplayViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var fileCollection: UICollectionView!
     @IBOutlet weak var shareBtn: UIBarButtonItem!
@@ -72,7 +74,7 @@ class FileDisplayViewController: UIViewController, UICollectionViewDelegate, UIC
         }
     }
     
-    //func to write an image to disk
+    ///func to write an image to disk
     @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
         if let error = error {
             // we got back an error!
@@ -86,6 +88,8 @@ class FileDisplayViewController: UIViewController, UICollectionViewDelegate, UIC
         }
     }
     
+    /// Uploads an image to the current folder in AWS
+    /// - Parameter image: Image to upload
     func uploadToAWS(_ image: UIImage) {
             var code = String()
             while (true) {
@@ -237,6 +241,8 @@ class FileDisplayViewController: UIViewController, UICollectionViewDelegate, UIC
         sender.view?.removeFromSuperview()
     }
     
+    /// Called when user wants to share a directory with another user
+    /// - Parameter sender: UIButton
     @objc func shareAction (sender:UIButton) {
         print("SHARE")
         let alert = UIAlertController(title: "Invite A Collaborator", message: "The collaborator will recieve an email notification and see these files in thier Shared with Me folder.", preferredStyle: UIAlertController.Style.alert)
