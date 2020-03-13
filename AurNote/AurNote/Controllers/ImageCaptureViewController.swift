@@ -15,6 +15,7 @@ import UIKit
 import AVKit
 import CropViewController
 
+/// Holds the logic for opening the camera and photo library as well as permissions associated with access to these
 class ImageCaptureViewController: UIViewController, CropViewControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     // TODO: create dictionary to store set of codes ?
     var imgStore = ImageStorer()
@@ -119,6 +120,12 @@ class ImageCaptureViewController: UIViewController, CropViewControllerDelegate, 
         
     }
     
+    /// <#Description#>
+    /// - Parameters:
+    ///   - cropViewController: the view controller that is used to crop images
+    ///   - image: the newly cropped version of the original image
+    ///   - cropRect: the rectangle defined to crop the original image
+    ///   - angle: the angle at which the image is rotated
     func cropViewController(_ cropViewController: CropViewController, didCropToImage image: UIImage, withRect cropRect: CGRect, angle: Int) {
         // 'image' is the newly cropped version of the original image
                 
@@ -145,8 +152,10 @@ class ImageCaptureViewController: UIViewController, CropViewControllerDelegate, 
     }
 }
 
+/// Class that handles the storage and retrieval of images in using the user's filesystem. This is for persistent storage of photos. Currently the primary use is for photos that are meant to be overlaid onto notes.
 class ImageStorer {
     
+    /// Defines possible persistent storage types for photos. Currently only fileSystem is used.
     enum StorageType {
         case userDefaults
         case fileSystem
