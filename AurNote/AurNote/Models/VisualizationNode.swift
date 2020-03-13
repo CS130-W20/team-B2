@@ -19,6 +19,7 @@ class VisualizationNode: SCNNode {
      Create a plane geometry for the current and previous altered images sized to the argument
      size, and initialize them with transparent material. Because `SCNPlane` is defined in the
      XY-plane, but `ARImageAnchor` is defined in the XZ plane, you rotate by 90 degrees to match.
+     - Parameter size: size of image
      */
     init(_ size: CGSize) {
         currentImage = createPlaneNode(size: size, rotation: -.pi / 2, contents: UIColor.clear)

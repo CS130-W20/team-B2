@@ -30,6 +30,10 @@ class AlteredImage {
     /// A delegate to tell when image tracking fails.
     weak var delegate: AlteredImageDelegate?
     
+    /// initialization of vizualization node and reference image
+    /// - Parameters:
+    ///   - image: image inside rectanngle
+    ///   - referenceImage: image inside rectangle
     init?(_ image: CIImage, referenceImage: ARReferenceImage) {
         
         self.referenceImage = referenceImage
@@ -93,8 +97,9 @@ class AlteredImage {
         }
     }
     
-    /// Alters the image's appearance by applying the "StyleTransfer" Core ML model to it.
+    /// Analyzes image to get code and fetch image to overlay 
     /// - Tag: CreateAlteredImage
+    /// - Parameter imageContent: image inside rectangle with handwritten code that needs to be parsed
     func createAlteredImage(imageContent: CIImage) {
         DispatchQueue.global().async { [weak self] in
             guard let self = self else { return }
