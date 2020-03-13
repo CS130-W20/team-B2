@@ -1,6 +1,7 @@
 clean: true
 module: AurNote
 skip_undocumented: true
+hide_documentation_coverage: true
 sdk: iPhone 11 Pro Max simulator
 min_acl: private
 readme: ../README.md
