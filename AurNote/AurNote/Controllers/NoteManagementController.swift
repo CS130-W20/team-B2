@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 /// Represents each of the user's folders contains only a label for the folder name
 class DirectoryCollectionCell: UICollectionViewCell {
 
@@ -47,6 +49,7 @@ class SharedFolderCell: UICollectionViewCell {
 
 /// The view controller for the splash page which includes collection view
 class NoteManagementController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchBarDelegate {
+    static let searchUpdate = Notification.Name("searchUpdate")
     var data = [String]()
     var userId: String = ""       //change this to dynamically obtain signed in userId
     var awsBucketHandler: AWSBucketHandler? = nil
@@ -179,13 +182,14 @@ class NoteManagementController: UIViewController, UICollectionViewDelegate, UICo
         //var matchingFilenames = [(String, String)]()
         //an array of all (foldername, filename) tuples that contained this word
         let matchingFilenames = handwriting.allText[searchText.lowercased()]
-        var matchingImages = [UIImage]()
+        var matchingImages = [(String, UIImage)]()
         print(matchingFilenames)
         if (matchingFilenames != nil){
             for (_, file) in matchingFilenames!{
-                matchingImages.append(awsBucketHandler!.fileMap[file]!)
+                matchingImages.append((file, awsBucketHandler!.fileMap[file]!))
             }
         }
+        NotificationCenter.default.post(name: NoteManagementController.searchUpdate, object: nil, userInfo:["data": matchingImages])
         //handwriting.allText[searchText.lowercased()].0
         if (searchText.count > 0) {
             directoryCollection.isHidden = true
@@ -198,6 +202,11 @@ class NoteManagementController: UIViewController, UICollectionViewDelegate, UICo
         // you can use this to show the view
         // the view controller is in Search.storyboard
         filteredResultsView.isHidden = false
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        filteredResultsView.isHidden = true
+        directoryCollection.isHidden = false
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
