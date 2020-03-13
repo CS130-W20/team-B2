@@ -8,13 +8,14 @@
 
 import UIKit
 
+///View for each shared folder
 class SharedCollectionCell: UICollectionViewCell {
     
     @IBOutlet weak var sharedFolderName: UILabel!
     @IBOutlet weak var usersName: UILabel!
     
-    /// sets the  cell's name to the name of the folder
-    /// /// - Parameter name: String name of the folder
+    /// Shows content of a shared collection cell
+    /// - Parameter name: path of the shared folder
     func displayContent(name: String) {
         var localCopy = name.split(separator: "/")
         let fn = localCopy.popLast()
@@ -23,6 +24,7 @@ class SharedCollectionCell: UICollectionViewCell {
     }
 }
 
+/// View containing all shared folders
 class SharedFoldersViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     var data = [String]()
     var userId = AppDelegate.shared().userId         //change this to dynamically obtain signed in userId
