@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AWSBucketHandler Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/AWSBucketHandler" class="dashAnchor"></a>
+    <a title="AWSBucketHandler Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">AurNote Docs</a> (25% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">AurNote Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        AWSBucketHandler Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/ARAnnotationViewController.html">ARAnnotationViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AWSBucketHandler.html">AWSBucketHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AccountViewController.html">AccountViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AddFolderCell.html">AddFolderCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AlteredImage.html">AlteredImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AppDelegate.html">AppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CustomTabBarController.html">CustomTabBarController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DirectoryCollectionCell.html">DirectoryCollectionCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EEZoomableImageView.html">EEZoomableImageView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FileCollectionCell.html">FileCollectionCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FileDisplayViewController.html">FileDisplayViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HandwritingManager.html">HandwritingManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageCaptureViewController.html">ImageCaptureViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageStorer.html">ImageStorer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageStorer/StorageType.html">– StorageType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LoggedInViewController.html">LoggedInViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LoginViewController.html">LoginViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoteManagementController.html">NoteManagementController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PinchZoomHandler.html">PinchZoomHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RectangleDetector.html">RectangleDetector</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ScanViewController.html">ScanViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SceneDelegate.html">SceneDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SharedCollectionCell.html">SharedCollectionCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SharedFolderCell.html">SharedFolderCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SharedFoldersViewController.html">SharedFoldersViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VisualizationNode.html">VisualizationNode</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global%20Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:7AurNote11handwritingAA18HandwritingManagerCvp">handwriting</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/CIImage.html">CIImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CVPixelBuffer.html">CVPixelBuffer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIView.html">UIView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:7AurNote15createPlaneNode4size8rotation8contentsSo7SCNNodeCSo6CGSizeV_SfypSgtF">createPlaneNode(size:rotation:contents:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/AlteredImageDelegate.html">AlteredImageDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/RectangleDetectorDelegate.html">RectangleDetectorDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ZoomingDelegate.html">ZoomingDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/PinchZoomHandlerConstants.html">PinchZoomHandlerConstants</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>AWSBucketHandler</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">AWSBucketHandler</span></code></pre>
+
+                </div>
+              </div>
+            <p>AWSBucketHandler makes all requests to the S3 bucket using the configuration specified
+This class is instantiated and passed through many view controllers</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16AWSBucketHandlerC6userIdSSvp"></a>
+                    <a name="//apple_ref/swift/Property/userId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16AWSBucketHandlerC6userIdSSvp">userId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">userId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16AWSBucketHandlerC16myIdentityPoolIdSSvp"></a>
+                    <a name="//apple_ref/swift/Property/myIdentityPoolId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16AWSBucketHandlerC16myIdentityPoolIdSSvp">myIdentityPoolId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">myIdentityPoolId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16AWSBucketHandlerC13configurationSo23AWSServiceConfigurationCvp"></a>
+                    <a name="//apple_ref/swift/Property/configuration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16AWSBucketHandlerC13configurationSo23AWSServiceConfigurationCvp">configuration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">configuration</span><span class="p">:</span> <span class="kt">AWSServiceConfiguration</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16AWSBucketHandlerC11SG_API_KEY4SSvp"></a>
+                    <a name="//apple_ref/swift/Property/SG_API_KEY4" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16AWSBucketHandlerC11SG_API_KEY4SSvp">SG_API_KEY4</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">SG_API_KEY4</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16AWSBucketHandlerC8allFilesSaySSGvp"></a>
+                    <a name="//apple_ref/swift/Property/allFiles" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16AWSBucketHandlerC8allFilesSaySSGvp">allFiles</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">allFiles</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16AWSBucketHandlerC9folderMapSDySSSaySSGGvp"></a>
+                    <a name="//apple_ref/swift/Property/folderMap" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16AWSBucketHandlerC9folderMapSDySSSaySSGGvp">folderMap</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">folderMap</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16AWSBucketHandlerC11SG_API_KEY3SSvp"></a>
+                    <a name="//apple_ref/swift/Property/SG_API_KEY3" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16AWSBucketHandlerC11SG_API_KEY3SSvp">SG_API_KEY3</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">SG_API_KEY3</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16AWSBucketHandlerC2s3So5AWSS3Cvp"></a>
+                    <a name="//apple_ref/swift/Property/s3" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16AWSBucketHandlerC2s3So5AWSS3Cvp">s3</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">s3</span><span class="p">:</span> <span class="kt">AWSS3</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16AWSBucketHandlerC17folderToObjectMapSDySSSaySS_So7UIImageCtGGvp"></a>
+                    <a name="//apple_ref/swift/Property/folderToObjectMap" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16AWSBucketHandlerC17folderToObjectMapSDySSSaySS_So7UIImageCtGGvp">folderToObjectMap</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">folderToObjectMap</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="p">[(</span><span class="kt">String</span><span class="p">,</span> <span class="kt">UIImage</span><span class="p">)]]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16AWSBucketHandlerC10bucketNameSSvp"></a>
+                    <a name="//apple_ref/swift/Property/bucketName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16AWSBucketHandlerC10bucketNameSSvp">bucketName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">bucketName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16AWSBucketHandlerC16sharedFolderNameSSvp"></a>
+                    <a name="//apple_ref/swift/Property/sharedFolderName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16AWSBucketHandlerC16sharedFolderNameSSvp">sharedFolderName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">sharedFolderName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16AWSBucketHandlerC7fileMapSDySSSo7UIImageCGvp"></a>
+                    <a name="//apple_ref/swift/Property/fileMap" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16AWSBucketHandlerC7fileMapSDySSSo7UIImageCGvp">fileMap</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">fileMap</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">UIImage</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16AWSBucketHandlerC11SG_API_KEY1SSvp"></a>
+                    <a name="//apple_ref/swift/Property/SG_API_KEY1" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16AWSBucketHandlerC11SG_API_KEY1SSvp">SG_API_KEY1</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">SG_API_KEY1</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16AWSBucketHandlerC11SG_API_KEY2SSvp"></a>
+                    <a name="//apple_ref/swift/Property/SG_API_KEY2" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16AWSBucketHandlerC11SG_API_KEY2SSvp">SG_API_KEY2</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">SG_API_KEY2</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16AWSBucketHandlerC17SENDGRID_API_USERSSvp"></a>
+                    <a name="//apple_ref/swift/Property/SENDGRID_API_USER" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16AWSBucketHandlerC17SENDGRID_API_USERSSvp">SENDGRID_API_USER</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">SENDGRID_API_USER</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16AWSBucketHandlerC11SG_API_KEY5SSvp"></a>
+                    <a name="//apple_ref/swift/Property/SG_API_KEY5" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16AWSBucketHandlerC11SG_API_KEY5SSvp">SG_API_KEY5</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">SG_API_KEY5</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16AWSBucketHandlerC2idACSS_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(id:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16AWSBucketHandlerC2idACSS_tcfc">init(id:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>initializes and configures credential provider with userpool id and credentials</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>id</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a unique identifier for the logged in user, also the name of their folder in the S3 bucket</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16AWSBucketHandlerC14initializeUser10completionyyyXlSgc_tF"></a>
+                    <a name="//apple_ref/swift/Method/initializeUser(completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16AWSBucketHandlerC14initializeUser10completionyyyXlSgc_tF">initializeUser(completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">initializeUser</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">AnyObject</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">())</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16AWSBucketHandlerC11getAllFiles10completionyyyXlSgc_tF"></a>
+                    <a name="//apple_ref/swift/Method/getAllFiles(completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16AWSBucketHandlerC11getAllFiles10completionyyyXlSgc_tF">getAllFiles(completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>gets the names of all files in the user&rsquo;s directory and stores it in a global variable</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getAllFiles</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">AnyObject</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">())</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>this is an event callback that lets the caller execute some function after the request completes</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16AWSBucketHandlerC14getDirectoriesSaySSGyF"></a>
+                    <a name="//apple_ref/swift/Method/getDirectories()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16AWSBucketHandlerC14getDirectoriesSaySSGyF">getDirectories()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Extracts the list of directories from the file names to populate the splash page of user folders
+Return - Array<String> which contains the names of all user folders (unique)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getDirectories</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Array</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16AWSBucketHandlerC9getObject4path10folderName04fileI010completionySS_S2SyyXlSgctF"></a>
+                    <a name="//apple_ref/swift/Method/getObject(path:folderName:fileName:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16AWSBucketHandlerC9getObject4path10folderName04fileI010completionySS_S2SyyXlSgctF">getObject(path:folderName:fileName:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getObject</span><span class="p">(</span><span class="nv">path</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">folderName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">fileName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">AnyObject</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">())</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16AWSBucketHandlerC19getFilesInDirectory10folderName10completionySS_yyXlSgctF"></a>
+                    <a name="//apple_ref/swift/Method/getFilesInDirectory(folderName:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16AWSBucketHandlerC19getFilesInDirectory10folderName10completionySS_yyXlSgctF">getFilesInDirectory(folderName:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getFilesInDirectory</span><span class="p">(</span><span class="nv">folderName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">AnyObject</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">())</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16AWSBucketHandlerC22returnFilesInDirectory10folderNameSaySS_So7UIImageCtGSS_tF"></a>
+                    <a name="//apple_ref/swift/Method/returnFilesInDirectory(folderName:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16AWSBucketHandlerC22returnFilesInDirectory10folderNameSaySS_So7UIImageCtGSS_tF">returnFilesInDirectory(folderName:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">returnFilesInDirectory</span><span class="p">(</span><span class="nv">folderName</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[(</span><span class="kt">String</span><span class="p">,</span> <span class="kt">UIImage</span><span class="p">)]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16AWSBucketHandlerC12putDirectory10folderName10completionySS_yyXlSgctF"></a>
+                    <a name="//apple_ref/swift/Method/putDirectory(folderName:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16AWSBucketHandlerC12putDirectory10folderName10completionySS_yyXlSgctF">putDirectory(folderName:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">putDirectory</span><span class="p">(</span><span class="nv">folderName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">AnyObject</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">())</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16AWSBucketHandlerC7putFile10folderName04fileH00I3URL10completionySS_SS10Foundation0J0VyyXlSgctF"></a>
+                    <a name="//apple_ref/swift/Method/putFile(folderName:fileName:fileURL:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16AWSBucketHandlerC7putFile10folderName04fileH00I3URL10completionySS_SS10Foundation0J0VyyXlSgctF">putFile(folderName:fileName:fileURL:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">putFile</span><span class="p">(</span><span class="nv">folderName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">fileName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">fileURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">AnyObject</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">())</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16AWSBucketHandlerC9shareFile10folderName5email10completionySS_SSyyXlSgctF"></a>
+                    <a name="//apple_ref/swift/Method/shareFile(folderName:email:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16AWSBucketHandlerC9shareFile10folderName5email10completionySS_SSyyXlSgctF">shareFile(folderName:email:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shareFile</span><span class="p">(</span><span class="nv">folderName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">email</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">AnyObject</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">())</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16AWSBucketHandlerC20getSharedDirectoriesSaySSGyF"></a>
+                    <a name="//apple_ref/swift/Method/getSharedDirectories()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16AWSBucketHandlerC20getSharedDirectoriesSaySSGyF">getSharedDirectories()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getSharedDirectories</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Array</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16AWSBucketHandlerC25getFilesInSharedDirectory10folderName10completionySS_yyXlSgctF"></a>
+                    <a name="//apple_ref/swift/Method/getFilesInSharedDirectory(folderName:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16AWSBucketHandlerC25getFilesInSharedDirectory10folderName10completionySS_yyXlSgctF">getFilesInSharedDirectory(folderName:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getFilesInSharedDirectory</span><span class="p">(</span><span class="nv">folderName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">AnyObject</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">())</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16AWSBucketHandlerC8sendMail9emailAddr7subject4textySS_S2StF"></a>
+                    <a name="//apple_ref/swift/Method/sendMail(emailAddr:subject:text:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16AWSBucketHandlerC8sendMail9emailAddr7subject4textySS_S2StF">sendMail(emailAddr:subject:text:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sendMail</span><span class="p">(</span><span class="nv">emailAddr</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">subject</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">text</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-03-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

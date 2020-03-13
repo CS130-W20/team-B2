@@ -1,0 +1,12 @@
+clean: true
+module: AurNote
+sdk: iPhone 11 Pro Max simulator
+min_acl: private
+readme: ../README.md
+documentation: ../Documentation/*.md
+xcodebuild_arguments:
+  - -workspace
+  - AurNote.xcworkspace
+  - -scheme
+  - AurNote
+output: ../docs

@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PinchZoomHandler Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/PinchZoomHandler" class="dashAnchor"></a>
+    <a title="PinchZoomHandler Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">AurNote Docs</a> (25% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">AurNote Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        PinchZoomHandler Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/ARAnnotationViewController.html">ARAnnotationViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AWSBucketHandler.html">AWSBucketHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AccountViewController.html">AccountViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AddFolderCell.html">AddFolderCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AlteredImage.html">AlteredImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AppDelegate.html">AppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CustomTabBarController.html">CustomTabBarController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DirectoryCollectionCell.html">DirectoryCollectionCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EEZoomableImageView.html">EEZoomableImageView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FileCollectionCell.html">FileCollectionCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FileDisplayViewController.html">FileDisplayViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HandwritingManager.html">HandwritingManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageCaptureViewController.html">ImageCaptureViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageStorer.html">ImageStorer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ImageStorer/StorageType.html">– StorageType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LoggedInViewController.html">LoggedInViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LoginViewController.html">LoginViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NoteManagementController.html">NoteManagementController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PinchZoomHandler.html">PinchZoomHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RectangleDetector.html">RectangleDetector</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ScanViewController.html">ScanViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SceneDelegate.html">SceneDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SharedCollectionCell.html">SharedCollectionCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SharedFolderCell.html">SharedFolderCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SharedFoldersViewController.html">SharedFoldersViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VisualizationNode.html">VisualizationNode</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global%20Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global%20Variables.html#/s:7AurNote11handwritingAA18HandwritingManagerCvp">handwriting</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/CIImage.html">CIImage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/CVPixelBuffer.html">CVPixelBuffer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UIView.html">UIView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:7AurNote15createPlaneNode4size8rotation8contentsSo7SCNNodeCSo6CGSizeV_SfypSgtF">createPlaneNode(size:rotation:contents:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/AlteredImageDelegate.html">AlteredImageDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/RectangleDetectorDelegate.html">RectangleDetectorDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ZoomingDelegate.html">ZoomingDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/PinchZoomHandlerConstants.html">PinchZoomHandlerConstants</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>PinchZoomHandler</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">fileprivate</span> <span class="kd">class</span> <span class="kt">PinchZoomHandler</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16PinchZoomHandler33_86573722E8B6145B222DC9482E740A3ALLC03minD5Scale12CoreGraphics7CGFloatVvp"></a>
+                    <a name="//apple_ref/swift/Property/minZoomScale" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16PinchZoomHandler33_86573722E8B6145B222DC9482E740A3ALLC03minD5Scale12CoreGraphics7CGFloatVvp">minZoomScale</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">minZoomScale</span><span class="p">:</span> <span class="kt">CGFloat</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16PinchZoomHandler33_86573722E8B6145B222DC9482E740A3ALLC03maxD5Scale12CoreGraphics7CGFloatVvp"></a>
+                    <a name="//apple_ref/swift/Property/maxZoomScale" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16PinchZoomHandler33_86573722E8B6145B222DC9482E740A3ALLC03maxD5Scale12CoreGraphics7CGFloatVvp">maxZoomScale</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">maxZoomScale</span><span class="p">:</span> <span class="kt">CGFloat</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16PinchZoomHandler33_86573722E8B6145B222DC9482E740A3ALLC22resetAnimationDurationSdvp"></a>
+                    <a name="//apple_ref/swift/Property/resetAnimationDuration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16PinchZoomHandler33_86573722E8B6145B222DC9482E740A3ALLC22resetAnimationDurationSdvp">resetAnimationDuration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">resetAnimationDuration</span><span class="p">:</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16PinchZoomHandler33_86573722E8B6145B222DC9482E740A3ALLC15isZoomingActiveSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isZoomingActive" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16PinchZoomHandler33_86573722E8B6145B222DC9482E740A3ALLC15isZoomingActiveSbvp">isZoomingActive</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isZoomingActive</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16PinchZoomHandler33_86573722E8B6145B222DC9482E740A3ALLC8delegateAA15ZoomingDelegate_pSgvp"></a>
+                    <a name="//apple_ref/swift/Property/delegate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16PinchZoomHandler33_86573722E8B6145B222DC9482E740A3ALLC8delegateAA15ZoomingDelegate_pSgvp">delegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">weak</span> <span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ZoomingDelegate.html">ZoomingDelegate</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16PinchZoomHandler33_86573722E8B6145B222DC9482E740A3ALLC15sourceImageViewSo07UIImageN0CSgvp"></a>
+                    <a name="//apple_ref/swift/Property/sourceImageView" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16PinchZoomHandler33_86573722E8B6145B222DC9482E740A3ALLC15sourceImageViewSo07UIImageN0CSgvp">sourceImageView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">weak</span> <span class="k">var</span> <span class="nv">sourceImageView</span><span class="p">:</span> <span class="kt">UIImageView</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16PinchZoomHandler33_86573722E8B6145B222DC9482E740A3ALLC13zoomImageViewSo07UIImageN0Cvp"></a>
+                    <a name="//apple_ref/swift/Property/zoomImageView" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16PinchZoomHandler33_86573722E8B6145B222DC9482E740A3ALLC13zoomImageViewSo07UIImageN0Cvp">zoomImageView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="k">var</span> <span class="nv">zoomImageView</span><span class="p">:</span> <span class="kt">UIImageView</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16PinchZoomHandler33_86573722E8B6145B222DC9482E740A3ALLC11initialRectSo6CGRectVvp"></a>
+                    <a name="//apple_ref/swift/Property/initialRect" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16PinchZoomHandler33_86573722E8B6145B222DC9482E740A3ALLC11initialRectSo6CGRectVvp">initialRect</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="k">var</span> <span class="nv">initialRect</span><span class="p">:</span> <span class="kt">CGRect</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16PinchZoomHandler33_86573722E8B6145B222DC9482E740A3ALLC21zoomImageLastPositionSo7CGPointVvp"></a>
+                    <a name="//apple_ref/swift/Property/zoomImageLastPosition" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16PinchZoomHandler33_86573722E8B6145B222DC9482E740A3ALLC21zoomImageLastPositionSo7CGPointVvp">zoomImageLastPosition</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="k">var</span> <span class="nv">zoomImageLastPosition</span><span class="p">:</span> <span class="kt">CGPoint</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16PinchZoomHandler33_86573722E8B6145B222DC9482E740A3ALLC14lastTouchPointSo7CGPointVvp"></a>
+                    <a name="//apple_ref/swift/Property/lastTouchPoint" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16PinchZoomHandler33_86573722E8B6145B222DC9482E740A3ALLC14lastTouchPointSo7CGPointVvp">lastTouchPoint</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="k">var</span> <span class="nv">lastTouchPoint</span><span class="p">:</span> <span class="kt">CGPoint</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16PinchZoomHandler33_86573722E8B6145B222DC9482E740A3ALLC17lastNumberOfTouchSiSgvp"></a>
+                    <a name="//apple_ref/swift/Property/lastNumberOfTouch" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16PinchZoomHandler33_86573722E8B6145B222DC9482E740A3ALLC17lastNumberOfTouchSiSgvp">lastNumberOfTouch</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="k">var</span> <span class="nv">lastNumberOfTouch</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Initialization"></a>
+                <a name="//apple_ref/swift/Section/Initialization" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Initialization"></a>
+                  <h3 class="section-name"><p>Initialization</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16PinchZoomHandler33_86573722E8B6145B222DC9482E740A3ALLC20usingSourceImageViewADSo07UIImageO0C_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(usingSourceImageView:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16PinchZoomHandler33_86573722E8B6145B222DC9482E740A3ALLC20usingSourceImageViewADSo07UIImageO0C_tcfc">init(usingSourceImageView:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="n">usingSourceImageView</span> <span class="nv">sourceImageView</span><span class="p">:</span> <span class="kt">UIImageView</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Private%20Methods"></a>
+                <a name="//apple_ref/swift/Section/Private Methods" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Private%20Methods"></a>
+                  <h3 class="section-name"><p>Private Methods</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16PinchZoomHandler33_86573722E8B6145B222DC9482E740A3ALLC05setupC7Gesture2onySo6UIViewC_tF"></a>
+                    <a name="//apple_ref/swift/Method/setupPinchGesture(on:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16PinchZoomHandler33_86573722E8B6145B222DC9482E740A3ALLC05setupC7Gesture2onySo6UIViewC_tF">setupPinchGesture(on:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">func</span> <span class="nf">setupPinchGesture</span><span class="p">(</span><span class="n">on</span> <span class="nv">pinchContainer</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16PinchZoomHandler33_86573722E8B6145B222DC9482E740A3ALLC06handleC7Gesture5pinchySo07UIPinchM10RecognizerC_tF"></a>
+                    <a name="//apple_ref/swift/Method/handlePinchGesture(pinch:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16PinchZoomHandler33_86573722E8B6145B222DC9482E740A3ALLC06handleC7Gesture5pinchySo07UIPinchM10RecognizerC_tF">handlePinchGesture(pinch:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">private</span> <span class="kd">func</span> <span class="nf">handlePinchGesture</span><span class="p">(</span><span class="nv">pinch</span><span class="p">:</span> <span class="kt">UIPinchGestureRecognizer</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16PinchZoomHandler33_86573722E8B6145B222DC9482E740A3ALLC06handleC8Movement12pinchGesture15sourceImageViewySo07UIPinchO10RecognizerC_So07UIImageR0CtF"></a>
+                    <a name="//apple_ref/swift/Method/handlePinchMovement(pinchGesture:sourceImageView:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16PinchZoomHandler33_86573722E8B6145B222DC9482E740A3ALLC06handleC8Movement12pinchGesture15sourceImageViewySo07UIPinchO10RecognizerC_So07UIImageR0CtF">handlePinchMovement(pinchGesture:sourceImageView:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">func</span> <span class="nf">handlePinchMovement</span><span class="p">(</span><span class="nv">pinchGesture</span><span class="p">:</span> <span class="kt">UIPinchGestureRecognizer</span><span class="p">,</span> <span class="nv">sourceImageView</span><span class="p">:</span> <span class="kt">UIImageView</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7AurNote16PinchZoomHandler33_86573722E8B6145B222DC9482E740A3ALLC05resetD0yyF"></a>
+                    <a name="//apple_ref/swift/Method/resetZoom()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7AurNote16PinchZoomHandler33_86573722E8B6145B222DC9482E740A3ALLC05resetD0yyF">resetZoom()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">private</span> <span class="kd">func</span> <span class="nf">resetZoom</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-03-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
