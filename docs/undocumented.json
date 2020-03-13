@@ -8,76 +8,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Configurations/AppDelegate.swift",
-      "line": 16,
-      "symbol": "AppDelegate.userId",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Configurations/AppDelegate.swift",
-      "line": 17,
-      "symbol": "AppDelegate.awsBucketHandler",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Configurations/AppDelegate.swift",
-      "line": 19,
-      "symbol": "AppDelegate.application(_:didFinishLaunchingWithOptions:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Configurations/AppDelegate.swift",
-      "line": 26,
-      "symbol": "AppDelegate.application(_:configurationForConnecting:options:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Configurations/AppDelegate.swift",
-      "line": 32,
-      "symbol": "AppDelegate.application(_:didDiscardSceneSessions:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Configurations/AppDelegate.swift",
-      "line": 38,
-      "symbol": "AppDelegate.application(_:open:options:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Configurations/AppDelegate.swift",
-      "line": 43,
-      "symbol": "AppDelegate.application(_:open:sourceApplication:annotation:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Configurations/AppDelegate.swift",
-      "line": 48,
-      "symbol": "AppDelegate.sign(_:didDisconnectWith:withError:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Configurations/AppDelegate.swift",
-      "line": 56,
-      "symbol": "AppDelegate.sign(_:didSignInFor:withError:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Configurations/AppDelegate.swift",
-      "line": 84,
-      "symbol": "AppDelegate.shared()",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Configurations/SceneDelegate.swift",
       "line": 11,
       "symbol": "SceneDelegate",
@@ -85,136 +15,10 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Configurations/SceneDelegate.swift",
-      "line": 13,
-      "symbol": "SceneDelegate.window",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Configurations/SceneDelegate.swift",
-      "line": 16,
-      "symbol": "SceneDelegate.scene(_:willConnectTo:options:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Configurations/SceneDelegate.swift",
-      "line": 23,
-      "symbol": "SceneDelegate.sceneDidDisconnect(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Configurations/SceneDelegate.swift",
-      "line": 30,
-      "symbol": "SceneDelegate.sceneDidBecomeActive(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Configurations/SceneDelegate.swift",
-      "line": 35,
-      "symbol": "SceneDelegate.sceneWillResignActive(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Configurations/SceneDelegate.swift",
-      "line": 40,
-      "symbol": "SceneDelegate.sceneWillEnterForeground(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Configurations/SceneDelegate.swift",
-      "line": 45,
-      "symbol": "SceneDelegate.sceneDidEnterBackground(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/ARAnnotationViewController.swift",
       "line": 12,
       "symbol": "ARAnnotationViewController",
       "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/ARAnnotationViewController.swift",
-      "line": 35,
-      "symbol": "ARAnnotationViewController.capturedImageRaw",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/ARAnnotationViewController.swift",
-      "line": 36,
-      "symbol": "ARAnnotationViewController.processedImage",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/ARAnnotationViewController.swift",
-      "line": 38,
-      "symbol": "ARAnnotationViewController.sceneView",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/ARAnnotationViewController.swift",
-      "line": 39,
-      "symbol": "ARAnnotationViewController.messagePanel",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/ARAnnotationViewController.swift",
-      "line": 40,
-      "symbol": "ARAnnotationViewController.messageLabel",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/ARAnnotationViewController.swift",
-      "line": 41,
-      "symbol": "ARAnnotationViewController.didCapture(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/ARAnnotationViewController.swift",
-      "line": 63,
-      "symbol": "ARAnnotationViewController.image(_:didFinishSavingWithError:contextInfo:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/ARAnnotationViewController.swift",
-      "line": 78,
-      "symbol": "ARAnnotationViewController.instance",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/ARAnnotationViewController.swift",
-      "line": 86,
-      "symbol": "ARAnnotationViewController.viewDidLoad()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/ARAnnotationViewController.swift",
-      "line": 93,
-      "symbol": "ARAnnotationViewController.viewDidAppear(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/ARAnnotationViewController.swift",
-      "line": 126,
-      "symbol": "ARAnnotationViewController.messageHideTimer",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
@@ -351,76 +155,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/AWSBucketHandler.swift",
-      "line": 53,
-      "symbol": "AWSBucketHandler.initializeUser(completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/AWSBucketHandler.swift",
-      "line": 141,
-      "symbol": "AWSBucketHandler.getObject(path:folderName:fileName:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/AWSBucketHandler.swift",
-      "line": 178,
-      "symbol": "AWSBucketHandler.getFilesInDirectory(folderName:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/AWSBucketHandler.swift",
-      "line": 202,
-      "symbol": "AWSBucketHandler.returnFilesInDirectory(folderName:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/AWSBucketHandler.swift",
-      "line": 213,
-      "symbol": "AWSBucketHandler.putDirectory(folderName:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/AWSBucketHandler.swift",
-      "line": 239,
-      "symbol": "AWSBucketHandler.putFile(folderName:fileName:fileURL:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/AWSBucketHandler.swift",
-      "line": 269,
-      "symbol": "AWSBucketHandler.shareFile(folderName:email:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/AWSBucketHandler.swift",
-      "line": 291,
-      "symbol": "AWSBucketHandler.getSharedDirectories()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/AWSBucketHandler.swift",
-      "line": 295,
-      "symbol": "AWSBucketHandler.getFilesInSharedDirectory(folderName:completion:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/AWSBucketHandler.swift",
-      "line": 339,
-      "symbol": "AWSBucketHandler.sendMail(emailAddr:subject:text:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/AccountViewController.swift",
       "line": 12,
       "symbol": "AccountViewController",
@@ -428,115 +162,10 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/AccountViewController.swift",
-      "line": 14,
-      "symbol": "AccountViewController.logoutButtonPressed(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/AccountViewController.swift",
-      "line": 18,
-      "symbol": "AccountViewController.goBackToOneButtonTapped(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/CustomTabBarController.swift",
       "line": 12,
       "symbol": "CustomTabBarController",
       "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/CustomTabBarController.swift",
-      "line": 13,
-      "symbol": "CustomTabBarController.contentView",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/CustomTabBarController.swift",
-      "line": 14,
-      "symbol": "CustomTabBarController.buttons",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/CustomTabBarController.swift",
-      "line": 15,
-      "symbol": "CustomTabBarController.cameraButton",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/CustomTabBarController.swift",
-      "line": 16,
-      "symbol": "CustomTabBarController.tabBarView",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/CustomTabBarController.swift",
-      "line": 18,
-      "symbol": "CustomTabBarController.noteManagementViewController",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/CustomTabBarController.swift",
-      "line": 19,
-      "symbol": "CustomTabBarController.imageCaptureViewController",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/CustomTabBarController.swift",
-      "line": 20,
-      "symbol": "CustomTabBarController.accountViewController",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/CustomTabBarController.swift",
-      "line": 22,
-      "symbol": "CustomTabBarController.viewControllers",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/CustomTabBarController.swift",
-      "line": 23,
-      "symbol": "CustomTabBarController.selectedIndex",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/CustomTabBarController.swift",
-      "line": 25,
-      "symbol": "CustomTabBarController.viewDidLoad()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/CustomTabBarController.swift",
-      "line": 43,
-      "symbol": "CustomTabBarController.didPressTab(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/CustomTabBarController.swift",
-      "line": 62,
-      "symbol": "CustomTabBarController.didPressCameraButton(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/CustomTabBarController.swift",
-      "line": 66,
-      "symbol": "CustomTabBarController.methodOfReceivedNotification(notification:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -548,259 +177,203 @@
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/FileDisplayViewController.swift",
-      "line": 14,
-      "symbol": "FileCollectionCell",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/FileDisplayViewController.swift",
-      "line": 16,
+      "line": 17,
       "symbol": "FileCollectionCell.fileImage",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/FileDisplayViewController.swift",
-      "line": 42,
-      "symbol": "FileDisplayViewController",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/FileDisplayViewController.swift",
-      "line": 43,
+      "line": 45,
       "symbol": "FileDisplayViewController.fileCollection",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/FileDisplayViewController.swift",
-      "line": 44,
+      "line": 46,
       "symbol": "FileDisplayViewController.shareBtn",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/FileDisplayViewController.swift",
-      "line": 45,
+      "line": 47,
       "symbol": "FileDisplayViewController.addBtn",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/FileDisplayViewController.swift",
-      "line": 47,
+      "line": 49,
       "symbol": "FileDisplayViewController.userId",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/FileDisplayViewController.swift",
-      "line": 48,
+      "line": 50,
       "symbol": "FileDisplayViewController.awsBucketHandler",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/FileDisplayViewController.swift",
-      "line": 49,
+      "line": 51,
       "symbol": "FileDisplayViewController.folderName",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/FileDisplayViewController.swift",
-      "line": 50,
+      "line": 52,
       "symbol": "FileDisplayViewController.fileImages",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/FileDisplayViewController.swift",
-      "line": 51,
+      "line": 53,
       "symbol": "FileDisplayViewController.email",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/FileDisplayViewController.swift",
-      "line": 52,
+      "line": 54,
       "symbol": "FileDisplayViewController.imgStore",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/FileDisplayViewController.swift",
-      "line": 53,
+      "line": 55,
       "symbol": "FileDisplayViewController.isShared",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/FileDisplayViewController.swift",
-      "line": 54,
+      "line": 56,
       "symbol": "FileDisplayViewController.capturedImage",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/FileDisplayViewController.swift",
-      "line": 56,
+      "line": 58,
       "symbol": "FileDisplayViewController.unwindFromCameraWithFailure(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/FileDisplayViewController.swift",
-      "line": 60,
+      "line": 62,
       "symbol": "FileDisplayViewController.unwindFromCameraWithSuccess(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/FileDisplayViewController.swift",
-      "line": 76,
-      "symbol": "FileDisplayViewController.image(_:didFinishSavingWithError:contextInfo:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/FileDisplayViewController.swift",
-      "line": 89,
-      "symbol": "FileDisplayViewController.uploadToAWS(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/FileDisplayViewController.swift",
-      "line": 119,
+      "line": 123,
       "symbol": "FileDisplayViewController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/FileDisplayViewController.swift",
-      "line": 170,
+      "line": 174,
       "symbol": "FileDisplayViewController.viewDidAppear(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/FileDisplayViewController.swift",
-      "line": 175,
+      "line": 179,
       "symbol": "FileDisplayViewController.viewDidDisappear(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/FileDisplayViewController.swift",
-      "line": 205,
+      "line": 209,
       "symbol": "FileDisplayViewController.configurationTextField(textField:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/FileDisplayViewController.swift",
-      "line": 215,
+      "line": 219,
       "symbol": "FileDisplayViewController.collectionView(_:didSelectItemAt:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/FileDisplayViewController.swift",
-      "line": 234,
+      "line": 238,
       "symbol": "FileDisplayViewController.dismissFullscreenImage(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/FileDisplayViewController.swift",
-      "line": 240,
-      "symbol": "FileDisplayViewController.shareAction(sender:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/ImageCaptureViewController.swift",
-      "line": 18,
-      "symbol": "ImageCaptureViewController",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/ImageCaptureViewController.swift",
-      "line": 20,
+      "line": 21,
       "symbol": "ImageCaptureViewController.imgStore",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/ImageCaptureViewController.swift",
-      "line": 21,
+      "line": 22,
       "symbol": "ImageCaptureViewController.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/ImageCaptureViewController.swift",
-      "line": 27,
+      "line": 28,
       "symbol": "ImageCaptureViewController.viewDidAppear(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/ImageCaptureViewController.swift",
-      "line": 31,
+      "line": 32,
       "symbol": "ImageCaptureViewController.openCamera(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/ImageCaptureViewController.swift",
-      "line": 41,
+      "line": 42,
       "symbol": "ImageCaptureViewController.openPhotoLibrary(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/ImageCaptureViewController.swift",
-      "line": 47,
+      "line": 48,
       "symbol": "ImageCaptureViewController.savedImage",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/ImageCaptureViewController.swift",
-      "line": 48,
+      "line": 49,
       "symbol": "ImageCaptureViewController.codeMessage",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/ImageCaptureViewController.swift",
-      "line": 148,
-      "symbol": "ImageStorer",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/ImageCaptureViewController.swift",
-      "line": 150,
-      "symbol": "ImageStorer.StorageType",
-      "symbol_kind": "source.lang.swift.decl.enum",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/ImageCaptureViewController.swift",
-      "line": 151,
+      "line": 160,
       "symbol": "ImageStorer.StorageType.userDefaults",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/ImageCaptureViewController.swift",
-      "line": 152,
+      "line": 161,
       "symbol": "ImageStorer.StorageType.fileSystem",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
@@ -813,87 +386,10 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/LoggedInViewController.swift",
-      "line": 14,
-      "symbol": "LoggedInViewController.signOutButton",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/LoggedInViewController.swift",
-      "line": 15,
-      "symbol": "LoggedInViewController.statusText",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/LoggedInViewController.swift",
-      "line": 18,
-      "symbol": "LoggedInViewController.viewDidLoad()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/LoggedInViewController.swift",
-      "line": 24,
-      "symbol": "LoggedInViewController.didTapSignOut(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/LoginController.swift",
       "line": 14,
       "symbol": "LoginViewController",
       "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/LoginController.swift",
-      "line": 16,
-      "symbol": "LoginViewController.googleSignInButton(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/LoginController.swift",
-      "line": 20,
-      "symbol": "LoginViewController.unwindToLoginScreen(segue:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/LoginController.swift",
-      "line": 24,
-      "symbol": "LoginViewController.viewDidLoad()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/LoginController.swift",
-      "line": 38,
-      "symbol": "LoginViewController.prepare(for:sender:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/LoginController.swift",
-      "line": 49,
-      "symbol": "LoginViewController.preferredStatusBarStyle",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/LoginController.swift",
-      "line": 53,
-      "symbol": "LoginViewController.deinit",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/LoginController.swift",
-      "line": 59,
-      "symbol": "LoginViewController.receiveToggleAuthUINotification(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -919,51 +415,9 @@
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/NoteManagementController.swift",
-      "line": 28,
-      "symbol": "AddFolderCell.addFolderImage",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/NoteManagementController.swift",
-      "line": 29,
-      "symbol": "AddFolderCell.addFolderLabel",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/NoteManagementController.swift",
-      "line": 31,
-      "symbol": "AddFolderCell.displayContent()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/NoteManagementController.swift",
       "line": 38,
       "symbol": "SharedFolderCell",
       "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/NoteManagementController.swift",
-      "line": 40,
-      "symbol": "SharedFolderCell.sharedFolderImage",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/NoteManagementController.swift",
-      "line": 41,
-      "symbol": "SharedFolderCell.sharedFolderLabel",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/NoteManagementController.swift",
-      "line": 42,
-      "symbol": "SharedFolderCell.displayContent()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -1051,85 +505,57 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/ScanViewController.swift",
-      "line": 25,
-      "symbol": "ScanViewController.capturedImage",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/ScanViewController.swift",
-      "line": 27,
-      "symbol": "ScanViewController.viewDidLoad()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/SharedFoldersViewController.swift",
-      "line": 11,
-      "symbol": "SharedCollectionCell",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/SharedFoldersViewController.swift",
-      "line": 13,
+      "line": 14,
       "symbol": "SharedCollectionCell.sharedFolderName",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/SharedFoldersViewController.swift",
-      "line": 14,
+      "line": 15,
       "symbol": "SharedCollectionCell.usersName",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/SharedFoldersViewController.swift",
-      "line": 26,
-      "symbol": "SharedFoldersViewController",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/SharedFoldersViewController.swift",
-      "line": 27,
+      "line": 29,
       "symbol": "SharedFoldersViewController.data",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/SharedFoldersViewController.swift",
-      "line": 28,
+      "line": 30,
       "symbol": "SharedFoldersViewController.userId",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/SharedFoldersViewController.swift",
-      "line": 29,
+      "line": 31,
       "symbol": "SharedFoldersViewController.awsBucketHandler",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/SharedFoldersViewController.swift",
-      "line": 31,
+      "line": 33,
       "symbol": "SharedFoldersViewController.sharedCollection",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/SharedFoldersViewController.swift",
-      "line": 79,
+      "line": 81,
       "symbol": "SharedFoldersViewController.prepare(for:sender:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/SharedFoldersViewController.swift",
-      "line": 89,
+      "line": 91,
       "symbol": "SharedFoldersViewController.viewDidDisappear(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -1143,21 +569,14 @@
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Models/AlteredImage.swift",
-      "line": 33,
-      "symbol": "AlteredImage.init(_:referenceImage:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Models/AlteredImage.swift",
-      "line": 45,
+      "line": 49,
       "symbol": "AlteredImage.deinit",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Models/AlteredImage.swift",
-      "line": 145,
+      "line": 150,
       "symbol": "AlteredImageDelegate.alteredImageLostTracking(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -1167,34 +586,6 @@
       "line": 81,
       "symbol": "HandwritingManager",
       "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Models/HandwritingHandler.swift",
-      "line": 83,
-      "symbol": "HandwritingManager.vision",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Models/HandwritingHandler.swift",
-      "line": 84,
-      "symbol": "HandwritingManager.allText",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Models/HandwritingHandler.swift",
-      "line": 85,
-      "symbol": "HandwritingManager.fileNames",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Models/HandwritingHandler.swift",
-      "line": 90,
-      "symbol": "HandwritingManager.processImage(uiImage:className:fileName:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -1226,13 +617,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Models/RectangleDetector.swift",
-      "line": 128,
-      "symbol": "RectangleDetectorDelegate.rectangleFound(rectangleContent:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Models/Utilities.swift",
       "line": 70,
       "symbol": "UIView.dropShadow(scale:)",
@@ -1247,94 +631,10 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Models/VisualizationNode.swift",
-      "line": 46,
-      "symbol": "VisualizationNode.init(coder:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Views/EEZoomableImageView.swift",
       "line": 11,
       "symbol": "EEZoomableImageView",
       "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Views/EEZoomableImageView.swift",
-      "line": 13,
-      "symbol": "EEZoomableImageView.pinchZoomHandler",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Views/EEZoomableImageView.swift",
-      "line": 17,
-      "symbol": "EEZoomableImageView.zoomDelegate",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Views/EEZoomableImageView.swift",
-      "line": 26,
-      "symbol": "EEZoomableImageView.minZoomScale",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Views/EEZoomableImageView.swift",
-      "line": 35,
-      "symbol": "EEZoomableImageView.maxZoomScale",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Views/EEZoomableImageView.swift",
-      "line": 44,
-      "symbol": "EEZoomableImageView.resetAnimationDuration",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Views/EEZoomableImageView.swift",
-      "line": 53,
-      "symbol": "EEZoomableImageView.isZoomingActive",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Views/EEZoomableImageView.swift",
-      "line": 61,
-      "symbol": "EEZoomableImageView.init(frame:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Views/EEZoomableImageView.swift",
-      "line": 67,
-      "symbol": "EEZoomableImageView.init(image:highlightedImage:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Views/EEZoomableImageView.swift",
-      "line": 73,
-      "symbol": "EEZoomableImageView.init(image:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Views/EEZoomableImageView.swift",
-      "line": 79,
-      "symbol": "EEZoomableImageView.init(coder:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Views/EEZoomableImageView.swift",
-      "line": 85,
-      "symbol": "EEZoomableImageView.commonInit()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -1346,20 +646,6 @@
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Views/EEZoomableImageView.swift",
-      "line": 91,
-      "symbol": "ZoomingDelegate.pinchZoomHandlerStartPinching()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Views/EEZoomableImageView.swift",
-      "line": 92,
-      "symbol": "ZoomingDelegate.pinchZoomHandlerEndPinching()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Views/EEZoomableImageView.swift",
       "line": 95,
       "symbol": "PinchZoomHandlerConstants",
       "symbol_kind": "source.lang.swift.decl.struct",
@@ -1367,149 +653,9 @@
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Views/EEZoomableImageView.swift",
-      "line": 96,
-      "symbol": "PinchZoomHandlerConstants.kMinZoomScaleDefaultValue",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Views/EEZoomableImageView.swift",
-      "line": 97,
-      "symbol": "PinchZoomHandlerConstants.kMaxZoomScaleDefaultValue",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Views/EEZoomableImageView.swift",
-      "line": 98,
-      "symbol": "PinchZoomHandlerConstants.kResetAnimationDurationDefaultValue",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Views/EEZoomableImageView.swift",
-      "line": 99,
-      "symbol": "PinchZoomHandlerConstants.kIsZoomingActiveDefaultValue",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Views/EEZoomableImageView.swift",
       "line": 102,
       "symbol": "PinchZoomHandler",
       "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Views/EEZoomableImageView.swift",
-      "line": 105,
-      "symbol": "PinchZoomHandler.minZoomScale",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Views/EEZoomableImageView.swift",
-      "line": 106,
-      "symbol": "PinchZoomHandler.maxZoomScale",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Views/EEZoomableImageView.swift",
-      "line": 107,
-      "symbol": "PinchZoomHandler.resetAnimationDuration",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Views/EEZoomableImageView.swift",
-      "line": 108,
-      "symbol": "PinchZoomHandler.isZoomingActive",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Views/EEZoomableImageView.swift",
-      "line": 109,
-      "symbol": "PinchZoomHandler.delegate",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Views/EEZoomableImageView.swift",
-      "line": 110,
-      "symbol": "PinchZoomHandler.sourceImageView",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Views/EEZoomableImageView.swift",
-      "line": 112,
-      "symbol": "PinchZoomHandler.zoomImageView",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Views/EEZoomableImageView.swift",
-      "line": 113,
-      "symbol": "PinchZoomHandler.initialRect",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Views/EEZoomableImageView.swift",
-      "line": 114,
-      "symbol": "PinchZoomHandler.zoomImageLastPosition",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Views/EEZoomableImageView.swift",
-      "line": 115,
-      "symbol": "PinchZoomHandler.lastTouchPoint",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Views/EEZoomableImageView.swift",
-      "line": 116,
-      "symbol": "PinchZoomHandler.lastNumberOfTouch",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Views/EEZoomableImageView.swift",
-      "line": 120,
-      "symbol": "PinchZoomHandler.init(usingSourceImageView:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Views/EEZoomableImageView.swift",
-      "line": 128,
-      "symbol": "PinchZoomHandler.setupPinchGesture(on:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Views/EEZoomableImageView.swift",
-      "line": 135,
-      "symbol": "PinchZoomHandler.handlePinchGesture(pinch:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Views/EEZoomableImageView.swift",
-      "line": 141,
-      "symbol": "PinchZoomHandler.handlePinchMovement(pinchGesture:sourceImageView:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Views/EEZoomableImageView.swift",
-      "line": 211,
-      "symbol": "PinchZoomHandler.resetZoom()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }
   ],
