@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,14 +13,14 @@
             <objects>
                 <viewController storyboardIdentifier="NoteManagementViewController2" id="fQo-yv-UHT" customClass="NoteManagementController" customModule="AurNote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KtI-FQ-veR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background (Yewllo)" translatesAutoresizingMaskIntoConstraints="NO" id="vVV-gn-V4x">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Jcm-BT-p7J">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="722"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="722"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="25" minimumInteritemSpacing="25" id="NhV-Gm-6FN">
                                     <size key="itemSize" width="150" height="120"/>
@@ -68,7 +68,7 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sharedFolderCell" id="UWO-Dg-fQx" customClass="SharedFolderCell" customModule="AurNote" customModuleProvider="target">
-                                        <rect key="frame" x="200" y="25" width="150" height="120"/>
+                                        <rect key="frame" x="239" y="25" width="150" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jcG-lC-meZ">
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="120"/>
@@ -123,7 +123,7 @@
                                 </cells>
                             </collectionView>
                             <containerView opaque="NO" contentMode="scaleToFill" id="qRz-mG-XL6">
-                                <rect key="frame" x="0.0" y="-185" width="375" height="722"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="722"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="GVy-WB-9Sk" kind="embed" id="do2-my-vSy"/>
@@ -162,11 +162,11 @@
             <objects>
                 <viewController title="sharedFoldersViewController" id="BDj-4z-EeP" customClass="SharedFoldersViewController" customModule="AurNote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dFd-UJ-Idb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pVY-Ea-eCF">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="574"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="25" minimumInteritemSpacing="25" id="iun-xc-MsT">
                                     <size key="itemSize" width="150" height="120"/>
@@ -243,11 +243,11 @@
             <objects>
                 <viewController id="R3r-Mo-VGt" customClass="FileDisplayViewController" customModule="AurNote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Oz9-Uj-kDj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Xd9-lp-5G6">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="574"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="15" id="XO2-QE-RKy">
                                     <size key="itemSize" width="105" height="140"/>
@@ -330,7 +330,7 @@
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="9fz-tW-afi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -357,11 +357,11 @@
             <objects>
                 <viewController storyboardIdentifier="AccountViewController" title="AccountVC" id="XVm-HZ-2D5" customClass="AccountViewController" customModule="AurNote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WbW-p4-FRp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Soj-pX-l4v">
-                                <rect key="frame" x="24" y="500" width="327" height="68"/>
+                                <rect key="frame" x="43.5" y="695" width="327" height="68"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Soj-pX-l4v" secondAttribute="height" multiplier="327:68" id="20N-o0-ydD"/>
                                     <constraint firstAttribute="width" constant="327" id="Bt8-qL-Smb"/>
@@ -373,14 +373,14 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo (Team Page)" translatesAutoresizingMaskIntoConstraints="NO" id="DUo-pA-z6H">
-                                <rect key="frame" x="127.5" y="-49.5" width="120" height="145.5"/>
+                                <rect key="frame" x="147" y="145.5" width="120" height="145.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120.33333333333333" id="Diq-ZE-wXB"/>
                                     <constraint firstAttribute="width" secondItem="DUo-pA-z6H" secondAttribute="height" multiplier="24:29" id="utu-XV-Qdd"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Team" translatesAutoresizingMaskIntoConstraints="NO" id="SvS-6i-5wq">
-                                <rect key="frame" x="24" y="121" width="327" height="359"/>
+                                <rect key="frame" x="43.5" y="316" width="327" height="359"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.31140691040000001" green="0.33967638020000002" blue="0.92950242760000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -410,11 +410,11 @@
             <objects>
                 <viewController title="Backup" id="hjI-7n-XKc" customClass="FileDisplayViewController" customModule="AurNote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wzn-Iw-cCP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="82b-GK-23m">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kNg-45-irF">
                                     <size key="itemSize" width="170" height="176"/>
