@@ -4,23 +4,80 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--searchViewController-->
         <scene sceneID="gu4-Vu-3wU">
             <objects>
-                <viewController title="searchViewController" id="3x6-PG-QHN" sceneMemberID="viewController">
+                <viewController title="searchViewController" id="3x6-PG-QHN" customClass="SearchViewController" customModule="AurNote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HgM-k8-ewh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tSA-Fc-K7Q">
+                                <rect key="frame" x="0.0" y="363" width="414" height="426"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="15" id="aXf-H4-j8C">
+                                    <size key="itemSize" width="105" height="140"/>
+                                    <size key="estimatedItemSize" width="105" height="140"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="15" minY="15" maxX="15" maxY="15"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="fileCollectionCell" id="4tN-Nm-e9Y" customClass="SearchFileCollectionCell" customModule="AurNote" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="15" width="96" height="125"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="UWR-AQ-p2G">
+                                            <rect key="frame" x="0.0" y="0.0" width="96" height="125"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image Background (criss-cross)" translatesAutoresizingMaskIntoConstraints="NO" id="f5c-Pf-d3i">
+                                                    <rect key="frame" x="0.0" y="0.0" width="105" height="140"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="140" id="7IR-jg-SI7"/>
+                                                        <constraint firstAttribute="width" constant="105" id="jDu-kW-qU0"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tcm-OV-0hy">
+                                                    <rect key="frame" x="0.0" y="0.0" width="105" height="140"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="105" id="8h0-GL-Osn"/>
+                                                        <constraint firstAttribute="height" constant="140" id="Tr7-fE-KfG"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="tcm-OV-0hy" firstAttribute="centerX" secondItem="UWR-AQ-p2G" secondAttribute="centerX" id="1vm-Ds-iJZ"/>
+                                                <constraint firstItem="f5c-Pf-d3i" firstAttribute="centerX" secondItem="UWR-AQ-p2G" secondAttribute="centerX" id="8dB-HI-KKL"/>
+                                                <constraint firstItem="tcm-OV-0hy" firstAttribute="centerY" secondItem="UWR-AQ-p2G" secondAttribute="centerY" id="cS4-mY-4OL"/>
+                                                <constraint firstItem="f5c-Pf-d3i" firstAttribute="centerY" secondItem="UWR-AQ-p2G" secondAttribute="centerY" id="gbP-rY-okd"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="96" height="125"/>
+                                        <connections>
+                                            <outlet property="fileImage" destination="tcm-OV-0hy" id="OxQ-c4-Fuf"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="3z0-q4-Hmc"/>
                     </view>
+                    <connections>
+                        <outlet property="fileCollection" destination="tSA-Fc-K7Q" id="0Bi-Xj-WWB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J5S-2c-Dlq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3828" y="539"/>
+            <point key="canvasLocation" x="3827.5362318840585" y="538.39285714285711"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image Background (criss-cross)" width="105" height="140"/>
+    </resources>
 </document>

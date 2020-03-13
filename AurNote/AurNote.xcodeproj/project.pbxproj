@@ -20,6 +20,7 @@
 		11F47E6823FFF2B9002677D8 /* ImageCapture.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F47E6723FFF2B9002677D8 /* ImageCapture.storyboard */; };
 		11F47E6A23FFF2C2002677D8 /* ImageCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F47E6923FFF2C2002677D8 /* ImageCaptureViewController.swift */; };
 		200D3A0E2415B7AE00C961B7 /* HandwritingHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200D3A0D2415B7AD00C961B7 /* HandwritingHandler.swift */; };
+		200D3A3E241B56B100C961B7 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200D3A3D241B56B100C961B7 /* SearchViewController.swift */; };
 		2AB05CD62410AD5600E72136 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB05CD52410AD5600E72136 /* ScanViewController.swift */; };
 		2AB05D3824146DD000E72136 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB05D3724146DD000E72136 /* AccountViewController.swift */; };
 		2AB05D462415BA9900E72136 /* EEZoomableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB05D452415BA9900E72136 /* EEZoomableImageView.swift */; };
@@ -123,6 +124,7 @@
 		11F47E6723FFF2B9002677D8 /* ImageCapture.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImageCapture.storyboard; sourceTree = "<group>"; };
 		11F47E6923FFF2C2002677D8 /* ImageCaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCaptureViewController.swift; sourceTree = "<group>"; };
 		200D3A0D2415B7AD00C961B7 /* HandwritingHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandwritingHandler.swift; sourceTree = "<group>"; };
+		200D3A3D241B56B100C961B7 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		2AB05CD52410AD5600E72136 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		2AB05CD72410BB6900E72136 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2AB05CD82410BB6900E72136 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 				2AB05CD52410AD5600E72136 /* ScanViewController.swift */,
 				2AB05D3724146DD000E72136 /* AccountViewController.swift */,
 				2AB05D97241617F200E72136 /* CustomTabBarController.swift */,
+				200D3A3D241B56B100C961B7 /* SearchViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -644,6 +647,7 @@
 				1007569923FE7773009D0822 /* AWSBucketHandler.swift in Sources */,
 				2EA47C9123FD1F5800DE5CBA /* AlteredImage.swift in Sources */,
 				2EA47C9023FD1F5800DE5CBA /* RectangleDetector.swift in Sources */,
+				200D3A3E241B56B100C961B7 /* SearchViewController.swift in Sources */,
 				11F47E6A23FFF2C2002677D8 /* ImageCaptureViewController.swift in Sources */,
 				2EA47C8F23FD1F5800DE5CBA /* VisualizationNode.swift in Sources */,
 				2EA47C8A23FD1F0200DE5CBA /* ARAnnotationViewController.swift in Sources */,
@@ -896,14 +900,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = HBHDXQ6W6U;
+				DEVELOPMENT_TEAM = 6NXZD7X6D7;
 				INFOPLIST_FILE = AurNote/Configurations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ucla.cs130.AurNote2;
+				PRODUCT_BUNDLE_IDENTIFIER = uclosangeles.cs130.AurNote23;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -917,7 +921,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = HBHDXQ6W6U;
+				DEVELOPMENT_TEAM = 6NXZD7X6D7;
 				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = AurNote/Configurations/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -925,7 +929,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = uclosangeles.cs130.AurNote;
+				PRODUCT_BUNDLE_IDENTIFIER = uclosangeles.cs130.AurNote23;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
