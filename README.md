@@ -15,7 +15,7 @@ git clone https://github.com/CS130-W20/team-B2.git
 6. Build (:
 
 ## Relevant Links 
-Documentation: [AurNoteDocumentation.pdf](https://github.com/CS130-W20/team-B2/blob/master/AurNoteDocumentation.pdf)
+Documentation: [https://cs130-w20.github.io/team-B2/](https://cs130-w20.github.io/team-B2/)
 
 Testing: 
 - [AurNoteUITests](https://github.com/CS130-W20/team-B2/tree/master/AurNote/AurNoteUITests)
