@@ -176,6 +176,8 @@ class NoteManagementController: UIViewController, UICollectionViewDelegate, UICo
     
     @IBOutlet weak var filteredResultsView: UIView!
     
+    /// this handles the search word processing and finding the corresponding files
+    /// - Parameter searchText: the newly updated search text
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         // Add your search logic here
         print(searchText)
@@ -204,6 +206,8 @@ class NoteManagementController: UIViewController, UICollectionViewDelegate, UICo
         filteredResultsView.isHidden = false
     }
     
+    /// function that dismisses the search view controller after the user presses cancel
+    /// - Parameter searchBar: the search bar
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         filteredResultsView.isHidden = true
         directoryCollection.isHidden = false

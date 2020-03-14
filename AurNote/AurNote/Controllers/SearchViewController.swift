@@ -45,6 +45,8 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
     var imgStore = ImageStorer()
     var capturedImage: UIImage?
     
+    /// a notifier that updates the file images as the search text changes
+    /// - Parameter notification:the notification object
     @objc func onNotification(notification:Notification)
     {
         //print(notification.userInfo)
@@ -99,7 +101,8 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
         return cell
     }
 
-    
+    /// helper function that handles selection of a file
+    /// - Parameter didSelectItemAt: checking if user selected an item
     func collectionView(_ collectionView: UICollectionView,
              didSelectItemAt indexPath: IndexPath) {
 
@@ -120,6 +123,8 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
         self.tabBarController?.tabBar.isHidden = true
     }
     
+    /// gets rid of the full screen image by tapping away
+    /// - Parameter sender: the recognizer for the recognizer
     @objc func dismissFullscreenImage(_ sender: UITapGestureRecognizer) {
         self.navigationController?.isNavigationBarHidden = false
         self.tabBarController?.tabBar.isHidden = false
