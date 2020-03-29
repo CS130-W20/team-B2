@@ -394,105 +394,105 @@
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/NoteManagementController.swift",
-      "line": 14,
+      "line": 16,
       "symbol": "DirectoryCollectionCell.directoryName",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/NoteManagementController.swift",
-      "line": 15,
+      "line": 17,
       "symbol": "DirectoryCollectionCell.directoryName2",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/NoteManagementController.swift",
-      "line": 27,
+      "line": 29,
       "symbol": "AddFolderCell",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/NoteManagementController.swift",
-      "line": 38,
+      "line": 40,
       "symbol": "SharedFolderCell",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/NoteManagementController.swift",
-      "line": 50,
+      "line": 52,
+      "symbol": "NoteManagementController.searchUpdate",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/NoteManagementController.swift",
+      "line": 53,
       "symbol": "NoteManagementController.data",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/NoteManagementController.swift",
-      "line": 51,
+      "line": 54,
       "symbol": "NoteManagementController.userId",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/NoteManagementController.swift",
-      "line": 52,
+      "line": 55,
       "symbol": "NoteManagementController.awsBucketHandler",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/NoteManagementController.swift",
-      "line": 53,
+      "line": 56,
       "symbol": "NoteManagementController.newFolder",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/NoteManagementController.swift",
-      "line": 54,
+      "line": 57,
       "symbol": "NoteManagementController.search",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/NoteManagementController.swift",
-      "line": 56,
+      "line": 59,
       "symbol": "NoteManagementController.directoryCollection",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/NoteManagementController.swift",
-      "line": 132,
+      "line": 135,
       "symbol": "NoteManagementController.configurationTextField(textField:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/NoteManagementController.swift",
-      "line": 142,
+      "line": 145,
       "symbol": "NoteManagementController.collectionView(_:didSelectItemAt:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/NoteManagementController.swift",
-      "line": 174,
+      "line": 177,
       "symbol": "NoteManagementController.filteredResultsView",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/NoteManagementController.swift",
-      "line": 176,
-      "symbol": "NoteManagementController.searchBar(_:textDidChange:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/NoteManagementController.swift",
-      "line": 203,
+      "line": 216,
       "symbol": "NoteManagementController.prepare(for:sender:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -501,6 +501,20 @@
       "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/ScanViewController.swift",
       "line": 12,
       "symbol": "ScanViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/SearchViewController.swift",
+      "line": 11,
+      "symbol": "SearchFileCollectionCell",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/sri/git/AuRNote/team-B2/AurNote/AurNote/Controllers/SearchViewController.swift",
+      "line": 39,
+      "symbol": "SearchViewController",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
